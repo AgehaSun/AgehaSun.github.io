@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 420px 1fr;
+    grid-template-rows: 1fr;
+    background-color: black;
+}
+.nav{
+    background-color: #1F2022;
+    display: grid;
+    padding: 90px 60px 30px 60px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 280px auto 54px;
+}
+.main{
+    display: grid;
+    padding: 60px 30px 30px 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: "a a a""b b c""d e c";
+    grid-gap: 10px;
+    background-color: #17181A;
+}
+.a,.b,.c,.d,.e{
+    text-align: center;
+    background-color: #FD679C;
+    border-radius: 6px;
+    color: white;
+}
+.a{
+    grid-area: a;
+}
+.b{
+    grid-area: b;
+}
+.c{
+    grid-area: c;
+}
+.d{
+    grid-area: d;
+}
+.e{
+    grid-area: e;
+}
+
+.nav-title{
+    display: grid;
+    margin-top: 2px;
+}
+h1{
+    font-size: 32px;
+    color: white;
+}
+
+ul{
+    padding-left: 20px;
+    color: #808285;
+    list-style: none;
+    font-size: 20px;
+
+}
+.nav-options-item:hover{
+    color: white;
+}
+img{
+    object-fit: cover;
+    border-radius: 100px;
+}
+.nav-options-item{
+    margin: 10px;
+}
+.divider{
+    height: 1px;
+    background-color: #2A2B2D;
+}
+.beian{
+    color: #808285;
+    font-size: 14px;
+    text-align: center;
+}
