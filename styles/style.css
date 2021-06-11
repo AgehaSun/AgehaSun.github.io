@@ -102,32 +102,16 @@ img{
     font-size: 14px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main{
     background-color: #17181A;
 }
 
 .a,.b,.c,.d,.e{
-    text-align: center;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
     color: white;
+    margin-top: 20px;
 }
-
-
 
 
 
@@ -141,7 +125,7 @@ img{
         grid-template-columns: 420px 1fr;
     }
 
-    .main{
+    .content-a{
         display: grid;
         padding: 60px 30px 30px 30px;
         grid-template-columns: 1fr 1fr 1fr;
@@ -178,6 +162,22 @@ img{
 {
     .nav-title-button{
         display: none;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .content-a{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 30px 30px 30px 30px;;
+    }
+    .a,.b,.c,.d,.e{
+        height: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
