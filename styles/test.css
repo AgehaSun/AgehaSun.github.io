@@ -1,12 +1,29 @@
-div{
-    background-color: lightblue;
-    border: 1px solid black;
-    height: 100px;
-    width: 500px;
-    overflow-x: scroll;
-}
-
-p{
-    width: 1000px;
-    margin: 10px;
-}
+body{
+    padding:0;
+    margin:0;
+  }
+  main {
+      position: relative;
+      width: 90vw;
+      height: 80vh;
+      -webkit-overflow-scrolling: touch;
+  }
+  
+  .wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      width: auto;
+  }
+  
+  .wrapper > div {
+      pointer-events: none;
+      flex: 0 0 auto;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
