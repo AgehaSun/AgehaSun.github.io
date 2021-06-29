@@ -2,10 +2,14 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
+    cursor: url(/cursor/cursor_auto.svg) ,default;
+    font-family: Helvetica,"PingFang SC",sans-serif;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 body{
-    background-color: #17181A;
+    background-color: #131314;
 }
 
 img{
@@ -13,9 +17,15 @@ img{
     border-radius: 100px;
 }
 
-a{
-    
+@font-face {
+    font-family: "fitalia";
+    src: url(/fonts/Fitalia.ttf);
 }
+
+
+
+
+
 
 .container{
     background-color: black;
@@ -23,7 +33,7 @@ a{
 
 
 .nav{
-    background-color: #1F2022;
+    background-color: #1c1d1f;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     padding: 30px;
@@ -53,6 +63,10 @@ a{
 
 .nav-title-text{
     color: white;
+    font-size: 42px;
+    font-family: "fitalia",serif;
+    letter-spacing: 10px;
+    font-weight: normal;
 }
 
 .nav-option{
@@ -67,9 +81,10 @@ a{
 }
 
 .nav-option-button-span{
-    padding: 0 36px;
+    margin: 0 40px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #2A2B2D;
 }
 
 .nav-option-button-icon{
@@ -84,15 +99,22 @@ a{
 }
 
 .nav-option-button-text{
-    color:#808285;
-    padding: 12px 0;
-    border-bottom: 1px solid #2A2B2D;
-    flex: 1 1 auto;
-    font-size: 16px;
+    color:#787A80;
+    padding: 10px 0;
+    margin-right: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
 }
+
+.nav-option-button-divider{
+    color: #383A3D;
+    margin-right: 10px;
+}
+
 .nav-option-button:hover .nav-option-button-text{
     color: white;
     fill: white;
+    cursor: url(/cursor/cursor_link.svg) ,default;
 }
 
 .nav-recordinfo{
@@ -105,12 +127,13 @@ a{
 }
 
 .nav-recordinfo-text{
-    color: #808285;
-    font-size: 14px;
+    color: #6B6D70;
+    font-size: 12px;
+    font-weight: 200;
 }
 
 .main{
-    background-color: #17181A;
+    background-color: #151617;
 }
 
 .title{
@@ -119,7 +142,7 @@ a{
 }
 
 
-@media screen and (min-width:1200px)
+@media (min-width:1200px)
 {
     body{
         overflow: hidden;
@@ -139,7 +162,8 @@ a{
         width: 86%;
         height:80%;
         margin: 20px;
-        overflow-x: scroll;
+        overflow-x: hidden;
+        overflow-y: hidden;
         justify-self: center;
         align-self: center;
     }
@@ -170,32 +194,74 @@ a{
 
     .content-item{
         background-color: #17181A;
-        width: 540px;
-        height: 92%;
+        width: 300px;
+        height: 90%;
+        
+        position: relative;
         margin-right: 16px;
+        align-self: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 90px;
-        color: white;
+        transition: 0.5s;
     }
 
-    .content-item:hover{
-        filter: grayscale(100%);
-        opacity: 0.4;
+    .content-item:hover {
+        height: 100%;
+        transition: 0.3s;
+    }    
+    
+    .content-item:hover .content-cover{
+        filter: none;
+        opacity: 1;
+        transition: 0.2s;
     }
+
+    .content-item:hover .content-cover-title{
+        opacity: 0;
+        transition: 1s;
+    }
+
 
     .content-cover{
+        filter: grayscale(100%);
         width: 100%;
         height: 100%;
         border-radius: 4px;
         object-fit: cover;
+        opacity: 0.2;
+        transition: 0.8s;
+        position: absolute;
     }
+
+    .content-cover-up{
+        height: 100%;
+        width: 100%;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-cover-title{
+        color: white;
+        font-size: 120px;
+        font-weight: lighter;
+        transition: 1s;
+    }
+
+    .content-cover-text-1{
+        font-size: 20px;
+        color: white;
+    }
+
+
 }
 
 
 
-@media screen and (max-width:1199px)
+@media (max-width:1199px)
 {
     .nav-title-button{
         display: none;
