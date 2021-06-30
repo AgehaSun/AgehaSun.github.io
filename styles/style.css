@@ -230,33 +230,129 @@ img{
 
 @media (max-width:1199px)
 {
-    .nav-title-button{
-        display: none;
-    }
     .container{
         display: grid;
-        grid-template-columns:  1fr;
+        grid-template-rows: auto 1fr;
     }
+
+
+
+
+    .nav{
+        background-color: #1c1d1f;
+        padding: 30px;
+    }
+
+    .nav-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-title-icon{
+        display: none;
+    }
+
+    .nav-title-name{
+        margin: 30px 0;
+    }
+
+    .nav-title-text{
+        font-size: 30pt;
+        font-family: "fitalia",serif;
+        font-weight: normal;
+    }
+
+    .nav-option-button:hover .nav-option-button-text{
+        color: white;
+        fill: white;
+    }
+    
+
+    .nav-recordinfo{
+        display: flex;
+        margin-top: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-recordinfo-text{
+        color: #6B6D70;
+        font-size: 12px;
+        font-weight: 200;
+    }
+
+
+    .nav-option-button{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #2A2B2D;
+    }
+
+    .nav-option-button-text{
+        color:#787A80;
+        padding: 16px 0;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .nav-option-button-divider{
+        color: #383A3D;
+        margin-right: 10px;
+    }
+
+
 
     .main{
-        display: flex;
-        justify-content: center;
+        background-color: #151617;
     }
 
-    .wrapper{
+
+    .content-list{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
     }
 
     .content-item{
+        background-color: #1F3233;
+        margin-top: 20px;
         height: 200px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        position: relative;
     }
 
     .content-cover{
         width: 100%;
-        height: 300px;
-        border-radius: 6px;
-        object-fit: cover;
-        margin-top: 20px;
+        height: 200px;
+        opacity: 0.5;
+        position: absolute;
     }
+
+    .content-cover-up{
+        width: 100%;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-cover-poetry,.content-cover-author,.content-cover-me,.content-cover-initialletter{
+        display: none;
+    }
+
+    .content-cover-title{
+        font-size: 32px;
+        margin: 20px 0;
+    }
+
+    .content-cover-description,.content-cover-time{
+        opacity: 0.7;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
 }
