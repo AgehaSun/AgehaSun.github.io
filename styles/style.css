@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: #131314;
+    background-color: black;
     cursor: url(/cursor/cursor_auto.svg) ,default;
 }
 
@@ -41,7 +41,6 @@ img{
 
 
     .nav{
-        background-color: #1c1d1f;
         display: grid;
         grid-template-rows: auto auto 1fr auto;
         padding: 30px;
@@ -84,7 +83,6 @@ img{
         margin: 0 40px;
         display: flex;
         align-items: center;
-        border-bottom: 1px solid #2A2B2D;
     }
     
     .nav-option-button-text{
@@ -122,7 +120,6 @@ img{
 
 
     .main{
-        background-color: #151617;
         display: grid;
     }
    
@@ -215,7 +212,7 @@ img{
     .content-cover-initialletter{
         font-size: 160px;
         align-self: center;
-        opacity: 1s;
+        opacity: 1;
         transition: 1s;
     }
     .content-cover-author{
