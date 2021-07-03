@@ -42,33 +42,22 @@ img{
 
     .nav{
         display: grid;
-        grid-template-rows: auto auto 1fr auto;
-        padding: 30px;
+        grid-template-rows: auto 1fr auto 1fr auto auto;
+        padding: 40px 80px;
         height: auto;
     }
     
-
     .nav-title{
-        padding: 30px 40px;
+        margin: 20px 0;
+        height: 20vh;
         display: flex;
         align-items: center;
-        flex-direction: column;
-    }
-
-    .nav-title-icon{
-        margin-bottom: 20px;
-    }
-    
-    .nav-title-name{
-        display: flex;
         justify-content: center;
-        align-items: center;
-        height: 100px;
     }
     
     .nav-title-text{
         color: white;
-        font-size: 42px;
+        font-size: 48px;
         font-family: "fitalia",serif;
         letter-spacing: 10px;
         font-weight: normal;
@@ -102,9 +91,17 @@ img{
         fill: white;
     }
     
+    .nav-image{
+        margin-bottom: 60px;
+        text-align: right;
+    }
+
+    .nav-icon{
+        height: 260px;
+        width: 260px;
+    }
 
     .nav-recordinfo{
-        padding: 30px 40px;
         display: flex;
         height: 60px;
         align-items: center;
