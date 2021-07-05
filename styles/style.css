@@ -10,11 +10,6 @@
 
 body{
     background-color: black;
-    cursor: url(/cursor/cursor_auto.svg) ,default;
-}
-
-a{
-    cursor: url(/cursor/cursor_link.svg) ,default;
 }
 
 img{
@@ -26,6 +21,53 @@ img{
     src: url(/fonts/Fitalia.ttf);
 }
 
+.cursor{
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    opacity: 0.6;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursoranim 2s infinite alternate;
+}
+
+.cursor::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border:8px solid gray;
+    border-radius: 50%;
+    opacity: 0.4;
+    top: -8px;
+    left: -8px;
+    animation: cursoranim2 2s infinite alternate;
+}
+
+@keyframes cursoranim{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursoranim2{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(.5);
+    }
+}
+
+.container{
+    position: absolute;
+    /* opacity: 0; */
+}
 
 
 
@@ -42,17 +84,19 @@ img{
 
     .nav{
         display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-frame{
+        height: 72%;
+        display: grid;
         grid-template-rows: auto 1fr auto 1fr auto auto;
-        padding: 40px 80px;
-        height: auto;
     }
     
     .nav-title{
         margin: 20px 0;
-        height: 20vh;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
     
     .nav-title-text{
@@ -69,30 +113,31 @@ img{
     }
     
     .nav-option-button{
-        margin: 0 40px;
         display: flex;
         align-items: center;
     }
     
     .nav-option-button-text{
-        color:#787A80;
+        opacity: 0.5;
         padding: 10px 0;
         margin-right: 10px;
         font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: lighter;
     }
     
     .nav-option-button-divider{
-        color: #383A3D;
+        opacity: 0.15;
         margin-right: 10px;
     }
     
     .nav-option-button:hover .nav-option-button-text{
-        color: white;
+        opacity: 1;
         fill: white;
     }
     
     .nav-image{
-        margin-bottom: 60px;
+        margin-bottom: 20px;
         text-align: right;
     }
 
@@ -102,14 +147,10 @@ img{
     }
 
     .nav-recordinfo{
-        display: flex;
-        height: 60px;
-        align-items: center;
-        justify-content: center;
     }
     
     .nav-recordinfo-text{
-        color: #6B6D70;
+        opacity: 0.32;
         font-size: 12px;
         font-weight: 200;
     }
