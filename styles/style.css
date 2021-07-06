@@ -21,55 +21,6 @@ img{
     src: url(/fonts/Fitalia.ttf);
 }
 
-.cursor{
-    width: 40px;
-    height: 40px;
-    border: 2px solid white;
-    border-radius: 50%;
-    opacity: 0.6;
-    position: absolute;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    animation: cursoranim 2s infinite alternate;
-}
-
-.cursor::after{
-    content: "";
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    border:8px solid gray;
-    border-radius: 50%;
-    opacity: 0.4;
-    top: -8px;
-    left: -8px;
-    animation: cursoranim2 2s infinite alternate;
-}
-
-@keyframes cursoranim{
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(.7);
-    }
-}
-
-@keyframes cursoranim2{
-    from{
-        transform: scale(1);
-    }
-    to{
-        transform: scale(.5);
-    }
-}
-
-.container{
-    position: absolute;
-    /* opacity: 0; */
-}
-
-
 
 @media (min-width:1200px)
 {
@@ -261,17 +212,14 @@ img{
     }
 }
 
-
-
 @media (max-width:1199px)
 {
+
     .container{
         display: grid;
         grid-template-rows: auto 1fr;
+        width: 100vw;
     }
-
-
-
 
     .nav{
         background-color: #1c1d1f;
@@ -279,9 +227,11 @@ img{
     }
 
     .nav-title{
+        height: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .nav-icon{

@@ -5,6 +5,7 @@
     <title>Driftage</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <script src="/scripts/gsap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 </head>
 <body>
@@ -277,6 +278,9 @@
             </div >
         </div>
     </div>
-    <div class="cursor"></div>
+    <script>
+        gsap.from('.nav',{opacity:0,duration:0.8,y:-40,stagger:0.2})
+        gsap.from('.content-list',{opacity:0,duration:0.8,y:40,stagger:{each:0.2}})
+    </script>
 </body>
 </html>
