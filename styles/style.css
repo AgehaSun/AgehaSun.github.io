@@ -236,7 +236,6 @@ img{
 
     .nav-head{
         display: flex;
-        margin: 20px 0;
     }
 
     .nav-menu{
@@ -281,7 +280,7 @@ img{
 
     .nav-recordinfo{
         display: flex;
-        margin-top: 30px;
+        margin-top: 20px;
         height: 30px;
         align-items: center;
         justify-content: center;
