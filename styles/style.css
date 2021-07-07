@@ -21,6 +21,10 @@ img{
     src: url(/fonts/Fitalia.ttf);
 }
 
+.nav-menu-hide{
+    display: none;
+}
+
 
 @media (min-width:1200px)
 {
@@ -57,10 +61,14 @@ img{
         letter-spacing: 10px;
         font-weight: normal;
     }
-    
 
+    .nav-menu{
+        display: none;
+    }
+    
     .nav-option{
         height: auto;
+        flex-direction: column;
     }
     
     .nav-option-button{
@@ -223,7 +231,19 @@ img{
 
     .nav{
         background-color: #1c1d1f;
-        padding: 30px;
+        padding: 40px 60px;
+    }
+
+    .nav-head{
+        display: flex;
+        margin: 20px 0;
+    }
+
+    .nav-menu{
+        opacity: 0.5;
+        width: auto;
+        height: 60px;
+        margin-left: auto;
     }
 
     .nav-title{
@@ -246,6 +266,11 @@ img{
         font-size: 30pt;
         font-family: "fitalia",serif;
         font-weight: normal;
+    }
+
+    .nav-option{
+        display: none;
+        flex-direction: column;
     }
 
     .nav-option-button:hover .nav-option-button-text{
@@ -301,7 +326,7 @@ img{
 
     .content-item{
         background-color: #1F3233;
-        margin-top: 20px;
+        margin-top: 12px;
         height: 200px;
         width: 100%;
         overflow: hidden;
