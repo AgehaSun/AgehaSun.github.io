@@ -10,11 +10,22 @@ window.addEventListener('wheel', function(e) {
 function myFunction() {
   var navbar = document.getElementById("nav-bar");
   var y = document.getElementById("nav-menu")
+
   if (navbar.style.display === "flex") {
     y.style.opacity= 0.5;
     navbar.style.display = "none";
   } else {
     navbar.style.display = "flex";
     y.style.opacity = 1;
+  }
+}
+
+function displayAbout(){
+  var about_area = document.getElementById("about-area");
+  if(about_area.style.display === "none"){
+    about_area.style.display = "block"
+  }
+  else{
+    about_area.style.display = "none"
   }
 }
