@@ -178,7 +178,7 @@ img{
 
     .content-item{
         background-color: #1F3233;
-        width: 320px;
+        width: 340px;
         height: 90%;
         border-radius: 4px;
         
@@ -248,6 +248,7 @@ img{
         transition: 1s;
     }
     .content-cover-initialletter{
+        font-family: "saira",serif;
         font-size: 160px;
         align-self: center;
         opacity: 1;
@@ -312,10 +313,15 @@ img{
     }
 
     .about-item-name{
+        color: #6d7077;
         width: 180px;
-        opacity: 0.5;
+        opacity: 1;
         margin-right: 30px;
-        font-weight: 400;
+        font-weight: 700;
+    }
+
+    .about-item-content{
+        color: white;
     }
 
     .about-item-icon{
@@ -486,5 +492,37 @@ img{
         font-size: 16px;
     }
     
+
+
+
+
+
+    #projectsArea{
+        display: none;
+    }
+
+
+
+
+
+    #notesArea{
+        display: none;
+    }
+
+
+
+
+
+    #othersArea{
+        display: none;
+    }
+    
+
+
+
+
+    #aboutArea{
+        display: none;
+    }
 }
 
