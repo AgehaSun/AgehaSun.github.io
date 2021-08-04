@@ -5,11 +5,11 @@
     <title>Driftage</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="images/icon.png">
-    <script src="/scripts/gsap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <script src="/scripts/gsap.min.js"></script>
+    <script src="scripts/main.js" async></script>
 </head>
 <body>
-    <script src="scripts/main.js" async defer></script>
     <div class="container">
         <div class="nav">
             <div class="nav-frame">
@@ -24,61 +24,71 @@
                 <div class="nav-empty">
                 </div>
                 <div class="nav-option" id="nav-bar">
-                        <a class="nav-option-button" href="javascript:void(0)" >
-                            <p class="nav-option-button-text">
-                                首页
-                            </p>
-                            <p class="nav-option-button-divider">
-                                ||||||
-                            </p>
-                            <p class="nav-option-button-text">
-                                HOME
-                            </p>
-                        </a>
-                        <a class="nav-option-button" href="javascript:void(0)" on>
-                            <p class="nav-option-button-text">
-                                项目
-                            </p>
-                            <p class="nav-option-button-divider">
-                                ||||||
-                            </p>
-                            <p class="nav-option-button-text">
-                                PROJECTS
-                            </p>
-                        </a>
-                        <a class="nav-option-button" href="javascript:void(0)">
-                            <p class="nav-option-button-text">
-                                笔记
-                            </p>
-                            <p class="nav-option-button-divider">
-                                ||||||
-                            </p>
-                            <p class="nav-option-button-text">
-                                NOTES
-                            </p>
-                        </a>
-                        <a class="nav-option-button" href="javascript:void(0)">
-                            <p class="nav-option-button-text">
-                                其他
-                            </p>
-                            <p class="nav-option-button-divider">
-                                ||||||
-                            </p>
-                            <p class="nav-option-button-text">
-                                OTHERS
-                            </p>
-                        </a>
-                        <a class="nav-option-button" href="javascript:void(0)" onclick="displayAbout()">
-                            <p class="nav-option-button-text">
-                                关于
-                            </p>
-                            <p class="nav-option-button-divider">
-                                ||||||
-                            </p>
-                            <p class="nav-option-button-text">
-                                ABOUT
-                            </p>
-                        </a>
+                        <button class="nav-option-button" onclick="openPage(event,'homeArea')" >
+                            <span class="button-container">
+                                <p class="nav-option-button-text">
+                                    首页
+                                </p>
+                                <p class="nav-option-button-divider">
+                                    ||||||
+                                </p>
+                                <p class="nav-option-button-text">
+                                    HOME
+                                </p>
+                            </span>
+                        </button>
+                        <button class="nav-option-button" onclick="openPage(event,'projectsArea')" >
+                            <span class="button-container">
+                                <p class="nav-option-button-text">
+                                    项目
+                                </p>
+                                <p class="nav-option-button-divider">
+                                    ||||||
+                                </p>
+                                <p class="nav-option-button-text">
+                                    PROJECTS
+                                </p>
+                            </span>
+                        </button>
+                        <button class="nav-option-button" onclick="openPage(event,'notesArea')" >
+                            <span class="button-container">
+                                <p class="nav-option-button-text">
+                                    笔记
+                                </p>
+                                <p class="nav-option-button-divider">
+                                    ||||||
+                                </p>
+                                <p class="nav-option-button-text">
+                                    NOTES
+                                </p>
+                            </span>
+                        </button>
+                        <button class="nav-option-button" onclick="openPage(event,'othersArea')" >
+                            <span class="button-container">
+                                <p class="nav-option-button-text">
+                                    其他
+                                </p>
+                                <p class="nav-option-button-divider">
+                                    ||||||
+                                </p>
+                                <p class="nav-option-button-text">
+                                    OTHERS
+                                </p>
+                            </span>
+                        </button>
+                        <button class="nav-option-button" onclick="openPage(event,'aboutArea')" >
+                            <span class="button-container">
+                                <p class="nav-option-button-text">
+                                    关于
+                                </p>
+                                <p class="nav-option-button-divider">
+                                    ||||||
+                                </p>
+                                <p class="nav-option-button-text">
+                                    ABOUT
+                                </p>
+                            </span>
+                        </button>
                 </div>
                 <div class="nav-empty">
                 </div>
@@ -94,7 +104,7 @@
 
         </div>
         <div class="main">
-            <div class="wrapper">
+            <div class="tabContent" id="homeArea">
                 <div class="content-list">
                     <a class="content-item" href="">
                         <img class="content-cover" src="images/20170515bjunkuma.png" alt="">
@@ -281,7 +291,16 @@
                     </a>
                 </div>
             </div >
-            <div class="about" id="about-area">
+            <div class="tabContent" id="projectsArea">
+
+            </div>
+            <div class="tabContent" id="notesArea">
+
+            </div>
+            <div class="tabContent" id="othersArea">
+
+            </div>
+            <div class="tabContent" id="aboutArea">
                 <p class="nav-title-text">Apocrita</p>
                 <p class="about-item-name">孙志远 / Apocrita sun</p>
                 <p class="about-title">联系方式 / CONTACT ME</p>
@@ -338,7 +357,7 @@
     </div>
     <script>
         gsap.from('.nav',{opacity:0,duration:0.8,y:-40,stagger:0.2})
-        gsap.from('.content-list',{opacity:0,duration:0.8,y:40,stagger:{each:0.2}})
+        gsap.from('#homeArea',{opacity:0,duration:0.8,y:40,stagger:0.2})
     </script>
 </body>
 </html>

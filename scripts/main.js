@@ -1,5 +1,5 @@
 
-var item = document.querySelector('.wrapper')
+var item = document.getElementById('homeArea')
 
 window.addEventListener('wheel', function(e) {
 
@@ -20,12 +20,21 @@ function myFunction() {
   }
 }
 
-function displayAbout(){
-  var about_area = document.getElementById("about-area");
-  if(about_area.style.display === "none"){
-    about_area.style.display = "block"
+function openPage(evt,tabName){
+
+  var i,tabcontent,tablinks;
+
+  tabcontent = document.getElementsByClassName("tabContent")
+  for (i=0;i<tabcontent.length;i++){
+    tabcontent[i].style.display = "none";
   }
-  else{
-    about_area.style.display = "none"
+
+  tablinks = document.getElementsByClassName("nav-option-button")
+  for(i = 0;i<tablinks.length;i++){
+    tablinks[i].className = tablinks[i].className.replace(" active","");
   }
+
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+
 }
