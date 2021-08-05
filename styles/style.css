@@ -358,7 +358,7 @@ img{
 
     .nav{
         background-color: #1c1d1f;
-        padding: 30px;
+        padding: 10px 30px;
     }
 
     .nav-head{
@@ -367,13 +367,13 @@ img{
 
     .nav-menu{
         opacity: 0.5;
-        width: auto;
-        height: 60px;
+        display: flex;
+        align-items: center;
         margin-left: auto;
     }
 
     .nav-title{
-        height: 80px;
+        height: 120px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -390,7 +390,7 @@ img{
 
     .nav-title-text{
         font-size: 30pt;
-        font-family: "fitalia",serif;
+        font-family: "saira",serif;
         font-weight: normal;
     }
 
@@ -406,8 +406,8 @@ img{
     
 
     .nav-recordinfo{
-        display: flex;
-        margin-top: 20px;
+        display: none;
+        margin: 20px 0px;
         height: 30px;
         align-items: center;
         justify-content: center;
@@ -421,15 +421,27 @@ img{
 
 
     .nav-option-button{
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #2A2B2D;
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
         transition: 0.3s;
+    }
+
+    .nav-option-button.active .nav-option-button-text{
+        opacity: 1;
+        fill: white;
+    }
+
+    .button-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .nav-option-button-text{
         color:#787A80;
-        padding: 16px 0;
+        padding: 30px 0;
         margin-right: 10px;
         font-size: 14px;
     }
