@@ -305,6 +305,7 @@ img{
         font-size: 20px;
         margin-top: 50px;
         margin-bottom: 30px;
+        color: rgb(173, 182, 190);
     }
 
     .about-item-frame{
@@ -313,15 +314,14 @@ img{
     }
 
     .about-item-name{
-        color: #6d7077;
         width: 180px;
-        opacity: 1;
+        opacity: 0.4;
         margin-right: 30px;
-        font-weight: 700;
+        font-weight: 400;
     }
 
     .about-item-content{
-        color: white;
+        color: rgb(228, 228, 228);
     }
 
     .about-item-icon{
