@@ -305,7 +305,8 @@ img{
         font-size: 20px;
         margin-top: 50px;
         margin-bottom: 30px;
-        color: rgb(173, 182, 190);
+        color: white;
+        opacity: 0.8;
     }
 
     .about-item-frame{
