@@ -5,359 +5,320 @@
     <title>Driftage</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="images/icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
     <script src="/scripts/gsap.min.js"></script>
     <script src="scripts/main.js" async></script>
 </head>
 <body>
-    <div class="container">
-        <div class="nav">
-            <div class="nav-frame">
-                <div class="nav-head">
-                    <a class="nav-title" href="">
-                        <p class="nav-title-text">Driftage</p>
-                    </a>
-                    <a href="javascript:void(0);" class="nav-menu" id="nav-menu" onclick="myFunction()">
-                        <img class="nav-menu-image" src="/images/menu@2x.png" height="60px" width="60px">
-                    </a>
-                </div>
-                <div class="nav-empty">
-                </div>
-                <div class="nav-option" id="nav-bar">
-                        <button class="nav-option-button active" onclick="openPage(event,'homeArea')" >
-                            <span class="button-container">
-                                <p class="nav-option-button-text">
-                                    首页
-                                </p>
-                                <p class="nav-option-button-divider">
-                                    ||||||
-                                </p>
-                                <p class="nav-option-button-text">
-                                    HOME
-                                </p>
-                            </span>
-                        </button>
-                        <button class="nav-option-button" onclick="openPage(event,'projectsArea')" >
-                            <span class="button-container">
-                                <p class="nav-option-button-text">
-                                    项目
-                                </p>
-                                <p class="nav-option-button-divider">
-                                    ||||||
-                                </p>
-                                <p class="nav-option-button-text">
-                                    PROJECTS
-                                </p>
-                            </span>
-                        </button>
-                        <button class="nav-option-button" onclick="openPage(event,'notesArea')" >
-                            <span class="button-container">
-                                <p class="nav-option-button-text">
-                                    笔记
-                                </p>
-                                <p class="nav-option-button-divider">
-                                    ||||||
-                                </p>
-                                <p class="nav-option-button-text">
-                                    NOTES
-                                </p>
-                            </span>
-                        </button>
-                        <button class="nav-option-button" onclick="openPage(event,'othersArea')" >
-                            <span class="button-container">
-                                <p class="nav-option-button-text">
-                                    其他
-                                </p>
-                                <p class="nav-option-button-divider">
-                                    ||||||
-                                </p>
-                                <p class="nav-option-button-text">
-                                    OTHERS
-                                </p>
-                            </span>
-                        </button>
-                        <button class="nav-option-button" onclick="openPage(event,'aboutArea')" >
-                            <span class="button-container">
-                                <p class="nav-option-button-text">
-                                    关于
-                                </p>
-                                <p class="nav-option-button-divider">
-                                    ||||||
-                                </p>
-                                <p class="nav-option-button-text">
-                                    ABOUT
-                                </p>
-                            </span>
-                        </button>
-                </div>
-                <div class="nav-empty">
-                </div>
-                <div class="nav-image">
-                    <img class="nav-icon" src="images/driftage-icon.png"/>
-                </div>
-                <div class="nav-recordinfo" id = "recordinfo">
-                    <P class="nav-recordinfo-text">
-                        浙ICP备2021006016号
-                    </P>
-                </div>
+<div class="container">
+    <div class="nav">
+        <div class="nav-frame">
+            <div class="nav-head">
+                <a class="nav-title" href="">
+                    <p class="nav-title-text">Driftage</p>
+                </a>
+                <a href="javascript:void(0);" class="nav-menu" id="nav-menu" onclick="myFunction()">
+                    <img class="nav-menu-image" src="/images/menu@2x.png" alt="menu">
+                </a>
             </div>
+            <div class="nav-empty">
+            </div>
+            <div class="nav-option" id="nav-bar">
+                <button class="nav-option-button" id="homeButton">
+                    <span class="nav-option-button-text">
+                        HOME 首页
+                    </span>
+                </button>
+                <button class="nav-option-button" id="projectButton" onclick="openPage(event,'projectsArea')">
+                    <span class="nav-option-button-text">
+                        PROJECTS 项目
+                    </span>
+                </button>
+                <button class="nav-option-button" id="noteButton" onclick="openPage(event,'notesArea')">
+                    <span class="nav-option-button-text">
+                        NOTES 笔记
+                    </span>
+                </button>
+                <button class="nav-option-button" id="othersButton" onclick="openPage(event,'othersArea')">
+                    <span class="nav-option-button-text">
+                        OTHERS 其他
+                    </span>
+                </button>
+                <button class="nav-option-button" id="aboutButton" onclick="openPage(event,'aboutArea')">
+                    <span class="nav-option-button-text">
+                        ABOUT 关于
+                    </span>
+                </button>
+            </div>
+            <div class="nav-empty">
+            </div>
+            <div class="nav-image">
+                <img class="nav-icon" src="images/driftage-icon.png" alt="icon">
+            </div>
+            <div class="nav-recordinfo" id="recordinfo">
+                <P class="nav-recordinfo-text">
+                    浙ICP备2021006016号
+                </P>
+            </div>
+        </div>
+
+    </div>
+    <div class="main">
+        <div class="tabContent" id="homeArea">
+            <div class="content-list">
+                <a class="content-item" href="">
+                    <img class="content-cover" src="/images/1.png" alt="">
+                    <div class="content-cover-up">
+                        <div class="content-cover-space"></div>
+                        <p class="content-cover-title">Driftage</p>
+                        <p class="content-cover-description">Driftage's description</p>
+                        <p class="content-cover-initialletter">D</p>
+                        <p class="content-cover-poetry">
+                            <br>突然间，黄昏变得明亮
+                            <br>此刻，正有细雨落下
+                            <br>或曾经落下
+                            <br>下雨，
+                            <br>无疑是过去发生的一件事
+                            <br>
+                            <br>谁听见雨落下的声音
+                            <br>谁就回想起
+                            <br>曾经，幸福的命运向他呈现的
+                            <br>奇妙的玫瑰花
+                            <br>和它的红颜色
+                            <br>
+                            <br>这蒙住了窗玻璃的细雨
+                            <br>在被遗弃的郊外
+                            <br>在某个不复存在的庭院中
+                            <br>正洗着，
+                            <br>架上的黑葡萄。
+                        </p>
+                        <p class="content-cover-author">Jorge Luis Borges</p>
+                        <p class="content-cover-time">2021/01/21</p>
+                        <p class="content-cover-me">Apocrita</p>
+                    </div>
+                </a>
+                <a class="content-item" href="">
+                    <img class="content-cover" src="/images/2.png" alt="">
+                    <div class="content-cover-up">
+                        <div class="content-cover-space"></div>
+                        <p class="content-cover-title">Majula</p>
+                        <p class="content-cover-description">Majula's description</p>
+                        <p class="content-cover-initialletter">M</p>
+                        <p class="content-cover-poetry">
+                            <br>你怯懦地祈助的
+                            <br>别人的著作救不了你
+                            <br>你不是别人，此刻你正身处
+                            <br>自己的脚步编织起的迷宫的中心之地
+                            <br>耶稣或者苏格拉底
+                            <br>所经历的磨难救不了你
+                            <br>就连日暮时分在花园里圆寂的
+                            <br>佛法无边的悉达多也于你无益
+                            <br>你手写的文字，口出的言辞
+                            <br>都像尘埃一般一文不值
+                            <br>命运之神没有怜悯之心
+                            <br>上帝的长夜没有尽期
+                            <br>你的肉体只是时光，不停流逝的时光
+                            <br>你不过是每一个孤独的瞬息
+                        </p>
+                        <p class="content-cover-author">Jorge Luis Borges</p>
+                        <p class="content-cover-time">2021/01/21</p>
+                        <p class="content-cover-me">Apocrita</p>
+                    </div>
+                </a>
+                <a class="content-item" href="">
+                    <img class="content-cover" src="/images/3.png" alt="">
+                    <div class="content-cover-up">
+                        <div class="content-cover-space"></div>
+                        <p class="content-cover-title">Ageha</p>
+                        <p class="content-cover-description">Ageha's description</p>
+                        <p class="content-cover-initialletter">A</p>
+                        <p class="content-cover-poetry">
+                            <br>突然间，黄昏变得明亮
+                            <br>此刻，正有细雨落下
+                            <br>或曾经落下
+                            <br>下雨，
+                            <br>无疑是过去发生的一件事
+                            <br>
+                            <br>谁听见雨落下的声音
+                            <br>谁就回想起
+                            <br>曾经，幸福的命运向他呈现的
+                            <br>奇妙的玫瑰花
+                            <br>和它的红颜色
+                            <br>
+                            <br>这蒙住了窗玻璃的细雨
+                            <br>在被遗弃的郊外
+                            <br>在某个不复存在的庭院中
+                            <br>正洗着，
+                            <br>架上的黑葡萄。
+                        </p>
+                        <p class="content-cover-author">-Jorge Luis Borges</p>
+                        <p class="content-cover-time">2021/01/21</p>
+                        <p class="content-cover-me">Apocrita</p>
+                    </div>
+                </a>
+                <a class="content-item" href="">
+                    <img class="content-cover" src="images/4.png" alt="">
+                    <div class="content-cover-up">
+                        <div class="content-cover-space"></div>
+                        <p class="content-cover-title">Deracine</p>
+                        <p class="content-cover-description">Deracine's description</p>
+                        <p class="content-cover-initialletter">D</p>
+                        <p class="content-cover-poetry">
+                            <br>突然间，黄昏变得明亮
+                            <br>此刻，正有细雨落下
+                            <br>或曾经落下
+                            <br>下雨，
+                            <br>无疑是过去发生的一件事
+                            <br>
+                            <br>谁听见雨落下的声音
+                            <br>谁就回想起
+                            <br>曾经，幸福的命运向他呈现的
+                            <br>奇妙的玫瑰花
+                            <br>和它的红颜色
+                            <br>
+                            <br>这蒙住了窗玻璃的细雨
+                            <br>在被遗弃的郊外
+                            <br>在某个不复存在的庭院中
+                            <br>正洗着，
+                            <br>架上的黑葡萄。
+                        </p>
+                        <p class="content-cover-author">-Jorge Luis Borges</p>
+                        <p class="content-cover-time">2021/01/21</p>
+                        <p class="content-cover-me">Apocrita</p>
+                    </div>
+                </a>
+                <a class="content-item" href="">
+                    <img class="content-cover" src="images/5.png" alt="">
+                    <div class="content-cover-up">
+                        <div class="content-cover-space"></div>
+                        <p class="content-cover-title">Driftage</p>
+                        <p class="content-cover-description">Driftage's description</p>
+                        <p class="content-cover-initialletter">D</p>
+                        <p class="content-cover-poetry">
+                            <br>突然间，黄昏变得明亮
+                            <br>此刻，正有细雨落下
+                            <br>或曾经落下
+                            <br>下雨，
+                            <br>无疑是过去发生的一件事
+                            <br>
+                            <br>谁听见雨落下的声音
+                            <br>谁就回想起
+                            <br>曾经，幸福的命运向他呈现的
+                            <br>奇妙的玫瑰花
+                            <br>和它的红颜色
+                            <br>
+                            <br>这蒙住了窗玻璃的细雨
+                            <br>在被遗弃的郊外
+                            <br>在某个不复存在的庭院中
+                            <br>正洗着，
+                            <br>架上的黑葡萄。
+                        </p>
+                        <p class="content-cover-author">-Jorge Luis Borges</p>
+                        <p class="content-cover-time">2021/01/21</p>
+                        <p class="content-cover-me">Apocrita</p>
+                    </div>
+                </a>
+                <a class="content-item" href="">
+                    <img class="content-cover" src="/images/6.png" alt="">
+                    <div class="content-cover-up">
+                        <div class="content-cover-space"></div>
+                        <p class="content-cover-title">Driftage</p>
+                        <p class="content-cover-description">Driftage's description</p>
+                        <p class="content-cover-initialletter">D</p>
+                        <p class="content-cover-poetry">
+                            <br>突然间，黄昏变得明亮
+                            <br>此刻，正有细雨落下
+                            <br>或曾经落下
+                            <br>下雨，
+                            <br>无疑是过去发生的一件事
+                            <br>
+                            <br>谁听见雨落下的声音
+                            <br>谁就回想起
+                            <br>曾经，幸福的命运向他呈现的
+                            <br>奇妙的玫瑰花
+                            <br>和它的红颜色
+                            <br>
+                            <br>这蒙住了窗玻璃的细雨
+                            <br>在被遗弃的郊外
+                            <br>在某个不复存在的庭院中
+                            <br>正洗着，
+                            <br>架上的黑葡萄。
+                        </p>
+                        <p class="content-cover-author">-Jorge Luis Borges</p>
+                        <p class="content-cover-time">2021/01/21</p>
+                        <p class="content-cover-me">Apocrita</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="tabContent" id="projectsArea">
 
         </div>
-        <div class="main">
-            <div class="tabContent" id="homeArea">
-                <div class="content-list">
-                    <a class="content-item" href="">
-                        <img class="content-cover" src="/images/1.png" alt="">
-                        <div class="content-cover-up">
-                            <div class="content-cover-space"></div>
-                            <p class="content-cover-title">Driftage</p>
-                            <p class="content-cover-description">Driftage's description</p>
-                            <p class="content-cover-initialletter">D</p>
-                            <p class="content-cover-poetry">
-                                <br>突然间，黄昏变得明亮 
-                                <br>此刻，正有细雨落下 
-                                <br>或曾经落下
-                                <br>下雨， 
-                                <br>无疑是过去发生的一件事 
-                                <br>
-                                <br>谁听见雨落下的声音
-                                <br>谁就回想起 
-                                <br>曾经，幸福的命运向他呈现的 
-                                <br>奇妙的玫瑰花
-                                <br>和它的红颜色 
-                                <br>
-                                <br>这蒙住了窗玻璃的细雨 
-                                <br>在被遗弃的郊外 
-                                <br>在某个不复存在的庭院中
-                                <br>正洗着， 
-                                <br>架上的黑葡萄。
-                            </p>
-                            <p class="content-cover-author">Jorge Luis Borges</p>
-                            <p class="content-cover-time">2021/01/21</p>
-                            <p class="content-cover-me">Apocrita</p>
-                        </div>
-                    </a>
-                    <a class="content-item" href="">
-                        <img class="content-cover" src="/images/2.png" alt="">
-                        <div class="content-cover-up">
-                            <div class="content-cover-space"></div>
-                            <p class="content-cover-title">Majula</p>
-                            <p class="content-cover-description">Majula's description</p>
-                            <p class="content-cover-initialletter">M</p>
-                            <p class="content-cover-poetry">
-                                <br>你怯懦地祈助的 
-                                <br>别人的著作救不了你  
-                                <br>你不是别人，此刻你正身处 
-                                <br>自己的脚步编织起的迷宫的中心之地 
-                                <br>耶稣或者苏格拉底 
-                                <br>所经历的磨难救不了你 
-                                <br>就连日暮时分在花园里圆寂的 
-                                <br>佛法无边的悉达多也于你无益 
-                                <br>你手写的文字，口出的言辞 
-                                <br>都像尘埃一般一文不值 
-                                <br>命运之神没有怜悯之心 
-                                <br>上帝的长夜没有尽期 
-                                <br>你的肉体只是时光，不停流逝的时光 
-                                <br>你不过是每一个孤独的瞬息 
-                            </p>
-                            <p class="content-cover-author">Jorge Luis Borges</p>
-                            <p class="content-cover-time">2021/01/21</p>
-                            <p class="content-cover-me">Apocrita</p>
-                        </div>
-                    </a>                
-                    <a class="content-item" href="">
-                        <img class="content-cover" src="/images/3.png" alt="">
-                        <div class="content-cover-up">
-                            <div class="content-cover-space"></div>
-                            <p class="content-cover-title">Ageha</p>
-                            <p class="content-cover-description">Ageha's description</p>
-                            <p class="content-cover-initialletter">A</p>
-                            <p class="content-cover-poetry">
-                                <br>突然间，黄昏变得明亮 
-                                <br>此刻，正有细雨落下 
-                                <br>或曾经落下
-                                <br>下雨， 
-                                <br>无疑是过去发生的一件事 
-                                <br>
-                                <br>谁听见雨落下的声音
-                                <br>谁就回想起 
-                                <br>曾经，幸福的命运向他呈现的 
-                                <br>奇妙的玫瑰花
-                                <br>和它的红颜色 
-                                <br>
-                                <br>这蒙住了窗玻璃的细雨 
-                                <br>在被遗弃的郊外 
-                                <br>在某个不复存在的庭院中
-                                <br>正洗着， 
-                                <br>架上的黑葡萄。
-                            </p>
-                            <p class="content-cover-author">-Jorge Luis Borges</p>
-                            <p class="content-cover-time">2021/01/21</p>
-                            <p class="content-cover-me">Apocrita</p>
-                        </div>
-                    </a>                
-                    <a class="content-item" href="">
-                        <img class="content-cover" src="images/4.png" alt="">
-                        <div class="content-cover-up">
-                            <div class="content-cover-space"></div>
-                            <p class="content-cover-title">Deracine</p>
-                            <p class="content-cover-description">Deracine's description</p>
-                            <p class="content-cover-initialletter">D</p>
-                            <p class="content-cover-poetry">
-                                <br>突然间，黄昏变得明亮 
-                                <br>此刻，正有细雨落下 
-                                <br>或曾经落下
-                                <br>下雨， 
-                                <br>无疑是过去发生的一件事 
-                                <br>
-                                <br>谁听见雨落下的声音
-                                <br>谁就回想起 
-                                <br>曾经，幸福的命运向他呈现的 
-                                <br>奇妙的玫瑰花
-                                <br>和它的红颜色 
-                                <br>
-                                <br>这蒙住了窗玻璃的细雨 
-                                <br>在被遗弃的郊外 
-                                <br>在某个不复存在的庭院中
-                                <br>正洗着， 
-                                <br>架上的黑葡萄。
-                            </p>
-                            <p class="content-cover-author">-Jorge Luis Borges</p>
-                            <p class="content-cover-time">2021/01/21</p>
-                            <p class="content-cover-me">Apocrita</p>
-                        </div>
-                    </a>                
-                    <a class="content-item" href="">
-                        <img class="content-cover" src="images/5.png" alt="">
-                        <div class="content-cover-up">
-                            <div class="content-cover-space"></div>
-                            <p class="content-cover-title">Driftage</p>
-                            <p class="content-cover-description">Driftage's description</p>
-                            <p class="content-cover-initialletter">D</p>
-                            <p class="content-cover-poetry">
-                                <br>突然间，黄昏变得明亮 
-                                <br>此刻，正有细雨落下 
-                                <br>或曾经落下
-                                <br>下雨， 
-                                <br>无疑是过去发生的一件事 
-                                <br>
-                                <br>谁听见雨落下的声音
-                                <br>谁就回想起 
-                                <br>曾经，幸福的命运向他呈现的 
-                                <br>奇妙的玫瑰花
-                                <br>和它的红颜色 
-                                <br>
-                                <br>这蒙住了窗玻璃的细雨 
-                                <br>在被遗弃的郊外 
-                                <br>在某个不复存在的庭院中
-                                <br>正洗着， 
-                                <br>架上的黑葡萄。
-                            </p>
-                            <p class="content-cover-author">-Jorge Luis Borges</p>
-                            <p class="content-cover-time">2021/01/21</p>
-                            <p class="content-cover-me">Apocrita</p>
-                        </div>
-                    </a>                
-                    <a class="content-item" href="">
-                        <img class="content-cover" src="/images/6.png" alt="">
-                        <div class="content-cover-up">
-                            <div class="content-cover-space"></div>
-                            <p class="content-cover-title">Driftage</p>
-                            <p class="content-cover-description">Driftage's description</p>
-                            <p class="content-cover-initialletter">D</p>
-                            <p class="content-cover-poetry">
-                                <br>突然间，黄昏变得明亮 
-                                <br>此刻，正有细雨落下 
-                                <br>或曾经落下
-                                <br>下雨， 
-                                <br>无疑是过去发生的一件事 
-                                <br>
-                                <br>谁听见雨落下的声音
-                                <br>谁就回想起 
-                                <br>曾经，幸福的命运向他呈现的 
-                                <br>奇妙的玫瑰花
-                                <br>和它的红颜色 
-                                <br>
-                                <br>这蒙住了窗玻璃的细雨 
-                                <br>在被遗弃的郊外 
-                                <br>在某个不复存在的庭院中
-                                <br>正洗着， 
-                                <br>架上的黑葡萄。
-                            </p>
-                            <p class="content-cover-author">-Jorge Luis Borges</p>
-                            <p class="content-cover-time">2021/01/21</p>
-                            <p class="content-cover-me">Apocrita</p>
-                        </div>
-                    </a>
-                </div>
-            </div >
-            <div class="tabContent" id="projectsArea">
+        <div class="tabContent" id="notesArea">
 
-            </div>
-            <div class="tabContent" id="notesArea">
+        </div>
+        <div class="tabContent" id="othersArea">
 
+        </div>
+        <div class="tabContent" id="aboutArea">
+            <p class="nav-title-text">Apocrita</p>
+            <p class="about-item-name">孙志远 / Apocrita sun</p>
+            <p class="about-title">联系方式 / CONTACT ME</p>
+            <div class="about-item-frame">
+                <p class="about-item-name">联系电话 / PHONE</p>
+                <p class="about-item-content">+86 15168479096</p>
             </div>
-            <div class="tabContent" id="othersArea">
-
+            <div class="about-item-frame">
+                <p class="about-item-name">地址 / ADDDRESS</p>
+                <p class="about-item-content">浙江省杭州市江干区 / Jianggan District, Hangzhou, Zhejiang, China</p>
             </div>
-            <div class="tabContent" id="aboutArea">
-                <p class="nav-title-text">Apocrita</p>
-                <p class="about-item-name">孙志远 / Apocrita sun</p>
-                <p class="about-title">联系方式 / CONTACT ME</p>
-                <div class="about-item-frame">
-                    <p class="about-item-name">联系电话 / PHONE</p>
-                    <p class="about-item-content">+86 15168479096</p>
+            <div class="about-item-frame">
+                <p class="about-item-name">邮箱 / EMAIL</p>
+                <p class="about-item-content">Apocrita@foxmail.com</p>
+            </div>
+            <div class="about-item-frame">
+                <p class="about-item-name">微信 / WECHAT</p>
+                <p class="about-item-content">Apocrita</p>
+            </div>
+            <p class="about-title">技能 / SKILLS</p>
+            <div class="about-item-frame">
+                <p class="about-item-name">软件 / SOFTWARES</p>
+                <div class="about-item-iconList">
+                    <img class="about-item-icon" src="/images/software-icons/1.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/2.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/3.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/4.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/5.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/6.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/7.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/8.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/9.png" alt="icon">
+                    <img class="about-item-icon" src="/images/software-icons/10.png" alt="icon">
                 </div>
-                <div class="about-item-frame">
-                    <p class="about-item-name">地址 / ADDDRESS</p>
-                    <p class="about-item-content">浙江省杭州市江干区 / Jianggan District, Hangzhou, Zhejiang, China</p>
-                </div>
-                <div class="about-item-frame">
-                    <p class="about-item-name">邮箱 / EMAIL</p>
-                    <p class="about-item-content">Apocrita@foxmail.com</p>
-                </div>
-                <div class="about-item-frame">
-                    <p class="about-item-name">微信 / WECHAT</p>
-                    <p class="about-item-content">Apocrita</p>
-                </div>
-                <p class="about-title">技能 / SKILLS</p>
-                <div class="about-item-frame">
-                    <p class="about-item-name">软件 / SOFTWARES</p>
-                    <div class="">
-                        <img class="about-item-icon" src="/images/software-icons/1.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/2.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/3.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/4.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/5.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/6.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/7.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/8.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/9.png" height="24px" width="24px">
-                        <img class="about-item-icon" src="/images/software-icons/10.png" height="24px" width="24px">
-                    </div>
-                </div>
-                <div class="about-item-frame">
-                    <p class="about-item-name">领域 / FIELD</p>
-                    <p class="about-item-content">UI/UX  design 视觉设计 / Visual Artist</p>
-                </div>
-                <div class="about-item-frame">
-                    <p class="about-item-name"></p>
-                    <p class="about-item-content">html/css/javascript c#</p>
-                </div>
-                <div class="about-item-frame">
-                    <p class="about-item-name"></p>
-                    <p class="about-item-content">绘画 / painting</p>
-                </div>
-                <div class="about-item-frame">
-                    <p class="about-item-name"></p>
-                    <p class="about-item-content">unity独立游戏开发 / unity indie game Development</p>
-                </div>
+            </div>
+            <div class="about-item-frame">
+                <p class="about-item-name">领域 / FIELD</p>
+                <p class="about-item-content">UI/UX design 视觉设计 / Visual Artist</p>
+            </div>
+            <div class="about-item-frame">
+                <p class="about-item-name"></p>
+                <p class="about-item-content">html/css/javascript c#</p>
+            </div>
+            <div class="about-item-frame">
+                <p class="about-item-name"></p>
+                <p class="about-item-content">绘画 / painting</p>
+            </div>
+            <div class="about-item-frame">
+                <p class="about-item-name"></p>
+                <p class="about-item-content">unity独立游戏开发 / unity indie game Development</p>
             </div>
         </div>
     </div>
-    <script>
-        gsap.from('.nav',{opacity:0,duration:0.8,y:-40,stagger:0.2})
-        gsap.from('#homeArea',{opacity:0,duration:0.8,y:40,stagger:0.2})
-    </script>
+</div>
+<script>
+    gsap.from('.nav', {opacity: 0, duration: 0.8, y: -40, stagger: 0.2})
+    gsap.from('#homeArea', {opacity: 0, duration: 0.8, y: 40, stagger: 0.2})
+</script>
 </body>
 </html>
