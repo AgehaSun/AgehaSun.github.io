@@ -2,10 +2,10 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-family: Helvetica, "PingFang SC", sans-serif;
     font-size: 14px;
     font-weight: normal;
     color: white;
+    font-family: PingFangSC, Helvetica Neue, Arial, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
 }
 
 body {
@@ -16,13 +16,14 @@ img {
     object-fit: cover;
 }
 
-@font-face {
-    font-family: "saira";
-    src: url(/fonts/SairaCondensed-Regular.ttf);
-}
 
 .nav-menu-hide {
     display: none;
+}
+
+@font-face {
+    font-family: Saira;
+    src: url("../fonts/SairaCondensed-Regular.ttf");
 }
 
 
@@ -55,7 +56,7 @@ img {
     .nav-title-text {
         color: white;
         font-size: 60px;
-        font-family: "saira", serif;
+        font-family: Saira, sans-serif;
     }
 
     .nav-menu {
@@ -83,7 +84,6 @@ img {
     }
 
     .nav-option-button-text {
-        font-family: "saira", serif;
         opacity: 0.5;
         padding: 10px 0;
         margin-left: 10px;
@@ -212,6 +212,7 @@ img {
     .content-cover-title {
         font-size: 24px;
         align-self: center;
+        font-family: Saira, sans-serif;
     }
 
     .content-cover-description, .content-cover-poetry, .content-cover-author, .content-cover-time, .content-cover-me {
@@ -221,11 +222,11 @@ img {
     }
 
     .content-cover-initialletter {
-        font-family: "saira", serif;
         font-size: 160px;
         align-self: center;
         opacity: 1;
         transition: 1s;
+        font-family: Saira, sans-serif;
     }
 
     .content-cover-author {
@@ -336,7 +337,6 @@ img {
 
     .nav-title-text {
         font-size: 30pt;
-        font-family: "saira", serif;
         font-weight: normal;
     }
 

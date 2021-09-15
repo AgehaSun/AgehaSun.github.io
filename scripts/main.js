@@ -23,49 +23,49 @@ function myFunction() {
 }
 
 
-function test()
-{
-    document.style.display = "none";
-}
-
 let homeButton = document.getElementById("homeButton");
+let projectButton = document.getElementById("projectButton");
+let noteButton = document.getElementById("noteButton");
+let othersButton = document.getElementById("othersButton");
+let aboutButton = document.getElementById("aboutButton");
+
+
 
 homeButton.addEventListener('click',function (){
-    alert("x!");
+    openPage("homeArea",homeButton);
 })
 
-// function openPage(tabName) {
-//     let i, tabcontent, tablinks;
-//
-//     tabcontent = document.getElementsByClassName("tabContent")
-//     for (i = 0; i < tabcontent.length; i++) {
-//         tabcontent[i].style.display = "none";
-//     }
-//
-//     tablinks = document.getElementsByClassName("nav-option-button")
-//     for (i = 0; i < tablinks.length; i++) {
-//         tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-//
-//     document.getElementById(tabName).style.display = "block";
-// }
+projectButton.addEventListener('click',function (){
+    openPage("projectsArea",projectButton);
+})
+
+noteButton.addEventListener('click',function (){
+    openPage("notesArea",noteButton);
+})
+
+othersButton.addEventListener('click',function (){
+    openPage("othersArea",othersButton);
+})
+
+aboutButton.addEventListener('click',function (){
+    openPage("aboutArea",aboutButton);
+})
 
 
-// function openPage(tabName) {
-//
-//     var i, tabcontent, tablinks;
-//
-//     tabcontent = document.getElementsByClassName("tabContent")
-//     for (i = 0; i < tabcontent.length; i++) {
-//         tabcontent[i].style.display = "none";
-//     }
-//
-//     tablinks = document.getElementsByClassName("nav-option-button")
-//     for (i = 0; i < tablinks.length; i++) {
-//         tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-//
-//     document.getElementById(tabName).style.display = "block";
-//     evt.currentTarget.className += " active";
-//
-// }
+
+function openPage(tabName,activeButton) {
+    let i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabContent")
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("nav-option-button")
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    activeButton.className += " active";
+}
