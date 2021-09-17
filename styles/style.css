@@ -3,9 +3,8 @@
     margin: 0;
     text-decoration: none;
     font-size: 14px;
-    font-weight: normal;
     color: white;
-    font-family: PingFangSC, Helvetica Neue, Arial, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    font-family: PingFangSC-Regular, Microsoft YaHei, sans-serif;
 }
 
 body {
@@ -15,7 +14,6 @@ body {
 img {
     object-fit: cover;
 }
-
 
 .nav-menu-hide {
     display: none;
@@ -73,8 +71,6 @@ img {
         background-color: inherit;
         border: none;
         outline: none;
-        cursor: pointer;
-        transition: 0.3s;
     }
 
     .button-container {
@@ -84,8 +80,8 @@ img {
     }
 
     .nav-option-button-text {
-        opacity: 0.5;
-        padding: 10px 0;
+        opacity: 0.55;
+        padding: 8px 0;
         margin-left: 10px;
         font-size: 16px;
         float: right;
@@ -135,13 +131,25 @@ img {
 
     #homeArea {
         width: 90%;
+        height: 72%;
+        align-self: center;
+        overflow: hidden;
+        background-color: #2562db;
+        position: relative;
+    }
+
+
+    #projectsArea {
+        width: 90%;
         height: 80%;
         overflow: hidden;
         align-self: center;
         position: relative;
+        display: none;
     }
 
     .content-list {
+        width: auto;
         display: inline-flex;
         flex-wrap: nowrap;
         height: 100%;
@@ -161,7 +169,6 @@ img {
         justify-content: center;
         align-items: center;
 
-        transition: 0.5s;
     }
 
     .content-item:hover {
@@ -172,22 +179,18 @@ img {
     .content-item:hover .content-cover {
         filter: none;
         opacity: 1;
-        transition: 0.2s;
     }
 
     .content-item:hover .content-cover-initialletter {
         opacity: 0;
-        transition: 0.8s;
     }
 
     .content-item:hover .content-cover-poetry {
         opacity: 0;
-        transition: 0.5s;
     }
 
     .content-item:hover .content-cover-author {
         opacity: 0;
-        transition: 0.4s;
     }
 
     .content-cover {
@@ -196,7 +199,6 @@ img {
         height: 100%;
         opacity: 0.2;
         position: absolute;
-        transition: 0.8s;
     }
 
     .content-cover-up {
@@ -218,14 +220,12 @@ img {
     .content-cover-description, .content-cover-poetry, .content-cover-author, .content-cover-time, .content-cover-me {
         font-size: 12px;
         opacity: 0.7;
-        transition: 1s;
     }
 
     .content-cover-initialletter {
         font-size: 160px;
         align-self: center;
         opacity: 1;
-        transition: 1s;
         font-family: Saira, sans-serif;
     }
 
@@ -238,17 +238,25 @@ img {
     }
 
 
-    #projectsArea {
-        display: none;
-    }
-
 
     #notesArea {
+        width: 90%;
+        height: 72%;
+        align-self: center;
+        overflow: hidden;
+        background-color: #25dbd5;
+        position: relative;
         display: none;
     }
 
 
     #othersArea {
+        width: 90%;
+        height: 72%;
+        align-self: center;
+        overflow: hidden;
+        background-color: #d94484;
+        position: relative;
         display: none;
     }
 
@@ -259,8 +267,7 @@ img {
         align-self: center;
         overflow: hidden;
         background-color: #1f2022;
-        position: absolute;
-        margin-left: 80px;
+        position: relative;
         display: none;
     }
 
