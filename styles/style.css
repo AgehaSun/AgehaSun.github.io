@@ -39,20 +39,6 @@ li{
     cursor: pointer;
 }
 
-#cursor{
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    top: 0;
-    left: 0;
-    transform: translate(-50%,-50%);
-    background-color: white;
-    mix-blend-mode: difference;
-    transition: 0.1s;
-    z-index: 1000;
-}
-
 .nav-menu-hide {
     display: none;
 }

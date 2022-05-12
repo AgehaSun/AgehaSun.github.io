@@ -75,12 +75,5 @@ function openPage(tabName, activeButton) {
     activeButton.classList.add('selected');
 }
 
-// 鼠标
-const cursor = document.getElementById('cursor');
-const onMouseMove = (e) =>{ 
-  cursor.style.left = e.pageX + 'px'; 
-  cursor.style.top = e.pageY + 'px'; 
-}
-document.addEventListener('mousemove', onMouseMove);
 
 
