@@ -1,18 +1,23 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
     text-decoration: none;
+    list-style-type: none;
     font-size: 14px;
     color: white;
     font-family: PingFangSC-Regular, Microsoft YaHei, sans-serif;
 }
 
 body {
+    /* background: #161616; */
     /* background-color: #1f2022; */
-    background: linear-gradient(-45deg, #004466, #00264D, #000833, #110066);
+    background: linear-gradient(-45deg, #004466, #00264D, #000833, #000000);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
 }
+
+
 
 @keyframes gradient {
 	0% {
@@ -30,6 +35,24 @@ img {
     object-fit: cover;
 }
 
+li{
+    cursor: pointer;
+}
+
+#cursor{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    mix-blend-mode: difference;
+    transition: 0.1s;
+    z-index: 1000;
+}
+
 .nav-menu-hide {
     display: none;
 }
@@ -41,6 +64,20 @@ img {
 
 
 @media (min-width: 1200px) {
+
+    .container::before{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        content: "";
+        opacity: .05;
+        z-index: -1000;
+        pointer-events: none;
+        background: url(/images/noise.gif);
+    }
+
     .container {
         display: grid;
         height: 100vh;
@@ -82,11 +119,29 @@ img {
         flex-direction: column;
     }
 
+
+
     .nav-option-button {
-        background-color: inherit;
-        border: none;
-        outline: none;
+        opacity: 0.4;
+        font-size: 16px;
+        text-align: right;
+        margin-top: 8x;
+        margin-bottom: 8px;
     }
+
+
+    .nav-option-button:hover{
+        opacity: 1;
+    }
+
+    .selected{
+        opacity: 1;
+    }
+    
+    .nav-option-button:hover ~ #cursor{
+        transform: scale(6);
+    };
+
 
     .button-container {
         display: flex;
@@ -94,29 +149,15 @@ img {
         align-items: center;
     }
 
-    .nav-option-button-text {
-        opacity: 0.4;
-        padding: 8px 0;
+    .divider {
+        font-size: 20px;
+        font-weight: 100px;
+        opacity: 0.18;
         margin-left: 10px;
-        font-size: 16px;
-        float: right;
     }
 
-    .nav-option-button-divider {
-        opacity: 0.15;
-        margin-left: 10px;
-        float: right;
-    }
 
-    .nav-option-button:hover .nav-option-button-text {
-        opacity: 1;
-        fill: white;
-    }
 
-    .nav-option-button.active .nav-option-button-text {
-        opacity: 1;
-        fill: white;
-    }
 
     .nav-image {
         margin-bottom: 20px;
