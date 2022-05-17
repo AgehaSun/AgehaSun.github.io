@@ -17,7 +17,12 @@
 
                         
         <div class="container">
-
+            <div class="background" id="homeBackground"></div>
+            <div class="background" id="projectsBackground"></div>
+            <div class="background" id="notesBackground"></div>
+            <div class="background" id="othersBackground"></div>
+            <div class="background" id="aboutBackground"></div>
+            <div class="noise"></div>
 
             <div class="nav">
                 <div class="nav-frame">
@@ -42,7 +47,7 @@
                     <div class="nav-empty"></div>
 
                     <ul class="nav-option" id="nav-bar">
-                        <li class="nav-option-button" id="homeButton">HOME<span class="divider">/ </span>首页</li>
+                        <li class="nav-option-button selected" id="homeButton">HOME<span class="divider">/ </span>首页</li>
                         <li  class="nav-option-button" id="projectButton">PROJECTS<span class="divider">/ </span>项目</li>
                         <li  class="nav-option-button" id="noteButton">NOTES<span class="divider">/ </span>笔记</li>
                         <li  class="nav-option-button" id="othersButton">OTHERS<span class="divider">/ </span>其他</li>
@@ -68,7 +73,19 @@
 
 
             <div class="main">
-                <div class="tabContent" id="homeArea"></div>
+                <div class="tabContent" id="homeArea">
+                    <div class="clock">
+                        <div class="ellipse"></div>
+                        <img id="clock_1" src="/images/clock_1.png" alt="" height="600px" width="600px">
+                        <img id="clock_2" src="/images/clock_2.png" alt=""height="600px" width="600px">
+                        <img id="clock_3" src="/images/clock_3.png" alt=""height="600px" width="600px">
+                        <div id="home_text">
+                            <div id="p1">Your matter is time</div>
+                            <div id="p2">ceaseless time</div>
+                            <div id="p3">you are each solitary moment.</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="tabContent" id="projectsArea">
                     <div class="content-list">
                         <a class="content-item" href="">
@@ -402,6 +419,29 @@
                 y: 40,
                 stagger: 0.2,
             });
+
+            gsap.from("#clock_1",{
+                opacity:0,
+                y:-60,
+                duration:0.6,
+            })
+            gsap.to("#clock_1",{
+                rotation:360,
+                duration:360,
+                easse:"none",
+                repeat:-1,
+            })
+            gsap.to("#clock_2",{
+                rotation:-360,
+                duration:60,
+                easse:"none",
+                repeat:-1,
+            })
+            gsap.from("#clock_2",{
+                opacity:0,
+                y:40,
+                duration:0.6,
+            })
         </script>
     </body>
 </html>

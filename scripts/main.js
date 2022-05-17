@@ -36,44 +36,52 @@ const noteButton = document.getElementById("noteButton");
 const othersButton = document.getElementById("othersButton");
 const aboutButton = document.getElementById("aboutButton");
 
+
+
 homeButton.addEventListener("click", function () {
-    openPage("homeArea", homeButton);
+    openPage("homeArea", homeButton,"homeBackground");
 });
 
 projectButton.addEventListener("click", function () {
-    openPage("projectsArea", projectButton);
+    openPage("projectsArea", projectButton,"projectsBackground");
 });
 
 noteButton.addEventListener("click", function () {
-    openPage("notesArea", noteButton);
+    openPage("notesArea", noteButton,"notesBackground");
 });
 
 othersButton.addEventListener("click", function () {
-    openPage("othersArea", othersButton);
+    openPage("othersArea", othersButton,"othersBackground");
 });
 
 aboutButton.addEventListener("click", function () {
-    openPage("aboutArea", aboutButton);
+    openPage("aboutArea", aboutButton,"aboutBackground");
 });
 
-function openPage(tabName, activeButton) {
-    let i, tabcontent, tablinks;
+function openPage(tabName, activeButton,back) {
+    let i, tabcontent, tablinks,background;
 
     tabcontent = document.getElementsByClassName("tabContent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
 
+    background = document.getElementsByClassName("background")
+    for (i = 0; i < background.length; i++) {
+        background[i].style.display = "none";
+    }
+
     tablinks = document.getElementsByClassName("nav-option-button");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
+
         tablinks[i].classList.remove('selected');
     }
 
     document.getElementById(tabName).style.display = "block";
+    document.getElementById(back).style.display = "block";
     activeButton.className += " active";
     activeButton.classList.add('selected');
 }
-
 
 

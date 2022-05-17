@@ -7,17 +7,78 @@
     font-size: 14px;
     color: white;
     font-family: PingFangSC-Regular, Microsoft YaHei, sans-serif;
+    user-select: none;
+    -webkit-user-seletct: none;
+    -moz-user-seletct: none;
 }
 
-body {
-    /* background: #161616; */
-    /* background-color: #1f2022; */
+img {
+    object-fit: cover;
+}
+
+li{
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: Saira;
+    src: url("../fonts/SairaCondensed-Regular.ttf");
+}
+
+
+#homeBackground{
+    background: linear-gradient(-45deg, #000000, #0e0e0e, #141414, #000000);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+    position: absolute;
+    z-index: -6;
+    width: 100%;
+    height: 100%;
+}
+
+#projectsBackground{
     background: linear-gradient(-45deg, #004466, #00264D, #000833, #000000);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
+#notesBackground{
+    background: linear-gradient(-45deg, #004466, #00264D, #000833, #000000);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+    position: absolute;
+    z-index: -4;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
 
+#othersBackground{
+    background: linear-gradient(-45deg, #004466, #00264D, #000833, #000000);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+    position: absolute;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#aboutBackground{
+    background: linear-gradient(-45deg, #004466, #00264D, #000833, #000000);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
 
 @keyframes gradient {
 	0% {
@@ -31,38 +92,24 @@ body {
 	}
 }
 
-img {
-    object-fit: cover;
-}
-
-li{
-    cursor: pointer;
+.noise{
+    background: url(/images/noise.gif);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: "";
+        opacity: .05;
+        z-index: -1;
+        pointer-events: none;
 }
 
 .nav-menu-hide {
     display: none;
 }
 
-@font-face {
-    font-family: Saira;
-    src: url("../fonts/SairaCondensed-Regular.ttf");
-}
 
 
 @media (min-width: 1200px) {
-
-    .container::before{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        content: "";
-        opacity: .05;
-        z-index: -1000;
-        pointer-events: none;
-        background: url(/images/noise.gif);
-    }
 
     .container {
         display: grid;
@@ -114,6 +161,8 @@ li{
         margin-top: 8x;
         margin-bottom: 8px;
     }
+
+
 
 
     .nav-option-button:hover{
@@ -176,9 +225,77 @@ li{
         height: 72%;
         align-self: center;
         overflow: hidden;
-        background-color: #2562db;
+        /* background-color: #2562db; */
         position: relative;
     }
+
+    .clock{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ellipse{
+        height: 600px;
+        width: 600px;
+        border-radius: 50%;
+        position:absolute;
+        z-index: -1011;
+        box-shadow: 0px 0px 160px rgba(121, 0, 0, 0.2);
+    }
+
+    #clock_1{
+        height: 600px;
+        width: 600px;
+        position:absolute;
+        z-index: -1010;
+        justify-self: center;
+    }
+    #clock_2{
+        height: 600px;
+        width: 600px;
+        position:absolute;
+        z-index: -1009;
+        justify-self: center;
+    }
+    #clock_3{
+        height: 600px;
+        width: 600px;
+        position:absolute;
+        z-index:3;
+        justify-self: center;
+    }
+
+    #home_text{
+        width: 100%;
+        z-index: 10;
+        justify-self: center;
+    }
+
+    #p1{
+        font-size: 50px;
+        font-family: Saira;
+        text-transform: uppercase;
+        text-align: left;
+        margin-left: 10%;
+    }
+    #p2{
+        font-size:120px;
+        font-family: Saira;
+        text-align: center;
+        color: #8b1212;
+        text-transform: uppercase;
+    }
+    #p3{
+        font-size: 40px;
+        font-family: Saira;
+        text-transform: uppercase;
+        text-align: right;
+        margin-right: 10%;
+    }
+
 
 
     #projectsArea {
