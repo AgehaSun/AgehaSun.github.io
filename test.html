@@ -7,14 +7,24 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/testStyle.css">
+        <script src="/scripts/blotter.min.js"></script>
+        <script src="/scripts/ChannelSplitMaterial.js"></script>
     </head>
     <body>
-        <div class="noise"></div>
-        <div class="container">
-            <div class="text">
-                <h1>Driftage</h1>
-            </div>
-        </div>        
-        <script src="" async defer></script>
+    <script>
+      var text = new Blotter.Text("Hello", {
+        family : "serif",
+        size : 120,
+        fill : "#171717"
+      });
+
+      var material = new Blotter.ChannelSplitMaterial();
+
+      var blotter = new Blotter(material, { texts : text });
+
+      var scope = blotter.forText(text);
+
+      scope.appendTo(document.body);
+    </script>
     </body>
 </html>

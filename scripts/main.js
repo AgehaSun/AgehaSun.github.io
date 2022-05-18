@@ -15,16 +15,13 @@ menuButton.addEventListener("click", function () {
 
 function menuShow() {
     const navbar = document.getElementById("nav-bar");
-    const record = document.getElementById("recordinfo");
     const y = document.getElementById("nav-menu");
-
+    
     if (navbar.style.display === "flex") {
         y.style.opacity = "0.5";
         navbar.style.display = "none";
-        record.style.display = "none";
     } else {
         navbar.style.display = "flex";
-        record.style.display = "flex";
         y.style.opacity = "1";
     }
 }
