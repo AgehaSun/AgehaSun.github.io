@@ -5,6 +5,13 @@ window.addEventListener("load", function () {
     document.getElementById("noteButton").addEventListener("click", function () { openPage("notesArea", noteButton, "notesBackground"); })
     document.getElementById("othersButton").addEventListener("click", function () { openPage("othersArea", othersButton, "othersBackground"); })
     document.getElementById("aboutButton").addEventListener("click", function () { openPage("aboutArea", aboutButton, "aboutBackground"); })
+
+    //横向滚动
+    var item = document.getElementById("projectsArea");
+    item.addEventListener("wheel", function (e) { if (e.deltaY > 0) item.scrollLeft += 100; else item.scrollLeft -= 100; })
+
+    //导航栏折叠
+    document.getElementById("nav-menu").addEventListener("click", function () { menuShow(); })
 })
 
 //切换栏目
@@ -32,26 +39,6 @@ function openPage(tabName, activeButton, back) {
     document.getElementById(back).style.display = "block";
     activeButton.className += " active";
     activeButton.classList.add('selected');
-}
-
-
-//横向滚动
-const item = document.getElementById("projectsArea");
-if (item) {
-    item.addEventListener("wheel", function (e) {
-        if (e.deltaY > 0) item.scrollLeft += 100;
-        else item.scrollLeft -= 100;
-    });
-}
-
-
-//导航栏折叠
-const menuButton = document.getElementById("nav-menu");
-
-if (menuButton) {
-    menuButton.addEventListener("click", function () {
-        menuShow();
-    });
 }
 
 function menuShow() {
