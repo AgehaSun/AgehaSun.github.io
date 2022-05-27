@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 18px;
+    color: white;
+    user-select: none;
+    font-family: serif;
+    -webkit-user-seletct: none;
+    -moz-user-seletct: none;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+    margin: 0;
+}
+
+p {
+    color: white;
+    opacity: 0.8;
+    font-size: 17px;
+    margin: 0;
+}
+
+a {
+    color: white;
+
+}
+
+@font-face {
+    font-family: Saira;
+    src: url("../fonts/SairaCondensed-Regular.ttf");
+}
+
+.container {
+
+    background-color: #17181A;
+    display: grid;
+    grid-template-columns: 1fr 1000px 1fr;
+    grid-template-rows: 100vh;
+    overflow: hidden;
+}
+
+.nav {
+    padding: 10vh 60px 10vh 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navFrame {
+    width: 100%;
+    text-align: right;
+}
+
+.navImage {
+    width: 200px;
+    width: 200px;
+}
+
+.navTitle {
+    width: 100%;
+    display: block;
+    color: white;
+    font-size: 48px;
+    font-family: Saira, sans-serif;
+}
+
+.navSubTitle {
+    font-size: 16px;
+    opacity: 0.6;
+    display: inline-flex;
+}
+
+.main {
+    background-color: #1F2022;
+    padding: 0 80px 0 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4vh 100px 2vh auto 2vh 30px 4vh;
+}
+
+
+.contentTop {
+    margin: 0;
+}
+
+.projectTitle {
+    font-size: 32px;
+}
+
+.projectDescription {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+.contentBox {
+    overflow: scroll;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.contentPara {
+    margin-bottom: 20px;
+}
+
+.contentBot {
+    text-align: right;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+
+.empty {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #505256;
+}
+
+.links {
+    padding: 10vh 60px 10vh 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.linksTitle {
+    font-size: 22px;
+}
