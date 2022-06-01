@@ -1,0 +1,43 @@
+    @media (min-width: 1200px) {
+        #aboutArea {
+            display: none;
+        }
+
+        .about-title {
+            font-size: 20px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .about-item-frame {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .about-item-name {
+            width: 180px;
+            opacity: 0.4;
+            margin-right: 30px;
+            font-weight: 400;
+        }
+
+        .about-item-content {
+            color: rgb(228, 228, 228);
+        }
+
+        .about-item-icon {
+            margin-right: 20px;
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+
+    @media (max-width: 1199px) {
+
+        #aboutArea {
+            display: none;
+        }
+    }

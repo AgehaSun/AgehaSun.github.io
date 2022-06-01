@@ -1,0 +1,185 @@
+ @media (min-width: 1200px) {
+     .clock {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .lineBackground {
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         z-index: -1012;
+         background-image: url("/images/line.png");
+         background-repeat: repeat-x;
+         opacity: 0.25;
+     }
+
+     .ellipse {
+         height: 600px;
+         width: 600px;
+         border-radius: 50%;
+         position: absolute;
+         z-index: -1011;
+         box-shadow: 0px 0px 160px rgba(121, 0, 0, 0.2);
+     }
+
+     #clock_1 {
+         height: 600px;
+         width: 600px;
+         position: absolute;
+         z-index: -1010;
+         justify-self: center;
+     }
+
+     #clock_2 {
+         height: 600px;
+         width: 600px;
+         position: absolute;
+         z-index: -1009;
+         justify-self: center;
+     }
+
+     #clock_3 {
+         height: 600px;
+         width: 600px;
+         position: absolute;
+         z-index: 30;
+         justify-self: center;
+     }
+
+     #home_text {
+         width: 100%;
+         z-index: 10;
+         justify-self: center;
+     }
+
+     #p1 {
+         font-size: 50px;
+         font-family: Saira;
+         text-transform: uppercase;
+         text-align: left;
+         margin-left: 10%;
+         color: #919191;
+     }
+
+     #p2 {
+         font-size: 120px;
+         font-family: Saira;
+         text-align: center;
+         color: #6F181A;
+         text-transform: uppercase;
+         height: 200px;
+         width: 100%;
+     }
+
+     #p22 {
+         display: none;
+     }
+
+     #p3 {
+         font-size: 40px;
+         font-family: Saira;
+         text-transform: uppercase;
+         text-align: right;
+         margin-right: 10%;
+         color: #919191;
+     }
+ }
+
+
+
+ @media (max-width: 1199px) {
+     #homeArea {
+         width: 100vw;
+         height: 88vh;
+         overflow: hidden;
+     }
+
+     .clock {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .lineBackground {
+         width: 88%;
+         height: 88%;
+         position: absolute;
+         z-index: -1012;
+         background-image: url("/images/line.png");
+         background-repeat: repeat-x;
+         opacity: 0.2;
+     }
+
+     .ellipse {
+         width: 60vw;
+         height: 60vw;
+         border-radius: 50%;
+         position: absolute;
+         z-index: -1011;
+         box-shadow: 0px 0px 160px rgba(121, 0, 0, 0.2);
+     }
+
+
+     #clock_1 {
+         width: 60vw;
+         position: absolute;
+         z-index: -1010;
+     }
+
+     #clock_2 {
+         width: 60vw;
+         position: absolute;
+         z-index: -1009;
+     }
+
+     #clock_3 {
+         width: 60vw;
+         position: absolute;
+         z-index: 10;
+     }
+
+     #home_text {
+         width: 100%;
+         padding-left: 10vw;
+         padding-right: 10vw;
+     }
+
+
+
+
+     #p1 {
+         font-size: 2rem;
+         font-family: Saira;
+         color: #919191;
+         text-align: center;
+     }
+
+
+     #p2 {
+         display: none;
+         font-size: 2rem;
+         font-family: Saira;
+         color: #919191;
+         text-align: center;
+     }
+
+     #p22 {
+         font-size: 2rem;
+         font-family: Saira;
+         color: #6F181A;
+         text-align: center;
+     }
+
+     #p3 {
+         font-size: 2rem;
+         font-family: Saira;
+         text-align: center;
+         color: #919191;
+     }
+ }
