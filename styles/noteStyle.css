@@ -42,11 +42,12 @@ a {
 }
 
 body {
-    background: linear-gradient(-45deg, #004466, #00264D, #002559, #014450);
+    background: linear-gradient(-45deg, #243651, #243651, #1C293D, #1C293D);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
-    width: 100vw;
-    height: 100vh;
+    z-index: -4;
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes gradient {
