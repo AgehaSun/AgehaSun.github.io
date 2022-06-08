@@ -112,7 +112,7 @@ li {
 
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1080px) {
 
     .container {
         display: grid;
@@ -223,7 +223,7 @@ li {
 }
 
 
-@media (max-width: 1199px) {
+@media (max-width: 1079px) {
     .container {
         display: grid;
         grid-template-rows: auto 1fr;

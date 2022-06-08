@@ -1,4 +1,4 @@
-    @media (min-width: 1200px) {
+    @media (min-width: 1080px) {
         #aboutArea {
             display: none;
         }
@@ -35,7 +35,7 @@
 
     }
 
-    @media (max-width: 1199px) {
+    @media (max-width: 1079px) {
 
         #aboutArea {
             display: none;
