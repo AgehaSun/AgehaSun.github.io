@@ -1,0 +1,5 @@
+@import url(/styles/library.css);
+
+body {
+    background: var(--linearColor-projectsBackground);
+}

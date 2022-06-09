@@ -1,18 +1,25 @@
-    @media (min-width: 1080px) {
+    @media (min-width: 1024px) {
         #aboutArea {
+            display: none;
+            overflow: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        #aboutArea::-webkit-scrollbar {
             display: none;
         }
 
         .about-title {
             font-size: 20px;
-            margin-top: 50px;
-            margin-bottom: 30px;
-            color: white;
-            opacity: 0.8;
+            margin-top: 10%;
+            margin-bottom: 2%;
+            color: var(--color-text-b);
         }
 
         .about-item-frame {
-            display: flex;
+            display: grid;
+            grid-template-columns: 180px auto;
             margin-bottom: 10px;
         }
 
@@ -21,10 +28,11 @@
             opacity: 0.4;
             margin-right: 30px;
             font-weight: 400;
+            color: var(--color-text-b);
         }
 
         .about-item-content {
-            color: rgb(228, 228, 228);
+            color: var(--color-text-b)
         }
 
         .about-item-icon {
@@ -35,7 +43,7 @@
 
     }
 
-    @media (max-width: 1079px) {
+    @media (max-width: 1023px) {
 
         #aboutArea {
             display: none;

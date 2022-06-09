@@ -1,34 +1,8 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 14px;
-    color: white;
-    font-family: PingFangSC-Regular, Microsoft YaHei, sans-serif;
-    user-select: none;
-    -webkit-user-seletct: none;
-    -moz-user-seletct: none;
-    scrollbar-width: none;
-}
-
-img {
-    object-fit: cover;
-}
-
-li {
-    cursor: pointer;
-}
-
-@font-face {
-    font-family: Saira;
-    src: url("../fonts/SairaCondensed-Regular.ttf");
-}
+@import url(/styles/library.css);
 
 
 #homeBackground {
-    background: linear-gradient(-45deg, #000000, #0e0e0e, #141414, #000000);
+    background: var(--linearColor-homeBackground);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     position: absolute;
@@ -38,7 +12,7 @@ li {
 }
 
 #projectsBackground {
-    background: linear-gradient(-45deg, #004466, #00264D, #002559, #014450);
+    background: var(--linearColor-projectsBackground);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     position: absolute;
@@ -49,7 +23,7 @@ li {
 }
 
 #notesBackground {
-    background: linear-gradient(-45deg, #243651, #243651, #1C293D, #1C293D);
+    background: var(--linearColor-notesBackground);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     position: absolute;
@@ -60,7 +34,7 @@ li {
 }
 
 #othersBackground {
-    background: linear-gradient(-45deg, #004466, #00264D, #000833, #000000);
+    background: var(--linearColor-othersBackground);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     position: absolute;
@@ -71,7 +45,7 @@ li {
 }
 
 #aboutBackground {
-    background: linear-gradient(-45deg, #004466, #00264D, #000833, #000000);
+    background: var(--linearColor-aboutBackground);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     position: absolute;
@@ -79,20 +53,6 @@ li {
     width: 100%;
     height: 100%;
     display: none;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
 }
 
 .noise {
@@ -112,7 +72,7 @@ li {
 
 
 
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
 
     .container {
         display: grid;
@@ -126,7 +86,7 @@ li {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        padding: 16vh 40px 16vh 40px;
+        padding: 12vh 40px 12vh 40px;
     }
 
     .nav-frame {
@@ -158,19 +118,19 @@ li {
     }
 
     .nav-option-button {
-        opacity: 0.4;
         font-size: 16px;
         text-align: right;
-        margin-top: 8x;
-        margin-bottom: 8px;
+        margin-top: 0.4vh;
+        margin-bottom: 0.4vh;
+        color: var(--color-text-d);
     }
 
     .nav-option-button:hover {
-        opacity: 1;
+        color: var(--color-text-a);
     }
 
     .selected {
-        opacity: 1;
+        color: var(--color-text-a);
     }
 
     .nav-option-button:hover~#cursor {
@@ -191,39 +151,41 @@ li {
     }
 
     .nav-image {
-        margin-bottom: 20px;
+        margin-bottom: 2vh;
         display: flex;
         flex-direction: row-reverse;
     }
 
     .nav-icon {
-        height: 150px;
-        width: 75px;
+        height: 120px;
+        width: 60px;
     }
 
     .nav-recordinfo-text {
-        opacity: 0.32;
         font-size: 12px;
         font-weight: 200;
         text-align: right;
+        color: var(--color-text-d);
     }
+
+
 
     .main {
         display: grid;
-        padding: 0 20% 0 80px;
+        padding: 0 12vw 0 4vw;
         position: relative;
     }
 
     .tabContent {
-        height: 68vh;
         overflow: hidden;
         align-self: center;
         position: relative;
+        height: 76vh;
     }
 }
 
 
-@media (max-width: 1079px) {
+@media (max-width: 1023px) {
     .container {
         display: grid;
         grid-template-rows: auto 1fr;

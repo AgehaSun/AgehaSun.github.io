@@ -1,40 +1,4 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    text-decoration: none;
-    list-style-type: none;
-    font-size: 18px;
-    color: white;
-    user-select: none;
-    font-family: serif;
-    -webkit-user-seletct: none;
-    -moz-user-seletct: none;
-}
-
-:root {
-    --divider-color: rgba(255, 255, 255, 0.08);
-    --background-color: #17181A;
-    --primaryText-color: #ffffff;
-    --secondaryText-color: rgba(255, 255, 255, 0.5);
-}
-
-h1 {
-    color: var(--primaryText-color);
-    font-size: 32px;
-    margin: 0;
-}
-
-p {
-    color: var(--primaryText-color);
-    opacity: 0.8;
-    font-size: 17px;
-    margin: 0;
-}
-
-a {
-    color: var(--primaryText-color);
-}
+@import url(/styles/library.css);
 
 @font-face {
     font-family: Saira;
@@ -42,26 +6,10 @@ a {
 }
 
 body {
-    background: linear-gradient(-45deg, #243651, #243651, #1C293D, #1C293D);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
-    z-index: -4;
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    width: 100vw;
+    height: 100vh;
 }
 
 .noise {
@@ -81,20 +29,20 @@ body {
 
 
 
-@media (min-width:1080px) {
+@media (min-width:1024px) {
 
     .container {
         /* background-color: var(--background-color); */
         display: grid;
-        grid-template-columns: minmax(180px, 1fr) minmax(740px, 1200px) minmax(180px, 1fr);
+        grid-template-columns: minmax(180px, 1fr) minmax(664px, 1200px) minmax(180px, 1fr);
         grid-template-rows: 100vh;
         overflow: hidden;
     }
 
-    .nav {
+    .left {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 300px auto 200px;
+        grid-template-rows: 30% auto 20%;
         padding: 0px 40px;
     }
 
@@ -102,7 +50,7 @@ body {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        border-bottom: 1px solid var(--divider-color);
+        border-bottom: 1px solid var(--color-divider);
     }
 
     .navBackButton {
@@ -133,7 +81,7 @@ body {
     }
 
     .navTitle {
-        color: var(--primaryText-color);
+        color: var(--color-primaryText);
         font-size: 24px;
         font-family: Saira, sans-serif;
     }
@@ -141,7 +89,7 @@ body {
     .navText {
         white-space: pre-wrap;
         word-break: break-all;
-        color: var(--secondaryText-color);
+        color: var(--color-secondaryText);
         font-size: 14px;
     }
 
@@ -150,16 +98,16 @@ body {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        border-top: 1px solid var(--divider-color);
+        border-top: 1px solid var(--color-divider);
         margin-top: 40px;
     }
 
 
 
-
+    /* mid area */
     .mid {
-        border-left: 1px solid var(--divider-color);
-        border-right: 1px solid var(--divider-color);
+        border-left: 1px solid var(--color-divider);
+        border-right: 1px solid var(--color-divider);
     }
 
     .main {
@@ -171,7 +119,7 @@ body {
 
 
     .mainTop {
-        border-bottom: 1px solid var(--divider-color);
+        border-bottom: 1px solid var(--color-divider);
         overflow: hidden;
         margin-top: 30px;
         margin-bottom: 20px;
@@ -179,6 +127,7 @@ body {
 
     .projectTitle {
         font-size: 28px;
+        color: var(--color-primaryText);
     }
 
     .projectDescription {
@@ -186,6 +135,7 @@ body {
         margin-top: 10px;
         margin-bottom: 20px;
         opacity: 0.6;
+        color: var(--color-secondaryText);
     }
 
     .mainContent {
@@ -208,7 +158,7 @@ body {
 
     .contentPara {
         margin-bottom: 20px;
-        color: var(--primaryText-color);
+        color: var(--color-primaryText);
     }
 
 
@@ -216,7 +166,7 @@ body {
         text-align: right;
         font-size: 16px;
         opacity: 0.6;
-        border-top: 1px solid var(--divider-color);
+        border-top: 1px solid var(--color-divider);
         overflow: hidden;
         margin-bottom: 30px;
         margin-top: 20px;
@@ -224,6 +174,7 @@ body {
 
     .projectTime {
         margin-top: 20px;
+        color: var(--color-secondaryText);
     }
 
 
@@ -235,6 +186,11 @@ body {
         opacity: 0.1;
     }
 
+
+
+
+
+    /* right */
     .right {
         display: grid;
         grid-template-rows: 2fr 3fr;
@@ -242,7 +198,7 @@ body {
     }
 
     .rightTop {
-        border-bottom: 1px solid var(--divider-color);
+        border-bottom: 1px solid var(--color-divider);
         width: 100%;
     }
 
@@ -255,11 +211,13 @@ body {
 
     .linksTitle {
         font-size: 24px;
-        color: var(--primaryText-color);
+        color: var(--color-primaryText);
     }
 
     .linkText {
         font-size: 14px;
-        color: var(--secondaryText-color);
+        color: var(--color-secondaryText);
     }
 }
+
+

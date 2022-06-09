@@ -1,7 +1,7 @@
- @media (min-width: 1080px) {
+ @media (min-width: 1024px) {
      #projectsArea {
          display: none;
-         height: 80vh;
+         height: 84vh;
      }
 
      .content-list {
@@ -13,8 +13,8 @@
      }
 
      .content-item {
-         width: 340px;
-         height: 68vh;
+         width: 320px;
+         height: 76vh;
          border-radius: 4px;
 
          position: relative;
@@ -27,10 +27,12 @@
          transition: 0.8s;
          overflow: visible;
 
+
+
      }
 
      .content-item:hover {
-         height: 80vh;
+         height: 84vh;
          transition: 0.2s;
      }
 
@@ -63,12 +65,12 @@
      }
 
      .content-cover-up {
-         height: 68vh;
+         height: 76vh;
          width: 100%;
          z-index: 1;
          padding: 0 40px;
          display: grid;
-         grid-template-rows: 40px 40px 20px 240px auto 40px 20px 20px 40px;
+         grid-template-rows: 4vh 40px 20px 240px auto 40px 20px 20px 4vh;
          overflow: hidden;
      }
 
@@ -76,19 +78,24 @@
          font-size: 24px;
          align-self: center;
          font-family: Saira, sans-serif;
+         color: var(--color-text-a);
      }
 
      .content-cover-description {
          font-size: 12px;
-         opacity: 0.4;
+         color: var(--color-text-d);
      }
 
-     .content-cover-poetry,
+     .content-cover-poetry {
+         color: var(--color-text-c);
+         font-size: 12px;
+     }
+
      .content-cover-author,
      .content-cover-time,
      .content-cover-me {
          font-size: 12px;
-         opacity: 0.7;
+         color: var(--color-text-d);
      }
 
      .content-cover-initialletter {
@@ -96,6 +103,7 @@
          align-self: center;
          opacity: 1;
          font-family: Saira, sans-serif;
+         color: var(--color-text-a);
      }
 
      .content-cover-author {
@@ -111,7 +119,7 @@
 
 
 
- @media (max-width: 1079px) {
+ @media (max-width: 1023px) {
      #projectsArea {
          display: none;
      }
