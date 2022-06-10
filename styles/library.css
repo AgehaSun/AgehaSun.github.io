@@ -9,12 +9,17 @@
     --color-primaryText: #ffffff;
     --color-secondaryText: rgba(255, 255, 255, 0.5);
 
-    --linearColor-homeBackground: linear-gradient(-45deg, #000000, #0e0e0e, #141414, #000000);
-    --linearColor-projectsBackground: linear-gradient(-45deg, #004466, #00264D, #002559, #014450);
-    --linearColor-notesBackground: linear-gradient(-45deg, #243651, #243651, #1C293D, #1C293D);
-    --linearColor-othersBackground: linear-gradient(-45deg, #000000, #0e0e0e, #141414, #000000);
-    --linearColor-aboutBackground: linear-gradient(-45deg, #000000, #0e0e0e, #141414, #000000);
 
+    --linearColor-homeBackground: #0C0C0C;
+    --linearColor-projectsBackground: linear-gradient(137.59deg, #003F7D 0%, #104E7A 34.9%, #0C5984 67.19%, #006174 100%);
+    --linearColor-notesBackground: linear-gradient(137.59deg, #1F364D 0%, #243959 34.9%, #232E4D 67.19%, #232A4D 100%);
+    --linearColor-othersBackground: linear-gradient(137.59deg, #8B75C8 0%, #CE8893 34.9%, #D7876C 67.19%, #C89962 100%);
+    --linearColor-aboutBackground: linear-gradient(-45deg, #4E7DF5, #4082F4, #5A9CF9, #7DA2FF);
+
+    --maskColor-about: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+
+
+    --color-background-a: #F0F2F5;
 }
 
 * {

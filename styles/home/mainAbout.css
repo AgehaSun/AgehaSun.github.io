@@ -1,14 +1,75 @@
     @media (min-width: 1024px) {
         #aboutArea {
             display: none;
+            overflow: hidden;
+        }
+
+
+
+        .fly {
+            display: flex;
+            position: absolute;
+            z-index: 100;
+            width: 16vw;
+            height: 100%;
+            right: 0;
+        }
+
+        .flyText {
+            width: 100%;
+            position: absolute;
+            margin-top: 6vh;
+            z-index: 120;
+            font-size: 24px;
+            color: var(--color-text-b);
+            font-family: serif;
+            text-align: right;
+        }
+
+        .animArea {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            justify-self: center;
+            align-self: center;
+            -webkit-mask-image: var(--maskColor-about);
+            mask-image: var(--maskColor-about);
+        }
+
+        .anim {
+            margin-top: 20vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        #airplane {
+            width: 100px;
+            height: 80px;
+        }
+
+        #cloud {
+            width: 60px;
+            height: 1080px;
+        }
+
+
+        .aboutme {
+            position: relative;
+            width: 100%;
+            height: 100%;
             overflow: auto;
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
 
-        #aboutArea::-webkit-scrollbar {
+        .aboutme::-webkit-scrollbar {
             display: none;
         }
+
 
         .about-title {
             font-size: 20px;
