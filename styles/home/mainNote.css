@@ -94,6 +94,11 @@
         color: var(--color-text-a);
     }
 
+    #nts1 {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
     .noteTime {
         color: var(--color-text-b);
     }
