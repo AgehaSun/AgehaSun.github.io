@@ -15,8 +15,6 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
     <script src="/scripts/main.js" async></script>
     <script src="/scripts/gsap.min.js"></script>
-    <script src="/scripts/blotter.min.js"></script>
-    <script src="/scripts/FliesMaterial.js"></script>
 </head>
 
 <body onload="console.log('The Script will load now.')">
@@ -68,15 +66,15 @@
             <!-- 首页 -->
             <div class="tabContent" id="homeArea">
                 <div class="clock">
-                    <div class="lineBackground"></div>
-                    <div class="ellipse"></div>
-                    <img id="clock_1" src="/images/clock_1.png" alt="">
-                    <img id="clock_2" src="/images/clock_2.png" alt="">
-                    <img id="clock_3" src="/images/clock_3.png" alt="">
+                    <img id="clock_1" src="/images/home/media-1.png" alt="">
+                    <img id="clock_2" src="/images/home/media-2.png" alt="">
+                    <img id="clock_3" src="/images/home/media-3.png" alt="">
+                    <img id="clock_4" src="/images/home/media-4.png" alt="">
+                    <img id="clock_5" src="/images/home/media-5.png" alt="">
+                    <img id="clock_p" src="/images/home/media-p.png" alt="">
                     <div id="home_text">
                         <div id="p1">Your matter is time</div>
-                        <div id="p2"></div>
-                        <div id="p22">CEASELESS TIME</div>
+                        <div id="p2">CEASELESS TIME</div>
                         <div id="p3">you are each solitary moment.</div>
                     </div>
                 </div>
@@ -446,28 +444,51 @@
             stagger: 0.2,
         });
 
+        // 钟进入动画
         gsap.from("#clock_1", {
             opacity: 0,
             y: -60,
             duration: 0.6,
         })
-        gsap.to("#clock_1", {
-            rotation: 360,
-            duration: 360,
-            ease: "none",
-            repeat: -1,
-        })
-        gsap.to("#clock_2", {
-            rotation: -360,
-            duration: 60,
-            ease: "none",
-            repeat: -1,
-        })
+
         gsap.from("#clock_2", {
             opacity: 0,
             y: 40,
             duration: 0.6,
         })
+
+        //钟旋转动画
+        gsap.to("#clock_1", {
+            rotation: 360,
+            duration: 24,
+            ease: "none",
+            repeat: -1,
+        })
+        gsap.to("#clock_2", {
+            rotation: -360,
+            duration: 36,
+            ease: "none",
+            repeat: -1,
+        })
+        gsap.to("#clock_3", {
+            rotation: 360,
+            duration: 40,
+            ease: "none",
+            repeat: -1,
+        })
+        gsap.to("#clock_4", {
+            rotation: 360,
+            duration: 360,
+            ease: "none",
+            repeat: -1,
+        })
+        gsap.to("#clock_5", {
+            rotation: -360,
+            duration: 30,
+            ease: "none",
+            repeat: -1,
+        })
+
 
         // gsap.from(".anim",
         //     { y: 400, duration: 40 }
@@ -481,30 +502,6 @@
         about.onclick = function () {
             airplane.restart();
         }
-
-
-
-
-
-
-        var text = new Blotter.Text("CEASELESS TIME", {
-            family: "Saira",
-            size: 120,
-            fill: "#6F181A",
-            textAlign: "center",
-        });
-
-        var fliesText = document.getElementById("p2");
-
-        var material = new Blotter.FliesMaterial();
-
-        var blotter = new Blotter(material, { texts: text });
-        material.uniforms.uPointCellWidth.value = 0.014;
-        material.uniforms.uPointRadius.value = 0.9;
-        material.uniforms.uSpeed.value = 4;
-
-        var scope = blotter.forText(text);
-        scope.appendTo(fliesText);
 
     </script>
 </body>
