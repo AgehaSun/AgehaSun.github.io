@@ -1,12 +1,5 @@
 @import url(/styles/library.css);
 
-
-
-#notesArea {
-    display: none;
-}
-
-
 @media (min-width: 1024px) {
     .noteList {
         width: 100%;

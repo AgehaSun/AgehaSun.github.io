@@ -1,24 +1,21 @@
  @media (min-width: 1024px) {
-     #projectsArea {
-         display: none;
-         height: 84vh;
-     }
 
      .content-list {
          width: auto;
+         height: 100%;
+
          display: inline-flex;
          flex-wrap: nowrap;
-         height: 100%;
          align-self: center;
      }
 
-     .content-item {    
-         width: 320px;
-         height: 76vh;
+     .content-item {
+         width: 240px;
+         height: 100%;
          border-radius: 4px;
 
          position: relative;
-         margin-right: 16px;
+         margin-right: 24px;
          align-self: center;
 
          display: flex;

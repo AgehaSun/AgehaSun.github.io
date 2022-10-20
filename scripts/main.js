@@ -20,7 +20,7 @@ function openPage(tabName, activeButton, back) {
 
     tabcontent = document.getElementsByClassName("tabContent");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+        tabcontent[i].style.visibility = "hidden";
     }
 
     gback = document.getElementsByClassName("gback")
@@ -35,7 +35,7 @@ function openPage(tabName, activeButton, back) {
         tablinks[i].classList.remove('selected');
     }
 
-    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName).style.visibility= "visible";
     document.getElementById(back).style.display = "block";
     activeButton.className += " active";
     activeButton.classList.add('selected');

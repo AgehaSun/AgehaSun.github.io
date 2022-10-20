@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <title>Driftage</title>
-    <link rel="stylesheet" href="/styles/home/main.css" />
+    <link rel="stylesheet" href="styles/home/main.css" />
     <link rel="stylesheet" href="styles/home/mainHome.css">
-    <link rel="stylesheet" href="/styles/home/mainProject.css">
-    <link rel="stylesheet" href="/styles/home/mainNote.css">
-    <link rel="stylesheet" href="/styles/home/mainOthers.css">
-    <link rel="stylesheet" href="/styles/home/mainAbout.css">
+    <link rel="stylesheet" href="styles/home/mainProject.css">
+    <link rel="stylesheet" href="styles/home/mainNote.css">
+    <link rel="stylesheet" href="styles/home/mainOthers.css">
+    <link rel="stylesheet" href="styles/home/mainAbout.css">
     <link rel="icon" type="image/x-icon" href="images/icon.png" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
@@ -18,49 +18,45 @@
 </head>
 
 <body onload="console.log('The Script will load now.')">
+
+    <div class="gback" id="homeBackground"></div>
+    <div class="gback" id="projectsBackground"></div>
+    <div class="gback" id="notesBackground"></div>
+    <div class="gback" id="othersBackground"></div>
+    <div class="gback" id="aboutBackground"></div>
+    <div class="noise"></div>
+
     <div class="container">
-        <div class="gback" id="homeBackground"></div>
-        <div class="gback" id="projectsBackground"></div>
-        <div class="gback" id="notesBackground"></div>
-        <div class="gback" id="othersBackground"></div>
-        <div class="gback" id="aboutBackground"></div>
-        <div class="noise"></div>
-
         <div class="nav">
-            <div class="nav-frame">
+            <div class="nav-head">
+                <a class="nav-title" href="">
+                    <p class="nav-title-text">Driftage</p>
+                </a>
+                <a class="nav-menu" id="nav-menu">
+                    <img class="nav-menu-image" src="images/menu@2x.png" alt="menu" />
+                </a>
+            </div>
 
-                <div class="nav-head">
-                    <a class="nav-title" href="">
-                        <p class="nav-title-text">Driftage</p>
-                    </a>
-                    <a class="nav-menu" id="nav-menu">
-                        <img class="nav-menu-image" src="images/menu@2x.png" alt="menu" />
-                    </a>
-                </div>
+            <div class="nav-empty"></div>
 
-                <div class="nav-empty"></div>
+            <ul class="nav-option" id="nav-bar">
+                <li class="nav-option-button selected" id="homeButton">HOME<span class="divider">/ </span>首页</li>
+                <li class="nav-option-button" id="projectButton">PROJECTS<span class="divider">/ </span>项目</li>
+                <li class="nav-option-button" id="noteButton">NOTES<span class="divider">/ </span>笔记</li>
+                <li class="nav-option-button" id="othersButton">OTHERS<span class="divider">/ </span>其他</li>
+                <li class="nav-option-button" id="aboutButton">ABOUT<span class="divider">/ </span>关于</li>
+            </ul>
 
-                <ul class="nav-option" id="nav-bar">
-                    <li class="nav-option-button selected" id="homeButton">HOME<span class="divider">/ </span>首页</li>
-                    <li class="nav-option-button" id="projectButton">PROJECTS<span class="divider">/ </span>项目</li>
-                    <li class="nav-option-button" id="noteButton">NOTES<span class="divider">/ </span>笔记</li>
-                    <li class="nav-option-button" id="othersButton">OTHERS<span class="divider">/ </span>其他</li>
-                    <li class="nav-option-button" id="aboutButton">ABOUT<span class="divider">/ </span>关于</li>
-                </ul>
+            <div class="nav-empty"></div>
 
-                <div class="nav-empty"></div>
+            <div class="nav-image">
+                <img class="nav-icon" src="images/driftage-icon.png" alt="icon" />
+            </div>
 
-                <div class="nav-image">
-                    <img class="nav-icon" src="images/driftage-icon.png" alt="icon" />
-                </div>
-
-                <div class="nav-recordinfo" id="recordinfo">
-                    <p class="nav-recordinfo-text">浙ICP备2021006016号</p>
-                </div>
-
+            <div class="nav-recordinfo" id="recordinfo">
+                <p class="nav-recordinfo-text">浙ICP备2021006016号</p>
             </div>
         </div>
-
         <div class="main">
 
             <!-- 首页 -->
@@ -327,7 +323,7 @@
                     <!-- 笔记4 -->
                     <a href="/Pages/note1.html" class="noteBlockSmall" id="block4">
                         <div class="noteNumSmall">04</div>
-                        <div href="" class="noteTitleSmall">My heart like a peacock on a rainy day</div>
+                        <div class="noteTitleSmall">My heart like a peacock on a rainy day</div>
                         <div class="noteDesSmall">
                             <div class="noteTime">2022.06.01</div>
                         </div>
@@ -450,6 +446,8 @@
 
 
     <script>
+        import {gsap} from "./scripts/gsap.min";
+
         gsap.from(".nav", {
             opacity: 0,
             duration: 0.8,

@@ -1,4 +1,57 @@
 :root {
+    --space-80:80px;
+    --space-72:72px;
+    --space-64:64px;
+    --space-56:56px;
+    --space-48:48px;
+    --space-40:40px;
+    --space-32:32px;
+    --space-24:24px;
+    --space-16:16px;
+    --space-8:8px;
+    --space-4:4px;
+
+    --lineHeight-t1:16px;
+    --lineHeight-t2:24px;
+    --lineHeight-t3:24px;
+    --lineHeight-t4:32px;
+    --lineHeight-t5:32px;
+    --lineHeight-t6:40px;
+    --lineHeight-t7:56px;
+
+    --fontSize-t1:12px;
+    --fontSize-t2:14px;
+    --fontSize-t3:16px;
+    --fontSize-t4:18px;
+    --fontSize-t5:20px;
+    --fontSize-t6:24px;
+    --fontSize-t7:36px;
+
+    --cornerRadius-4:4px;
+    --cornerRadius-8:8px;
+    --cornerRadius-16:16px;
+    --cornerRadius-24:24px;
+    --cornerRadius-32:32px;
+    --cornerRadius-40:40px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     --color-divider: rgba(255, 255, 255, 0.08);
     --color-background: #17181A;
     --color-text-a: rgba(255, 255, 255, 1);
@@ -29,9 +82,6 @@
     text-decoration: none;
     list-style-type: none;
     user-select: none;
-    -webkit-user-seletct: none;
-    -moz-user-seletct: none;
-    scrollbar-width: none;
 }
 
 img {
