@@ -133,6 +133,7 @@
         grid-column-gap: 80px;
 
         overflow: hidden;
+        position: fixed;
     }
 
 
