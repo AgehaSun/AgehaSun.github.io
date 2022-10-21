@@ -18,6 +18,7 @@
     --lineHeight-t5:32px;
     --lineHeight-t6:40px;
     --lineHeight-t7:56px;
+    --lineHeight-t9:88px;
 
     --fontSize-t1:12px;
     --fontSize-t2:14px;
@@ -26,6 +27,8 @@
     --fontSize-t5:20px;
     --fontSize-t6:24px;
     --fontSize-t7:36px;
+    --fontSize-t8:40px;
+    --fontSize-t9:56px;
 
     --cornerRadius-4:4px;
     --cornerRadius-8:8px;
@@ -82,6 +85,9 @@
     text-decoration: none;
     list-style-type: none;
     user-select: none;
+
+    font-family: "Source Han Sans SC","PingFang SC",serif;
+
 }
 
 img {
@@ -103,7 +109,7 @@ li {
 
 @keyframes gradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 
     50% {
@@ -111,6 +117,6 @@ li {
     }
 
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }

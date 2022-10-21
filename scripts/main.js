@@ -1,17 +1,17 @@
 //加载
 window.addEventListener("load", function () {
-    document.getElementById("homeButton").addEventListener("click", function () { openPage("homeArea", homeButton, "homeBackground"); })
-    document.getElementById("projectButton").addEventListener("click", function () { openPage("projectsArea", projectButton, "projectsBackground"); })
-    document.getElementById("noteButton").addEventListener("click", function () { openPage("notesArea", noteButton, "notesBackground"); })
-    document.getElementById("othersButton").addEventListener("click", function () { openPage("othersArea", othersButton, "othersBackground"); })
-    document.getElementById("aboutButton").addEventListener("click", function () { openPage("aboutArea", aboutButton, "aboutBackground"); })
+    document.getElementById("homeButton").addEventListener("click", function () { openPage("homeArea", "homeButton", "homeBackground"); })
+    document.getElementById("projectButton").addEventListener("click", function () { openPage("projectsArea", "projectButton", "projectsBackground"); })
+    document.getElementById("noteButton").addEventListener("click", function () { openPage("notesArea", "noteButton", "notesBackground"); })
+    document.getElementById("othersButton").addEventListener("click", function () { openPage("othersArea", "othersButton", "othersBackground"); })
+    document.getElementById("aboutButton").addEventListener("click", function () { openPage("aboutArea", "aboutButton", "aboutBackground"); })
 
     //横向滚动
-    var item = document.getElementById("projectsArea");
+    let item = document.getElementById("projectsArea");
     item.addEventListener("wheel", function (e) { if (e.deltaY > 0) item.scrollLeft += 100; else item.scrollLeft -= 100; })
 
     //导航栏折叠
-    document.getElementById("nav-menu").addEventListener("click", function () { menuShow(); })
+    document.getElementById("nav-menu-button").addEventListener("click", function () { menuShow(); })
 })
 
 //切换栏目
@@ -25,7 +25,7 @@ function openPage(tabName, activeButton, back) {
 
     gback = document.getElementsByClassName("gback")
     for (i = 0; i < gback.length; i++) {
-        gback[i].style.display = "none";
+        gback[i].style.visibility = "hidden";
     }
 
     tablinks = document.getElementsByClassName("nav-option-button");
@@ -36,20 +36,37 @@ function openPage(tabName, activeButton, back) {
     }
 
     document.getElementById(tabName).style.visibility= "visible";
-    document.getElementById(back).style.display = "block";
-    activeButton.className += " active";
-    activeButton.classList.add('selected');
+    document.getElementById(back).style.visibility = "visible";
+    document.getElementById(activeButton).className += " active"
+    document.getElementById(activeButton).classList.add('selected');
+
+
+    //on media width < 768px
+    const button = document.getElementById("nav-menu-button");
+    const navbar = document.getElementById("nav-bar");
+    if(button.style.visibility != "hidden")
+    {
+        navbar.style.visibility = "hidden";
+        button.style.opacity = "0.5";
+    }
 }
+
 
 function menuShow() {
     const navbar = document.getElementById("nav-bar");
-    const y = document.getElementById("nav-menu");
+    const button = document.getElementById("nav-menu-button");
 
-    if (navbar.style.display === "flex") {
-        y.style.opacity = "0.5";
-        navbar.style.display = "none";
-    } else {
-        navbar.style.display = "flex";
-        y.style.opacity = "1";
+
+    if (navbar.style.visibility == "hidden") {
+        button.style.opacity = "1";
+        navbar.style.visibility = "visible";
+    }
+    else
+    {
+        button.style.opacity = "0.5";
+        navbar.style.visibility = "hidden";
     }
 }
+
+
+

@@ -29,17 +29,13 @@
     <div class="container">
         <div class="nav">
             <div class="nav-head">
-                <a class="nav-title" href="">
-                    <p class="nav-title-text">Driftage</p>
-                </a>
-                <a class="nav-menu" id="nav-menu">
-                    <img class="nav-menu-image" src="images/menu@2x.png" alt="menu" />
+                <a class="nav-title" href="">Driftage</a>
+                <a class="nav-menu" id="nav-menu-button">
+                    <img class="nav-menu-icon" src="images/menu@2x.png" alt="menu" />
                 </a>
             </div>
 
-            <div class="nav-empty"></div>
-
-            <ul class="nav-option" id="nav-bar">
+            <ul class="nav-menu-list" id="nav-bar">
                 <li class="nav-option-button selected" id="homeButton">HOME<span class="divider">/ </span>首页</li>
                 <li class="nav-option-button" id="projectButton">PROJECTS<span class="divider">/ </span>项目</li>
                 <li class="nav-option-button" id="noteButton">NOTES<span class="divider">/ </span>笔记</li>
@@ -47,9 +43,7 @@
                 <li class="nav-option-button" id="aboutButton">ABOUT<span class="divider">/ </span>关于</li>
             </ul>
 
-            <div class="nav-empty"></div>
-
-            <div class="nav-image">
+            <div class="nav-logo">
                 <img class="nav-icon" src="images/driftage-icon.png" alt="icon" />
             </div>
 
@@ -446,7 +440,7 @@
 
 
     <script>
-        import {gsap} from "./scripts/gsap.min";
+        import {gsap, TweenMax} from "./scripts/gsap.min";
 
         gsap.from(".nav", {
             opacity: 0,
@@ -581,11 +575,11 @@
 
 
 
-        var airplane = TweenMax.from(".anim",
+        let airplane = TweenMax.from(".anim",
             { yPercent: 30, duration: 40 }
         )
 
-        var about = document.getElementById("aboutButton");
+        let about = document.getElementById("aboutButton");
         about.onclick = function () {
             airplane.restart();
         }

@@ -1,6 +1,10 @@
 @import url(/styles/library.css);
 
 
+#homeArea{
+    visibility: visible;
+    z-index: 10;
+}
 #homeBackground {
     background: var(--linearColor-homeBackground);
     background-size: 400% 400%;
@@ -11,6 +15,11 @@
     height: 100%;
 }
 
+
+#projectsArea {
+    visibility: hidden;
+    z-index: 9;
+}
 #projectsBackground {
     background: var(--linearColor-projectsBackground);
     background-size: 400% 400%;
@@ -19,9 +28,14 @@
     z-index: -5;
     width: 100%;
     height: 100%;
-    display: none;
+    visibility: hidden;
 }
 
+
+#notesArea {
+    visibility: hidden;
+    z-index: 8;
+}
 #notesBackground {
     background: var(--linearColor-notesBackground);
     background-size: 400% 400%;
@@ -30,20 +44,30 @@
     z-index: -4;
     width: 100%;
     height: 100%;
-    display: none;
+    visibility: hidden;
 }
 
+
+#othersArea {
+    visibility: hidden;
+    z-index: 7;
+}
 #othersBackground {
-    background: var(--linearColor-othersBackground);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
-    position: absolute;
-    z-index: -3;
-    width: 100%;
-    height: 100%;
-    display: none;
-}
+     background: var(--linearColor-othersBackground);
+     background-size: 400% 400%;
+     animation: gradient 10s ease infinite;
+     position: absolute;
+     z-index: -3;
+     width: 100%;
+     height: 100%;
+    visibility: hidden;
+ }
 
+
+#aboutArea {
+    visibility: hidden;
+    z-index: 6;
+}
 #aboutBackground {
     background: var(--linearColor-aboutBackground);
     background-size: 400% 400%;
@@ -52,8 +76,13 @@
     z-index: -2;
     width: 100%;
     height: 100%;
-    display: none;
+    visibility: hidden;
 }
+
+
+
+
+
 
 .noise {
     background: url(/images/noise.gif);
@@ -72,16 +101,17 @@
 
 
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     body{
+        width: 100vw;
+        height: 100vh;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
-        width: 100vw;
-        height: 100vh;
-    }
 
+        overflow: hidden;
+    }
 
 
     .container {
@@ -106,8 +136,8 @@
 
     .tabContent{
         box-sizing: border-box;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: var(--space-40);
+        padding-bottom: var(--space-40);
 
         width: 100%;
         height: 100%;
@@ -117,68 +147,58 @@
         overflow: hidden;
     }
 
-    #homeArea{
-        visibility: visible;
-        z-index: 10;
-    }
 
-    #projectsArea {
-        visibility: hidden;
-        z-index: 9;
-    }
-    #notesArea {
-        visibility: hidden;
-        z-index: 8;
-    }
-    #othersArea {
-        visibility: hidden;
-        z-index: 7;
-    }
-    #aboutArea {
-        visibility: hidden;
-        z-index: 6;
-    }
 
 
 
 
 
     .nav {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        box-sizing: border-box;
+        padding-top: var(--space-40);
+        padding-bottom: var(--space-40);
 
         display: grid;
-        grid-template-rows: auto 1fr auto 1fr auto auto;
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-columns: 1fr;
     }
+
+    .nav-head{
+        height: var(--lineHeight-t9);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
 
     .nav-title {
         text-align: right;
         color: white;
+        font-size: var(--fontSize-t9);
+        line-height: var(--lineHeight-t9);
+        font-family: Saira, serif;
     }
 
-    .nav-title-text {
-        color: white;
-        font-size: 60px;
-        font-family: Saira, sans-serif;
+    #nav-menu-button {
+        visibility: hidden;
     }
 
-    .nav-menu {
-        display: none;
-    }
 
-    .nav-option {
-        height: auto;
+    .nav-menu-list {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     .nav-option-button {
+        height: var(--lineHeight-t3);
+        margin-top: var(--space-4);
+        margin-bottom: var(--space-4);
+
+        text-align: right;
+
+        color: var(--color-text-d);
         font-size: var(--fontSize-t3);
         line-height: var(--lineHeight-t3);
-        text-align: right;
-        margin-top: 0.4vh;
-        margin-bottom: 0.4vh;
-        color: var(--color-text-d);
     }
 
     .nav-option-button:hover {
@@ -193,33 +213,31 @@
         transform: scale(6);
     }
 
-    .button-container {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-    }
 
     .divider {
-        font-size: 20px;
-        font-weight: 100px;
+        font-size: var(--fontSize-t2);
         opacity: 0.18;
-        margin-left: 10px;
+        margin-left: var(--space-8);
+        margin-right: var(--space-8);
     }
 
-    .nav-image {
-        margin-bottom: 2vh;
+    .nav-logo {
+        margin-bottom: var(--space-16);
         display: flex;
         flex-direction: row-reverse;
     }
 
+
     .nav-icon {
-        height: 120px;
-        width: 60px;
+        height: 96px;
+        width: 48px;
     }
 
     .nav-recordinfo-text {
-        font-size: 12px;
-        font-weight: 200;
+        height: var(--lineHeight-t1);
+
+        font-size: var(--fontSize-t1);
+        line-height: var(--lineHeight-t1);
         text-align: right;
         color: var(--color-text-d);
     }
@@ -232,99 +250,122 @@
 }
 
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
+    body{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .container {
+        width: 100%;
+        height: 100%;
+
         display: grid;
         grid-template-rows: auto 1fr;
-        width: 100vw;
+
+        overflow: hidden;
     }
 
     .nav {
         background-color: #1c1d1f;
-        width: 100vw;
-    }
-
-    .nav-frame {
         width: 100%;
+        height: 48px;
+        position: relative;
     }
 
     .nav-head {
+        box-sizing: border-box;
         width: 100%;
-        height: 10vh;
-        display: flex;
+        height: 100%;
+        padding-left: var(--space-24);
+        padding-right: var(--space-24);
+
+        display: grid;
+        grid-template-columns: 1fr 48px;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #0C0C0C;
+        position: absolute;
+        z-index: 1;
     }
 
-    .nav-menu {
+    #nav-menu-button {
+        width: 48px;
+        height: 48px;
         opacity: 0.5;
+
         display: flex;
         align-items: center;
-        margin-left: auto;
-        margin-right: 6%;
+        justify-content: center;
+
+        visibility: visible;
     }
 
-    .nav-menu-image {
-        width: 60px;
-        height: 60px;
+    .nav-menu-icon {
+        width: 24px;
+        height: 24px;
     }
 
     .nav-title {
+        color: white;
+        font-size: var(--fontSize-t4);
+        line-height: var(--lineHeight-t4);
+    }
+
+
+
+    .nav-menu-list {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100vh;
+        margin-top: 48px;
+
         display: flex;
         flex-direction: column;
+        background-color: black;
         align-items: center;
         justify-content: center;
-        margin-left: 6%;
-    }
 
-    .nav-title-text {
-        font-size: 2.4rem;
-        font-weight: normal;
-        font-family: Saira;
-    }
-
-    .nav-icon {
-        display: none;
-    }
-
-    .nav-empty {
-        display: none;
-    }
-
-    .nav-image {
-        display: none;
+        position: absolute;
+        z-index: 100;
     }
 
 
 
-    .nav-option {
-        width: 100%;
-        height: 90vh;
-        display: none;
-        flex-direction: column;
-        background-color: #1c1d1f;
-        opacity: 1;
-        align-items: center;
-        justify-content: center;
-    }
 
     .nav-option-button {
         display: flex;
         width: 100%;
-        height: 8vh;
-        font-size: 1.2rem;
+        height: 80px;
+        margin-bottom: var(--space-8);
+
+        font-size:var(--fontSize-t3);
+        color: white;
+
         align-items: center;
         justify-content: center;
-        margin-bottom: 2vh;
     }
 
     .divider {
-        margin-left: 4vw;
-        margin-right: 4vw;
-        font-size: 2rem;
+        margin-left: var(--space-16);
+        margin-right: var(--space-16);
+        font-size: var(--fontSize-t2);
         opacity: 0.2;
     }
 
+
+    .nav-logo {
+        visibility: hidden;
+    }
+
     .nav-recordinfo {
-        display: none;
+        visibility: hidden;
     }
 
     .nav-recordinfo-text {
