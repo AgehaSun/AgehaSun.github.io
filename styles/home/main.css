@@ -107,6 +107,13 @@
 
 
 @media (min-width: 768px) {
+
+    html {
+        width: 100vw;
+        height: 100vh;
+    }
+
+
     body {
         width: 100vw;
         height: 100vh;
@@ -116,6 +123,7 @@
         justify-content: center;
 
         overflow: hidden;
+        background-color: black;
     }
 
 
@@ -259,11 +267,14 @@
     body {
         width: 100vw;
         height: 100vh;
+        height: -webkit-fill-available;
         overflow: hidden;
 
         display: flex;
         justify-content: center;
         align-items: center;
+
+        background-color: black;
     }
 
     .container {
