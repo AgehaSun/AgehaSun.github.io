@@ -35,7 +35,7 @@ function openPage(tabName, activeButton, back) {
         tablinks[i].classList.remove('selected');
     }
 
-    document.getElementById(tabName).style.visibility= "visible";
+    document.getElementById(tabName).style.visibility = "visible";
     document.getElementById(back).style.visibility = "visible";
     document.getElementById(activeButton).className += " active"
     document.getElementById(activeButton).classList.add('selected');
@@ -44,8 +44,8 @@ function openPage(tabName, activeButton, back) {
     //on media width < 768px
     const button = document.getElementById("nav-menu-button");
     const navbar = document.getElementById("nav-bar");
-    if(button.style.visibility != "hidden")
-    {
+    var style = getComputedStyle(button);
+    if (style.visibility == "visible") {
         navbar.style.visibility = "hidden";
         button.style.opacity = "0.5";
     }
@@ -61,8 +61,7 @@ function menuShow() {
         button.style.opacity = "1";
         navbar.style.visibility = "visible";
     }
-    else
-    {
+    else {
         button.style.opacity = "0.5";
         navbar.style.visibility = "hidden";
     }
