@@ -1,10 +1,11 @@
 @import url(/styles/library.css);
 
 
-#homeArea{
+#homeArea {
     visibility: visible;
     z-index: 10;
 }
+
 #homeBackground {
     background: var(--linearColor-homeBackground);
     background-size: 400% 400%;
@@ -20,6 +21,7 @@
     visibility: hidden;
     z-index: 9;
 }
+
 #projectsBackground {
     background: var(--linearColor-projectsBackground);
     background-size: 400% 400%;
@@ -36,6 +38,7 @@
     visibility: hidden;
     z-index: 8;
 }
+
 #notesBackground {
     background: var(--linearColor-notesBackground);
     background-size: 400% 400%;
@@ -52,22 +55,24 @@
     visibility: hidden;
     z-index: 7;
 }
+
 #othersBackground {
-     background: var(--linearColor-othersBackground);
-     background-size: 400% 400%;
-     animation: gradient 10s ease infinite;
-     position: absolute;
-     z-index: -3;
-     width: 100%;
-     height: 100%;
+    background: var(--linearColor-othersBackground);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    position: absolute;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
     visibility: hidden;
- }
+}
 
 
 #aboutArea {
     visibility: hidden;
     z-index: 6;
 }
+
 #aboutBackground {
     background: var(--linearColor-aboutBackground);
     background-size: 400% 400%;
@@ -102,7 +107,7 @@
 
 
 @media (min-width: 768px) {
-    body{
+    body {
         width: 100vw;
         height: 100vh;
 
@@ -134,7 +139,7 @@
         position: relative;
     }
 
-    .tabContent{
+    .tabContent {
         box-sizing: border-box;
         padding-top: var(--space-40);
         padding-bottom: var(--space-40);
@@ -163,7 +168,7 @@
         grid-template-columns: 1fr;
     }
 
-    .nav-head{
+    .nav-head {
         height: var(--lineHeight-t9);
         display: flex;
         flex-direction: column-reverse;
@@ -251,7 +256,7 @@
 
 
 @media (max-width: 767px) {
-    body{
+    body {
         width: 100vw;
         height: 100vh;
         overflow: hidden;
@@ -274,7 +279,7 @@
     .nav {
         background-color: #1c1d1f;
         width: 100%;
-        height: 48px;
+        height: 56px;
         position: relative;
     }
 
@@ -324,13 +329,14 @@
         box-sizing: border-box;
         width: 100%;
         height: 100vh;
-        margin-top: 48px;
+        margin-top: 56px;
+        padding-top: 72px;
+
 
         display: flex;
         flex-direction: column;
         background-color: black;
         align-items: center;
-        justify-content: center;
 
         position: absolute;
         z-index: 100;
@@ -342,10 +348,10 @@
     .nav-option-button {
         display: flex;
         width: 100%;
-        height: 80px;
+        height: 48px;
         margin-bottom: var(--space-8);
 
-        font-size:var(--fontSize-t3);
+        font-size: var(--fontSize-t3);
         color: white;
 
         align-items: center;
