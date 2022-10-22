@@ -55,9 +55,9 @@ function openPage(tabName, activeButton, back) {
 function menuShow() {
     const navbar = document.getElementById("nav-bar");
     const button = document.getElementById("nav-menu-button");
+    var style = getComputedStyle(navbar);
 
-
-    if (navbar.style.visibility == "hidden") {
+    if (style.visibility == "hidden") {
         button.style.opacity = "1";
         navbar.style.visibility = "visible";
     }

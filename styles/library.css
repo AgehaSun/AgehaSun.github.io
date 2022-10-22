@@ -1,71 +1,45 @@
 :root {
 
-    
-    --space-80:80px;
-    --space-72:72px;
-    --space-64:64px;
-    --space-56:56px;
-    --space-48:48px;
-    --space-40:40px;
-    --space-32:32px;
-    --space-24:24px;
-    --space-16:16px;
-    --space-8:8px;
-    --space-4:4px;
 
-    --lineHeight-t1:16px;
-    --lineHeight-t2:24px;
-    --lineHeight-t3:24px;
-    --lineHeight-t4:32px;
-    --lineHeight-t5:32px;
-    --lineHeight-t6:40px;
-    --lineHeight-t7:56px;
-    --lineHeight-t9:88px;
+    --space-80: 80px;
+    --space-72: 72px;
+    --space-64: 64px;
+    --space-56: 56px;
+    --space-48: 48px;
+    --space-40: 40px;
+    --space-32: 32px;
+    --space-24: 24px;
+    --space-16: 16px;
+    --space-8: 8px;
+    --space-4: 4px;
 
-    --fontSize-t1:12px;
-    --fontSize-t2:14px;
-    --fontSize-t3:16px;
-    --fontSize-t4:18px;
-    --fontSize-t5:20px;
-    --fontSize-t6:24px;
-    --fontSize-t7:36px;
-    --fontSize-t8:40px;
-    --fontSize-t9:56px;
+    --lineHeight-t1: 16px;
+    --lineHeight-t2: 24px;
+    --lineHeight-t3: 24px;
+    --lineHeight-t4: 32px;
+    --lineHeight-t5: 32px;
+    --lineHeight-t6: 40px;
+    --lineHeight-t7: 56px;
+    --lineHeight-t9: 88px;
 
-    --cornerRadius-4:4px;
-    --cornerRadius-8:8px;
-    --cornerRadius-16:16px;
-    --cornerRadius-24:24px;
-    --cornerRadius-32:32px;
-    --cornerRadius-40:40px;
+    --fontSize-t1: 12px;
+    --fontSize-t2: 14px;
+    --fontSize-t3: 16px;
+    --fontSize-t4: 18px;
+    --fontSize-t5: 20px;
+    --fontSize-t6: 24px;
+    --fontSize-t7: 36px;
+    --fontSize-t8: 40px;
+    --fontSize-t9: 56px;
 
-
+    --cornerRadius-4: 4px;
+    --cornerRadius-8: 8px;
+    --cornerRadius-16: 16px;
+    --cornerRadius-24: 24px;
+    --cornerRadius-32: 32px;
+    --cornerRadius-40: 40px;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    --color-divider: rgba(255, 255, 255, 0.08);
-    --color-background: #17181A;
-    --color-text-a: rgba(255, 255, 255, 1);
-    --color-text-b: rgba(255, 255, 255, 0.7);
-    --color-text-c: rgba(255, 255, 255, 0.5);
-    --color-text-d: rgba(255, 255, 255, 0.3);
-    --color-text-e: rgba(255, 255, 255, 0.2);
-    --color-primaryText: #ffffff;
-    --color-secondaryText: rgba(255, 255, 255, 0.5);
 
 
     --linearColor-homeBackground: #0C0C0C;
@@ -75,9 +49,6 @@
     --linearColor-aboutBackground: linear-gradient(-45deg, #4E7DF5, #4082F4, #5A9CF9, #7DA2FF);
 
     --maskColor-about: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-
-
-    --color-background-a: #F0F2F5;
 }
 
 * {
@@ -88,7 +59,7 @@
     list-style-type: none;
     user-select: none;
 
-    font-family: "Source Han Sans SC","PingFang SC",serif;
+    font-family: "Source Han Sans SC", "PingFang SC", serif;
 
 }
 
