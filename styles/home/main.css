@@ -1,5 +1,24 @@
 @import url(/styles/library.css);
 
+@font-face {
+    font-family: Saira;
+    src: url(/fonts/SairaCondensed-Regular.ttf);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
 
 #homeArea {
     visibility: visible;
@@ -45,23 +64,6 @@
     animation: gradient 10s ease infinite;
     position: absolute;
     z-index: -4;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-}
-
-
-#othersArea {
-    visibility: hidden;
-    z-index: 7;
-}
-
-#othersBackground {
-    background: var(--linearColor-othersBackground);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
-    position: absolute;
-    z-index: -3;
     width: 100%;
     height: 100%;
     visibility: hidden;

@@ -41,7 +41,6 @@
 
 
 
-
     --linearColor-homeBackground: #0C0C0C;
     --linearColor-projectsBackground: linear-gradient(137.59deg, #003F7D 0%, #104E7A 34.9%, #0C5984 67.19%, #006174 100%);
     --linearColor-notesBackground: linear-gradient(137.59deg, #1F364D 0%, #243959 34.9%, #232E4D 67.19%, #232A4D 100%);
@@ -69,27 +68,4 @@ img {
 
 li {
     cursor: pointer;
-}
-
-
-
-
-@font-face {
-    font-family: Saira;
-    src: url("../fonts/SairaCondensed-Regular.ttf");
-}
-
-
-@keyframes gradient {
-    0% {
-        background-position: 0 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0 50%;
-    }
 }

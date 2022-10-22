@@ -3,7 +3,6 @@ window.addEventListener("load", function () {
     document.getElementById("homeButton").addEventListener("click", function () { openPage("homeArea", "homeButton", "homeBackground"); })
     document.getElementById("projectButton").addEventListener("click", function () { openPage("projectsArea", "projectButton", "projectsBackground"); })
     document.getElementById("noteButton").addEventListener("click", function () { openPage("notesArea", "noteButton", "notesBackground"); })
-    document.getElementById("othersButton").addEventListener("click", function () { openPage("othersArea", "othersButton", "othersBackground"); })
     document.getElementById("aboutButton").addEventListener("click", function () { openPage("aboutArea", "aboutButton", "aboutBackground"); })
 
     //横向滚动

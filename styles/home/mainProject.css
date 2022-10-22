@@ -1,4 +1,4 @@
- @media (min-width: 1024px) {
+ @media (min-width: 768px) {
 
      .content-list {
          width: auto;
@@ -12,41 +12,46 @@
      .content-item {
          width: 240px;
          height: 100%;
-         border-radius: 4px;
+         margin-right: var(--space-24);
 
          position: relative;
-         margin-right: 24px;
-         align-self: center;
-
          display: flex;
+         align-self: center;
          justify-content: center;
          align-items: center;
-         transition: 0.8s;
+
          overflow: visible;
 
+         border-radius: var(--cornerRadius-4);
 
+         transition: 0.8s;
 
      }
 
      .content-item:hover {
-         height: 84vh;
+         height: 110%;
+
          transition: 0.2s;
      }
 
      .content-item:hover .content-cover {
          filter: none;
          box-sizing: border-box;
-         border-radius: 4px;
+         border-radius: var(--cornerRadius-4);
          border: solid 6px white;
          opacity: 1;
      }
 
-     .content-item:hover .content-cover-initialletter {
+     .content-item:hover .content-cover-title {
+         opacity: 0;
+     }
+
+     .content-item:hover .content-cover-description {
          opacity: 0;
      }
 
      .content-item:hover .content-cover-poetry {
-         opacity: 0;
+         text-shadow: #000 1px 0 8px;
      }
 
      .content-item:hover .content-cover-author {
@@ -62,112 +67,114 @@
      }
 
      .content-cover-up {
-         height: 76vh;
+         box-sizing: border-box;
+         height: 100%;
          width: 100%;
-         z-index: 1;
-         padding: 0 40px;
+         padding: var(--space-32) var(--space-24);
+
          display: grid;
-         grid-template-rows: 4vh 40px 20px 240px auto 40px 20px 20px 4vh;
+         grid-template-rows: auto auto 1fr auto;
+         grid-template-columns: 1fr;
+         row-gap: var(--space-4);
+
+         z-index: 1;
          overflow: hidden;
      }
 
      .content-cover-title {
-         font-size: 24px;
+         height: var(--lineHeight-t6);
+
          align-self: center;
+
          font-family: Saira, sans-serif;
-         color: var(--color-text-a);
+         color: white;
+         font-size: var(--fontSize-t6);
+         line-height: var(--lineHeight-t6);
      }
 
      .content-cover-description {
-         font-size: 12px;
-         color: var(--color-text-d);
+         height: var(--lineHeight-t1);
+
+         font-size: var(--fontSize-t1);
+         line-height: var(--lineHeight-t1);
+         color: white;
+         opacity: 0.4;
      }
 
      .content-cover-poetry {
-         color: var(--color-text-c);
-         font-size: 12px;
-     }
+         margin-top: var(--space-40);
+         margin-bottom: var(--space-16);
 
-     .content-cover-author,
-     .content-cover-time,
-     .content-cover-me {
-         font-size: 12px;
-         color: var(--color-text-d);
-     }
-
-     .content-cover-initialletter {
-         font-size: 160px;
-         align-self: center;
-         opacity: 1;
-         font-family: Saira, sans-serif;
-         color: var(--color-text-a);
+         color: white;
+         font-size: var(--fontSize-t1);
+         line-height: var(--lineHeight-t1);
      }
 
      .content-cover-author {
-         align-self: center;
-     }
+         height: var(--lineHeight-t1);
 
-     .content-cover-author,
-     .content-cover-time,
-     .content-cover-me {
+         font-size: var(--fontSize-t1);
+         line-height: var(--lineHeight-t1);
+         color: white;
          text-align: right;
-     }
- }
-
-
-
- @media (max-width: 1023px) {
-     #projectsArea {
-         display: none;
+         opacity: 0.6;
      }
 
-     .content-list {
-         display: flex;
-         flex-direction: column;
-     }
 
-     .content-item {
-         background-color: #1F3233;
-         margin-top: 12px;
-         height: 200px;
-         width: 100%;
-         overflow: hidden;
-         display: flex;
-         position: relative;
-     }
 
-     .content-cover {
-         width: 100%;
-         height: 200px;
-         opacity: 0.5;
-         position: absolute;
-     }
+     @media (max-width: 767px) {
+         #projectsArea {
+             display: none;
+         }
 
-     .content-cover-up {
-         width: 100%;
-         z-index: 9;
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-     }
+         .content-list {
+             display: flex;
+             flex-direction: column;
+         }
 
-     .content-cover-poetry,
-     .content-cover-author,
-     .content-cover-me,
-     .content-cover-initialletter {
-         display: none;
-     }
+         .content-item {
+             background-color: #1F3233;
+             margin-top: 12px;
+             height: 200px;
+             width: 100%;
+             overflow: hidden;
+             display: flex;
+             position: relative;
+         }
 
-     .content-cover-title {
-         font-size: 32px;
-         margin: 20px 0;
-     }
+         .content-cover {
+             width: 100%;
+             height: 200px;
+             opacity: 0.5;
+             position: absolute;
+         }
 
-     .content-cover-description,
-     .content-cover-time {
-         opacity: 0.7;
-         margin-bottom: 10px;
-         font-size: 16px;
+         .content-cover-up {
+             width: 100%;
+             z-index: 9;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+         }
+
+         .content-cover-poetry,
+         .content-cover-author,
+         .content-cover-me,
+         .content-cover-initialletter {
+             display: none;
+         }
+
+         .content-cover-title {
+             font-size: 32px;
+             margin: 20px 0;
+         }
+
+         .content-cover-description,
+         .content-cover-time {
+             opacity: 0.7;
+             margin-bottom: 10px;
+             font-size: 16px;
+         }
      }
  }
