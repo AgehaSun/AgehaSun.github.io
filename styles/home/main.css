@@ -119,6 +119,14 @@
         overflow: hidden;
         background-color: black;
         position: fixed;
+
+
+    }
+
+    @supports (-webkit-touch-callout: none) {
+        body {
+            min-height: -webkit-fill-available
+        }
     }
 
 
