@@ -23,15 +23,12 @@
          overflow: visible;
 
          border-radius: var(--cornerRadius-4);
-
-         transition: 0.8s;
-
      }
 
      .content-item:hover {
          height: 110%;
 
-         transition: 0.2s;
+         transition: 0.5s;
      }
 
      .content-item:hover .content-cover {
