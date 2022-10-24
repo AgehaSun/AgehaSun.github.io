@@ -154,7 +154,7 @@
      #clock_3 {
          width: 60vw;
          position: absolute;
-         z-index: 10;
+         z-index: -1008;
      }
 
      #home_text {

@@ -19,7 +19,10 @@ window.addEventListener("load", function () {
 function HorizontalScroll(event)
 {
     const item = document.getElementById("realmPage");
-    if(event.deltaY > 0)
+    const button = document.getElementById("nav-closeMenu-button");
+    const style = getComputedStyle(button);
+
+    if(event.deltaY > 0 && style.visibility === "hidden")
     {
         item.scrollLeft += 100;
     }
@@ -111,13 +114,19 @@ function openPage(tabName, activeButton, back) {
 }
 
 
+
+
+
 // 打开导航栏
 function menuShow() {
     const head = document.getElementById("head");
+    const title = document.getElementById("title");
     const navbar = document.getElementById("nav-bar");
     const button = document.getElementById("nav-menu-button");
     const closeButton = document.getElementById("nav-closeMenu-button");
 
+    head.style.backgroundColor = "rgba(0,0,0,0.9)";
+    title.style.visibility = "hidden";
     button.style.visibility = "hidden";
     closeButton.style.visibility = "visible";
     navbar.style.visibility = "visible";
@@ -131,6 +140,8 @@ function menuHide(){
     const button = document.getElementById("nav-menu-button");
     const closeButton = document.getElementById("nav-closeMenu-button");
 
+    head.style.backgroundColor = "rgba(0,0,0,0)";
+    title.style.visibility = "visible";
     button.style.visibility = "visible";
     closeButton.style.visibility = "hidden";
     navbar.style.visibility = "hidden";
