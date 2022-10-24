@@ -5,72 +5,52 @@
     <meta charset="UTF-8" />
     <title>Driftage</title>
     <link rel="stylesheet" href="styles/home/main.css" />
-    <link rel="stylesheet" href="styles/home/mainHome.css">
-    <link rel="stylesheet" href="styles/home/mainProject.css">
-    <link rel="stylesheet" href="styles/home/mainNote.css">
-    <link rel="stylesheet" href="styles/home/mainAbout.css">
+    <link rel="stylesheet" href="styles/home/waftPage.css">
+    <link rel="stylesheet" href="styles/home/realmPage.css">
+    <link rel="stylesheet" href="styles/home/fragmentsPage.css">
+    <link rel="stylesheet" href="styles/home/aboutPage.css">
     <link rel="icon" type="image/x-icon" href="images/icon.png" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
     <script src="/scripts/main.js"></script>
-    <script src="scripts/gsap.min.js"></script>
-    <script src="/scripts/animation.js"></script>
 </head>
 
 <body>
-    <div class="gback" id="homeBackground"></div>
-    <div class="gback" id="projectsBackground"></div>
-    <div class="gback" id="notesBackground"></div>
-    <div class="gback" id="othersBackground"></div>
-    <div class="gback" id="aboutBackground"></div>
+    <div class="pageBackground" id="waftBackground"></div>
+    <div class="pageBackground" id="realmBackground"></div>
+    <div class="pageBackground" id="fragmentsBackground"></div>
+    <div class="pageBackground" id="aboutBackground"></div>
     <div class="noise"></div>
     <div class="container">
-        <div class="nav">
-            <div class="nav-head">
+
+        <div class="nav" id="nav-frame">
+            <div class="nav-head" id="head">
                 <a class="nav-title" href="">Driftage</a>
                 <a class="nav-menu" id="nav-menu-button">
                     <img class="nav-menu-icon" src="images/menu@2x.png" alt="menu" />
                 </a>
             </div>
-
             <ul class="nav-menu-list" id="nav-bar">
-                <li class="nav-option-button selected" id="homeButton">WAFT<span class="divider">/ </span>飘</li>
-                <li class="nav-option-button" id="projectButton">REALM<span class="divider">/ </span>境</li>
-                <li class="nav-option-button" id="noteButton">FRAGMENTS<span class="divider">/ </span>碎片</li>
+                <li class="nav-option-button selected" id="waftButton">WAFT<span class="divider">/ </span>飘</li>
+                <li class="nav-option-button" id="realmButton">REALM<span class="divider">/ </span>境</li>
+                <li class="nav-option-button" id="fragmentsButton">FRAGMENTS<span class="divider">/ </span>碎片</li>
                 <li class="nav-option-button" id="aboutButton">ABOUT<span class="divider">/ </span>关于</li>
             </ul>
-
+            <div id="nav-closeMenu-button">
+                <img id="nav-closeMenu-icon" src="images/close.png">
+            </div>
             <div class="nav-logo">
                 <img class="nav-icon" src="images/driftage-icon.png" alt="icon" />
             </div>
-
             <div class="nav-recordinfo" id="recordinfo">
                 <p class="nav-recordinfo-text">浙ICP备2021006016号</p>
             </div>
         </div>
+
         <div class="main">
             <!-- 首页 -->
-            <div class="tabContent" id="homeArea">
-                <div class="clockback">
-                    <div class="repeatText">YourmatteristimeCEASELESSTIMeyouareeachsolitarymoment</div>
-                    <div class="-repeatText">CEASELESSTIMeyouareeachsolitarymomentYourmatteristime</div>
-                    <div class="repeatText">timeCEASELESSTIMeyouareeachsolitarymomentYourmatteris</div>
-                    <div class="-repeatText">TIMeyouareeachsolitarymomentYourmatteristimeCEASELESS</div>
-                    <div class="repeatText">matteristimeCEASELESSTIMeyouareeachsolitarymomentYour</div>
-                    <div class="-repeatText">youareeachsolitarymomentYourmatteristimeCEASELESSTIMe</div>
-                    <div class="repeatText">momentYourmatteristimeCEASELESSTIMeyouareeachsolitary</div>
-                    <div class="-repeatText">STIMeyouareeachsolitarymomentYourmatteristimeCEASELES</div>
-                    <div class="repeatText">YourmatteristimeCEASELESSTIMeyouareeachsolitarymoment</div>
-                    <div class="-repeatText">CEASELESSTIMeyouareeachsolitarymomentYourmatteristime</div>
-                    <div class="repeatText">timeCEASELESSTIMeyouareeachsolitarymomentYourmatteris</div>
-                    <div class="-repeatText">TIMeyouareeachsolitarymomentYourmatteristimeCEASELESS</div>
-                    <div class="repeatText">matteristimeCEASELESSTIMeyouareeachsolitarymomentYour</div>
-                    <div class="-repeatText">youareeachsolitarymomentYourmatteristimeCEASELESSTIMe</div>
-                    <div class="repeatText">momentYourmatteristimeCEASELESSTIMeyouareeachsolitary</div>
-                    <div class="-repeatText">STIMeyouareeachsolitarymomentYourmatteristimeCEASELES</div>
-                </div>
+            <div class="tabPages" id="waftPage">
                 <div class="clock">
-                    <div class="clockback2"></div>
                     <img id="clock_1" src="/images/home/media-1.png" alt="">
                     <img id="clock_2" src="/images/home/media-2.png" alt="">
                     <img id="clock_3" src="/images/home/media-3.png" alt="">
@@ -85,7 +65,7 @@
                 </div>
             </div>
             <!-- 项目 -->
-            <div class="tabContent" id="projectsArea">
+            <div class="tabPages" id="realmPage">
                 <div class="content-list">
                     <!-- 项目1 -->
                     <a class="content-item" href="/Pages/Project1.html">
@@ -255,7 +235,7 @@
                 </div>
             </div>
             <!-- 笔记 -->
-            <div class="tabContent" id="notesArea">
+            <div class="tabPages" id="fragmentsPage">
                 <div class="noteList">
 
                     <!-- 笔记1 -->
@@ -327,7 +307,7 @@
                 </div>
             </div>
             <!-- 关于 -->
-            <div class="tabContent" id="aboutArea">
+            <div class="tabPages" id="aboutPage">
                 <!-- 飞 -->
                 <div class="fly">
                     <div class="flyText">

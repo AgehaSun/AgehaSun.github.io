@@ -20,12 +20,12 @@
 }
 
 
-#homeArea {
+#waftPage {
     visibility: visible;
     z-index: 10;
 }
 
-#homeBackground {
+#waftBackground {
     background: var(--linearColor-homeBackground);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
@@ -36,12 +36,12 @@
 }
 
 
-#projectsArea {
+#realmPage {
     visibility: hidden;
     z-index: 9;
 }
 
-#projectsBackground {
+#realmBackground {
     background: var(--linearColor-projectsBackground);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
@@ -53,12 +53,12 @@
 }
 
 
-#notesArea {
+#fragmentsPage {
     visibility: hidden;
     z-index: 8;
 }
 
-#notesBackground {
+#fragmentsBackground {
     background: var(--linearColor-notesBackground);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
@@ -70,7 +70,7 @@
 }
 
 
-#aboutArea {
+#aboutPage {
     visibility: hidden;
     z-index: 6;
 }
@@ -144,12 +144,11 @@ body {
     }
 
     .main {
-        display: flex;
         overflow: hidden;
         position: relative;
     }
 
-    .tabContent {
+    .tabPages {
         box-sizing: border-box;
         padding-top: var(--space-40);
         padding-bottom: var(--space-40);
@@ -170,7 +169,7 @@ body {
         padding-bottom: var(--space-40);
 
         display: grid;
-        grid-template-rows: auto 1fr auto auto;
+        grid-template-rows: auto 1fr auto auto auto;
         grid-template-columns: 1fr;
     }
 
@@ -235,6 +234,12 @@ body {
         margin-right: var(--space-8);
     }
 
+    #nav-closeMenu-button{
+        visibility: hidden;
+    }
+
+
+
     .nav-logo {
         margin-bottom: var(--space-16);
         display: flex;
@@ -246,6 +251,7 @@ body {
         height: 96px;
         width: 48px;
     }
+
 
     .nav-recordinfo-text {
         height: var(--lineHeight-t1);
@@ -264,18 +270,17 @@ body {
     .container {
         width: 100%;
         height: 100%;
+        position: relative;
+        overflow: hidden;
 
         display: grid;
-        grid-template-rows: auto 1fr;
+        grid-template-rows: 80px 1fr;
         grid-template-columns: 1fr;
 
-        overflow: hidden;
     }
 
     .nav {
-        width: 100%;
-        height: 56px;
-        position: relative;
+        height: 100%;
     }
 
     .nav-head {
@@ -290,11 +295,8 @@ body {
         justify-content: center;
         align-items: center;
 
-        background-color: var(--color-background);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-
-        position: absolute;
-        z-index: 1;
     }
 
     #nav-menu-button {
@@ -316,29 +318,42 @@ body {
 
     .nav-title {
         color: var(--color-text);
-        font-size: var(--fontSize-t4);
-        line-height: var(--lineHeight-t4);
+        font-size: var(--fontSize-t5);
+        line-height: var(--lineHeight-t5);
+        font-family: Saira, serif;
     }
 
 
 
     .nav-menu-list {
-        box-sizing: border-box;
-        width: 100%;
-        height: 100vh;
-        margin-top: 56px;
-        padding-top: 72px;
+        margin-top: 160px;
 
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        position: absolute;
+        justify-content:center;
         visibility: hidden;
-        z-index: 100;
 
-        background-color: var(--color-background);
+        background-color: rgba(0,0,0,0.8);
     }
+
+    #nav-closeMenu-button
+    {
+        width: 100%;
+        height: 80px;
+        margin-top: var(--space-64);
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    #nav-closeMenu-icon{
+        width: 80px;
+        height: 80px;
+        opacity: 0.4;
+        visibility: inherit;
+    }
+
 
 
     .nav-option-button {
@@ -379,38 +394,32 @@ body {
 
     .nav-logo {
         visibility: hidden;
+        height: 0;
     }
 
     .nav-recordinfo {
         visibility: hidden;
+        height: 0;
     }
 
     .nav-recordinfo-text {
         visibility: hidden;
+        height: 0;
     }
 
     .main {
         overflow: hidden;
-        width: 100%;
-        height: 100%;
     }
 
 
-
-
-    .tabContent {
+    .tabPages {
         width: 100%;
         height: 100%;
         box-sizing: border-box;
         padding: var(--space-24);
 
-
         display: flex;
-
-
-        position: absolute;
         overflow: hidden;
+        flex-direction: column;
     }
-
-
 }
