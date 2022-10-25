@@ -320,15 +320,15 @@ body {
     }
 
     .nav-menu-icon {
-        width: 24px;
-        height: 24px;
+        width: 32px;
+        height: 32px;
 
     }
 
     .nav-title {
         color: var(--color-text);
-        font-size: var(--fontSize-t5);
-        line-height: var(--lineHeight-t5);
+        font-size: var(--fontSize-t6);
+        line-height: var(--lineHeight-t6);
         font-family: Saira, serif;
     }
 
