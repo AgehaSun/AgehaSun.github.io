@@ -4,17 +4,17 @@
 }
 
 :root {
-    --space-80: 80px;
+    --spacing-xxxxl: 80px;
     --space-72: 72px;
-    --space-64: 64px;
+    --spacing-xxxl: 64px;
     --space-56: 56px;
     --space-48: 48px;
-    --space-40: 40px;
-    --space-32: 32px;
-    --space-24: 24px;
-    --space-16: 16px;
-    --space-8: 8px;
-    --space-4: 4px;
+    --spacing-xxl: 40px;
+    --spacing-xl: 32px;
+    --spacing-large: 24px;
+    --spacing-m: 16px;
+    --spacing-s: 8px;
+    --spacing-xs: 4px;
 
     --lineHeight-t1: 16px;
     --lineHeight-t2: 24px;
@@ -36,7 +36,6 @@
     --fontSize-t9: 56px;
 
 
-    --color-text: #ffffff;
 }
 
 
@@ -105,17 +104,17 @@ body{
 
     .nav{
         box-sizing: border-box;
-        padding-top: var(--space-40);
-        padding-bottom: var(--space-40);
+        padding-top: var(--spacing-xxl);
+        padding-bottom: var(--spacing-xxl);
         display: flex;
         flex-direction: column;
-        row-gap: var(--space-80);
+        row-gap: var(--spacing-xxxxl);
     }
 
     .main {
         box-sizing: border-box;
-        padding-top: var(--space-40);
-        padding-bottom: var(--space-40);
+        padding-top: var(--spacing-xxl);
+        padding-bottom: var(--spacing-xxl);
         overflow: hidden;
         position: relative;
     }
@@ -187,13 +186,13 @@ body{
     }
 
     .contentTop{
-        padding: var(--space-8) 0;
+        padding: var(--spacing-s) 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .contentBottom{
         position: relative;
-        padding: var(--space-24) 0;
+        padding: var(--spacing-large) 0;
 
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -203,7 +202,7 @@ body{
 
         display: flex;
         flex-direction: column;
-        row-gap: var(--space-32);
+        row-gap: var(--spacing-xl);
 
     }
 
@@ -331,7 +330,7 @@ body{
     }
 
     .contentBottom{
-        margin-top: var(--space-32);
+        margin-top: var(--spacing-xl);
         display: flex;
         flex-direction: column;
     }
@@ -340,14 +339,14 @@ body{
         box-sizing: border-box;
         width: 100%;
         height: 240px;
-        margin-bottom: var(--space-40);
+        margin-bottom: var(--spacing-xxl);
         border: 4px solid rgba(255, 255, 255, 0.1);
     }
 
     .contentBottom-article{
-        margin-left: var(--space-8);
-        margin-bottom: var(--space-40);
-        padding-left:var(--space-16);
+        margin-left: var(--spacing-s);
+        margin-bottom: var(--spacing-xxl);
+        padding-left:var(--spacing-m);
         color: var(--color-text);
         font-size: var(--fontSize-t2);
         opacity: 0.8;

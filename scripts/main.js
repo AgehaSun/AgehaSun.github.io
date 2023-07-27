@@ -1,13 +1,14 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", function ()
+{
     document.getElementById("waftButton").addEventListener("click", function () { openPage("waftPage", "waftButton", "waftBackground"); })
     document.getElementById("realmButton").addEventListener("click", function () { openPage("realmPage", "realmButton", "realmBackground"); })
     document.getElementById("fragmentsButton").addEventListener("click", function () { openPage("fragmentsPage", "fragmentsButton", "fragmentsBackground"); })
     document.getElementById("aboutButton").addEventListener("click", function () { openPage("aboutPage", "aboutButton", "aboutBackground"); })
     document.getElementById("nav-menu-button").addEventListener("click", function () { menuShow(); })
     document.getElementById("nav-closeMenu-button").addEventListener("click", function () { menuHide(); })
-    document.getElementById("realmPage").addEventListener("wheel",HorizontalScroll,false)
-    document.getElementById("realmPage").addEventListener("touchstart",TouchStart,false)
-    document.getElementById("realmPage").addEventListener("touchmove",TouchMove,false)
+    document.getElementById("realmPage").addEventListener("wheel", HorizontalScroll, false)
+    document.getElementById("realmPage").addEventListener("touchstart", TouchStart, false)
+    document.getElementById("realmPage").addEventListener("touchmove", TouchMove, false)
 
     //横向滚动
     // let item = document.getElementById("realmPage");
@@ -22,7 +23,7 @@ function HorizontalScroll(event)
     const button = document.getElementById("nav-closeMenu-button");
     const style = getComputedStyle(button);
 
-    if(event.deltaY > 0 && style.visibility === "hidden")
+    if (event.deltaY > 0 && style.visibility === "hidden")
     {
         item.scrollLeft += 100;
     }
@@ -33,21 +34,21 @@ function HorizontalScroll(event)
 }
 
 
-let start = {x:0, y:0};
+let start = { x: 0, y: 0 };
 function TouchStart(event)
 {
     start.x = event.touches[0].pageX;
     start.y = event.touches[0].pageY;
 }
 
-function TouchMove (event)
+function TouchMove(event)
 {
     const item = document.getElementById("realmPage");
     offset = {}
     offset.x = start.x - event.touches[0].pageX;
     offset.y = start.y - event.touches[0].pageY;
 
-    if(offset.x < 0)
+    if (offset.x < 0)
     {
         item.scrollLeft += 100;
     }
@@ -61,24 +62,28 @@ function TouchMove (event)
 
 
 //切换页面
-function openPage(tabName, activeButton, back) {
+function openPage(tabName, activeButton, back)
+{
     const tabPages = document.getElementsByClassName("tabPages");
     const tabButtons = document.getElementsByClassName("nav-option-button");
     const background = document.getElementsByClassName("pageBackground");
 
     let i
-    for (i = 0; i < tabPages.length; i++) {
-        if(tabPages[i].id === tabName)
+    for (i = 0; i < tabPages.length; i++)
+    {
+        if (tabPages[i].id === tabName)
         {
             tabPages[i].style.visibility = "visible";
         }
-        else {
+        else
+        {
             tabPages[i].style.visibility = "hidden";
         }
     }
 
-    for (i = 0; i < tabButtons.length; i++) {
-        if(tabButtons[i].id === activeButton)
+    for (i = 0; i < tabButtons.length; i++)
+    {
+        if (tabButtons[i].id === activeButton)
         {
             tabButtons[i].className.replace(" active", "");
             tabButtons[i].className += " active"
@@ -88,13 +93,14 @@ function openPage(tabName, activeButton, back) {
         }
         else
         {
-            tabButtons[i].className =tabButtons[i].className.replace(" active", "");
+            tabButtons[i].className = tabButtons[i].className.replace(" active", "");
             tabButtons[i].classList.remove('selected');
         }
     }
 
-    for (i = 0; i < background.length; i++) {
-        if(background[i].id === back)
+    for (i = 0; i < background.length; i++)
+    {
+        if (background[i].id === back)
         {
             background[i].style.visibility = "visible";
         }
@@ -108,7 +114,8 @@ function openPage(tabName, activeButton, back) {
     //on media width < 768px
     const button = document.getElementById("nav-closeMenu-button");
     const style = getComputedStyle(button);
-    if (style.visibility === "visible") {
+    if (style.visibility === "visible")
+    {
         menuHide()
     }
 }
@@ -118,7 +125,8 @@ function openPage(tabName, activeButton, back) {
 
 
 // 打开导航栏
-function menuShow() {
+function menuShow()
+{
     const head = document.getElementById("head");
     const title = document.getElementById("title");
     const navbar = document.getElementById("nav-bar");
@@ -134,7 +142,8 @@ function menuShow() {
 }
 
 // 关闭导航栏
-function menuHide(){
+function menuHide()
+{
     const head = document.getElementById("head");
     const navbar = document.getElementById("nav-bar");
     const button = document.getElementById("nav-menu-button");
