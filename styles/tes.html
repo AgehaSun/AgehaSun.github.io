@@ -1,86 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body{
-            background-color: grey;
-            width: 100vw;
-            height: 100vh;
+        body {
+            background-color: black;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-
-
+            height: 100vh;
+            gap: 40px;
         }
 
-
-        .a {
-            background: #4b4b4b;
-            width: 1360px;
-            height: 220px;
-            margin: 40px;
-
-            display: grid;
-            grid-template-columns: 240px 1fr;
-            grid-column-gap: 40px;
-
-            overflow: hidden;
-
-        }
-
-
-        .b {
-            background: #000000;
-
-        }
-        .c {
-            background: #000000;
-            display: flex;
-            overflow: auto;
-
-        }
-        .d{
-            width: 200px;
+        #ssss {
+            width: 400px;
             height: 400px;
-            margin-left: 24px;
-            background-color: white;
-        }
-        .e{
-            width: 200px;
-            height: 400px;
-            margin-left: 24px;
-            background-color: white;
+
+            background-color: aqua;
+            transition: 3s;
         }
 
+        #ssss :hover {
+            background-color: azure;
+        }
 
-
-
+        #test {
+            background-color: brown;
+            width: 100px;
+            height: 48px;
+            transition: 3s;
+        }
     </style>
 </head>
+
 <body>
-    <div class="a">
-        <div class="b"></div>
-        <div class="c">
-            <div class="d">
-                <p class="p">
-                    asdsdadasdadsdasdad<br>
-                    asdadsadsdadsa<br>
-                    asdadsad<br>
-                </p>
-            </div>
-            <div class="e">
-                <p class="p">
-                    asdsdadasdadsdasdad<br>
-                    asdadsadsdadsa<br>
-                    asdadsad<br>
-                </p>
-            </div>
-        </div>
-    </div>
-    </div>
+    <script>
+        window.addEventListener("load", function ()
+        {
+            document.getElementById("test").addEventListener("click", function () { test(); })
+        })
+
+        function test()
+        {
+            const a = document.getElementById("ssss")
+            if (a.style.visibility = "visible")
+            {
+                a.style.visibility = "hidden"
+            }
+            else
+            {
+                a.style.visibility = "visible"
+            }
+        }
+    </script>
+
+    <div id="test"></div>
+    <div id="ssss"></div>
 
 </body>
+
 </html>

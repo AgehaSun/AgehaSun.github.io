@@ -5,6 +5,7 @@
   .content-list {
     width: auto;
     height: 100%;
+    visibility: inherit;
 
     display: flex;
 
@@ -15,6 +16,7 @@
 
   .content-item {
     width: 240px;
+    height: 100%;
     margin-right: var(--spacing-large);
 
     position: relative;
@@ -26,12 +28,6 @@
     overflow: visible;
 
     border-radius: var(--cornerRadius-4);
-  }
-
-  .content-item {
-    height: 100%;
-
-    transition: 0.2s;
   }
 
   .content-item:hover {

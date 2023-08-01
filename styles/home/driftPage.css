@@ -1,207 +1,183 @@
- @media (min-width: 768px) {
-     .clock {
-         margin-top: var(--spacing-xxl);
-         margin-bottom: var(--spacing-xxl);
-         box-sizing: border-box;
-         top:0;
-         bottom: 0;
-         left: 0;
-         right: 0;
-         position: absolute;
-         z-index: -1010;
+@import url(/styles/library.css);
 
-         overflow: hidden;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-     }
+@media (min-width: 768px) {
+  #waftPage {
+    justify-content: end;
+  }
 
+  .clock {
+    display: block;
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: var(--spacing-xxl);
+    margin-bottom: var(--spacing-xxl);
 
-     #clock_1 {
-         height: 80%;
-         width: 80%;
-         position: absolute;
-         z-index: -1010;
-         justify-self: center;
-     }
+    z-index: -100;
 
-     #clock_2 {
-         height: 80%;
-         width: 80%;
-         position: absolute;
-         z-index: -1009;
-         justify-self: center;
-     }
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-     #clock_3 {
-         height: 70vh;
-         width: 70vh;
-         position: absolute;
-         z-index: -1008;
-         justify-self: center;
-     }
+  #clock_1 {
+    width: 60%;
+    position: absolute;
+    z-index: -1010;
+    justify-self: center;
+  }
 
+  #clock_2 {
+    width: 60%;
+    position: absolute;
+    z-index: -1009;
+    justify-self: center;
+  }
 
-     #clock_4 {
-         height: 60vh;
-         width: 60vh;
-         position: absolute;
-         z-index: -1007;
-         justify-self: center;
-     }
+  #clock_3 {
+    width: 60%;
+    position: absolute;
+    z-index: -1008;
+    justify-self: center;
+  }
 
-     #clock_5 {
-         height: 60vh;
-         width: 60vh;
-         position: absolute;
-         z-index: -1006;
-         justify-self: center;
-     }
+  #clock_4 {
+    width: 60%;
+    position: absolute;
+    z-index: -1007;
+    justify-self: center;
+  }
 
-     #clock_p {
-         height: 60vh;
-         width: 60vh;
-         position: absolute;
-         z-index: 1;
-         justify-self: center;
-     }
+  #clock_5 {
+    height: 60vh;
+    width: 60vh;
+    position: absolute;
+    z-index: -1006;
+    justify-self: center;
+  }
 
-     #home_text {
-         width: 100%;
-         z-index: 2;
-         display: flex;
-         flex-direction: column;
-         align-items: end;
-         align-self: center;
-     }
+  #clock_p {
+    height: 60vh;
+    width: 60vh;
+    position: absolute;
+    z-index: 1;
+    justify-self: center;
+  }
 
-     #p1 {
-         font-size: var(--fontSize-t7);
-         line-height: var(--lineHeight-t7);
-         font-family: Saira, serif;
-         text-transform: uppercase;
-         color: #555;
-         opacity: 0.7;
-         text-align: right;
+  #home_text {
+    width: 100%;
 
-     }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-xl);
+  }
 
-     #p2 {
-         font-size: var(--fontSize-t9);
-         line-height: var(--lineHeight-t9);
-         font-family: Saira, serif;
-         color: #6F181A;
-         text-transform: uppercase;
-         opacity: 1;
-         text-align: right;
-         margin-top: 10px;
-     }
+  #p1 {
+    text-transform: uppercase;
+    color: #555;
+  }
 
-     #p3 {
-         font-size: var(--fontSize-t7);
-         line-height: var(--lineHeight-t7);
-         font-family: Saira, serif;
-         text-transform: uppercase;
-         color: #555;
-         opacity: 0.7;
-         text-align: right;
-         margin-top: 10px;
-     }
- }
+  #p2 {
+    color: #6f181a;
+    text-transform: uppercase;
+  }
 
+  #p3 {
+    text-transform: uppercase;
+    color: #555;
+  }
+}
 
+@media (max-width: 767px) {
+  .clock {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 80px;
+    bottom: 0;
+    z-index: 1;
 
- @media (max-width: 767px) {
-     .clock {
-         position: fixed;
-         left: 0;
-         right: 0;
-         top:80px;
-         bottom: 0;
-         z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-large);
+  }
 
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         padding: var(--spacing-large);
-     }
+  #clock_1 {
+    width: 70vw;
+    position: absolute;
+    z-index: 2;
+  }
 
+  #clock_2 {
+    width: 70vw;
+    position: absolute;
+    z-index: 3;
+  }
 
+  #clock_3 {
+    width: 70vw;
+    position: absolute;
+    z-index: 4;
+  }
 
-     #clock_1 {
-         width: 70vw;
-         position: absolute;
-         z-index: 2;
-     }
+  #clock_4 {
+    width: 70vw;
+    position: absolute;
+    z-index: 4;
+  }
 
-     #clock_2 {
-         width: 70vw;
-         position: absolute;
-         z-index: 3;
-     }
+  #clock_5 {
+    width: 70vw;
+    position: absolute;
+    z-index: 5;
+  }
 
-     #clock_3 {
-         width: 70vw;
-         position: absolute;
-         z-index: 4;
-     }
+  #clock_p {
+    width: 70vw;
+    position: absolute;
+    z-index: 6;
+  }
 
-     #clock_4 {
-         width: 70vw;
-         position: absolute;
-         z-index: 4;
-     }
+  #home_text {
+    position: absolute;
+    z-index: 7;
+    width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
 
-     #clock_5 {
-         width: 70vw;
-         position: absolute;
-         z-index: 5;
-     }
+  #p1 {
+    font-size: 2rem;
+    font-family: Saira, serif;
+    color: #919191;
+    text-align: center;
+  }
 
-     #clock_p {
-         width: 70vw;
-         position: absolute;
-         z-index: 6;
-     }
+  #p2 {
+    display: none;
+    font-size: 2rem;
+    font-family: Saira, serif;
+    color: #919191;
+    text-align: center;
+  }
 
-     #home_text {
-         position: absolute;
-         z-index: 7;
-         width: 100%;
-         padding-left: 10vw;
-         padding-right: 10vw;
-     }
+  #p22 {
+    font-size: 2rem;
+    font-family: Saira, serif;
+    color: #6f181a;
+    text-align: center;
+  }
 
-
-
-
-     #p1 {
-         font-size: 2rem;
-         font-family: Saira, serif;
-         color: #919191;
-         text-align: center;
-     }
-
-
-     #p2 {
-         display: none;
-         font-size: 2rem;
-         font-family: Saira, serif;
-         color: #919191;
-         text-align: center;
-     }
-
-     #p22 {
-         font-size: 2rem;
-         font-family: Saira, serif;
-         color: #6F181A;
-         text-align: center;
-     }
-
-     #p3 {
-         font-size: 2rem;
-         font-family: Saira, serif;
-         text-align: center;
-         color: #919191;
-     }
- }
+  #p3 {
+    font-size: 2rem;
+    font-family: Saira, serif;
+    text-align: center;
+    color: #919191;
+  }
+}

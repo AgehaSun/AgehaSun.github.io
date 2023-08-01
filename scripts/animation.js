@@ -1,5 +1,5 @@
 
-gsap.from(".nav",{
+gsap.from(".nav", {
     opacity: 0,
     duration: 0.8,
     y: -40,
@@ -108,7 +108,8 @@ gsap.to(".repeatText", {
     repeat: -1,
     ease: 'none',
     modifiers: {
-        x: gsap.utils.unitize(x => {
+        x: gsap.utils.unitize(x =>
+        {
             offset += additionalX.val;
             x = (parseFloat(x) + offset) % -containerWidth
             return x;
@@ -121,7 +122,7 @@ let airplane = TweenMax.from(".anim",
 )
 
 let about = document.getElementById("aboutButton");
-about.onclick = function () {
+about.onclick = function ()
+{
     airplane.restart();
-    alert("fly")
 }

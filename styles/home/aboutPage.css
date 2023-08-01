@@ -1,228 +1,215 @@
-@font-face {
-    font-family: Saira;
-    src: url(/fonts/SairaCondensed-Regular.ttf);
+@import url(/styles/library.css);
+
+@media (min-width: 768px) {
+  .fly {
+    width: 240px;
+    height: 100%;
+
+    position: absolute;
+    z-index: 100;
+    right: 0;
+  }
+
+  .flyText {
+    width: 100%;
+
+    position: absolute;
+    z-index: 200;
+
+    font-size: var(--fontSize-t5);
+    line-height: var(--lineHeight-t5);
+    color: var(--color-text);
+    color: var(--color-font-primary);
+    opacity: var(--opacity-navOption-normal);
+    font-family: serif;
+    text-align: right;
+  }
+
+  .animArea {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 100;
+
+    overflow: hidden;
+    justify-self: center;
+    align-self: center;
+    -webkit-mask-image: var(--maskColor-about);
+    mask-image: var(--maskColor-about);
+  }
+
+  .anim {
+    margin-top: 160px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  #airplane {
+    width: 100px;
+    height: 80px;
+  }
+
+  #cloud {
+    width: 60px;
+    height: 1080px;
+  }
+
+  .aboutme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .aboutme::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about-title-name {
+    color: var(--color-text);
+    font-size: var(--fontSize-t9);
+    line-height: var(--lineHeight-t9);
+    font-family: Saira, serif;
+  }
+
+  .about-title {
+    height: var(--fontSize-t5);
+    margin-top: var(--spacing-xxxxl);
+    margin-bottom: var(--spacing-large);
+
+    font-size: var(--fontSize-t5);
+    line-height: var(--fontSize-t5);
+    color: var(--color-text);
+  }
+
+  .about-item-frame {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-s);
+  }
+
+  .about-item-name {
+    width: 200px;
+
+    opacity: 0.4;
+    color: var(--color-text);
+  }
+
+  .about-item-content {
+    width: 400px;
+    color: var(--color-text);
+  }
+
+  .about-item-icon {
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+  }
 }
 
+@media (max-width: 767px) {
+  .fly {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-large);
+    overflow: hidden;
+  }
+  .flyText {
+    position: fixed;
+    font-family: serif;
+    color: var(--color-text);
+    font-size: var(--fontSize-t3);
+    opacity: 0.8;
+  }
+  .animArea {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-large);
+  }
 
+  .anim {
+    width: 100%;
+    height: 100%;
+  }
+  #airplane {
+    position: fixed;
+    z-index: 1;
+    width: 100px;
+    right: 0;
+    top: 0;
+    margin-right: var(--spacing-large);
+    margin-top: 140px;
+  }
 
-@media (min-width: 768px)
-{
-        .fly {
-            width: 240px;
-            height: 100%;
+  #cloud {
+    position: fixed;
+    z-index: 0;
+    width: 60px;
+    right: 0;
+    top: 0;
+    margin-right: 42px;
+    margin-top: 140px;
+  }
 
-            display: flex;
-            position: absolute;
-            z-index: 100;
-            right: 0;
-        }
+  .aboutme {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 40px;
+    margin-top: 180px;
+    padding: var(--spacing-large);
 
-        .flyText {
-            width: 100%;
-            margin-top: var(--spacing-large);
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+  }
 
-            font-size: var(--fontSize-t5);
-            line-height: var(--lineHeight-t5);
-            color: var(--color-text);
-            opacity: var(--opacity-navOption-normal);
-            font-family: serif;
-            text-align: right;
+  .about-title-name {
+    font-family: Saira, serif;
+    font-size: var(--fontSize-t7);
+    color: var(--color-text);
+    line-height: var(--lineHeight-t7);
+  }
 
-            position: absolute;
-            z-index: 120;
-        }
+  .about-title {
+    margin-top: var(--spacing-large);
+    font-size: var(--fontSize-t4);
+    color: var(--color-text);
+    line-height: var(--lineHeight-t4);
+  }
 
-        .animArea {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            justify-self: center;
-            align-self: center;
-            -webkit-mask-image: var(--maskColor-about);
-            mask-image: var(--maskColor-about);
-        }
+  .about-item-frame {
+    margin-top: var(--spacing-m);
+    margin-left: var(--spacing-s);
+  }
 
-        .anim {
-            margin-top: 200px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            align-items: center;
-        }
+  .about-item-name {
+    font-size: var(--fontSize-t2);
+    color: var(--color-text);
+    line-height: var(--lineHeight-t2);
+    opacity: 0.6;
+  }
 
-        #airplane {
-            width: 100px;
-            height: 80px;
-        }
-
-        #cloud {
-            width: 60px;
-            height: 1080px;
-        }
-
-
-        .aboutme {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: auto;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-
-        .aboutme::-webkit-scrollbar {
-            display: none;
-        }
-
-
-        .about-title-name{
-            color: var(--color-text);
-            font-size: var(--fontSize-t9);
-            line-height: var(--lineHeight-t9);
-            font-family: Saira, serif;
-        }
-
-        .about-title {
-            height: var(--fontSize-t5);
-            margin-top: var(--spacing-xxxxl);
-            margin-bottom: var(--spacing-large);
-
-            font-size: var(--fontSize-t5);
-            line-height: var(--fontSize-t5);
-            color: var(--color-text);
-        }
-
-        .about-item-frame {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: var(--spacing-s);
-        }
-
-        .about-item-name {
-            width: 200px;
-
-            opacity: 0.4;
-            color: var(--color-text);
-        }
-
-        .about-item-content {
-            width: 400px;
-            color: var(--color-text)
-        }
-
-        .about-item-icon {
-            margin-right: 20px;
-            width: 24px;
-            height: 24px;
-        }
-
-    }
-
-    @media (max-width: 767px) {
-        .fly{
-            position: absolute;
-            z-index: 1;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: var(--spacing-large);
-            overflow: hidden;
-        }
-        .flyText{
-            position: fixed;
-            font-family: serif;
-            color: var(--color-text);
-            font-size: var(--fontSize-t3);
-            opacity: 0.8;
-        }
-        .animArea{
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: var(--spacing-large);
-        }
-
-        .anim{
-            width: 100%;
-            height: 100%;
-        }
-        #airplane{
-            position: fixed;
-            z-index: 1;
-            width: 100px;
-            right: 0;
-            top: 0;
-            margin-right: var(--spacing-large);
-            margin-top: 140px;
-        }
-
-        #cloud{
-            position: fixed;
-            z-index: 0;
-            width: 60px;
-            right: 0;
-            top: 0;
-            margin-right: 42px;
-            margin-top: 140px;
-        }
-
-
-
-
-
-        .aboutme{
-            position: absolute;
-            z-index: 2;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 40px;
-            margin-top: 180px;
-            padding: var(--spacing-large);
-
-            overflow: scroll;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .about-title-name{
-            font-family: Saira, serif;
-            font-size: var(--fontSize-t7);
-            color: var(--color-text);
-            line-height: var(--lineHeight-t7);
-        }
-
-        .about-title{
-            margin-top: var(--spacing-large);
-            font-size: var(--fontSize-t4);
-            color: var(--color-text);
-            line-height: var(--lineHeight-t4);
-        }
-
-        .about-item-frame
-        {
-            margin-top: var(--spacing-m);
-            margin-left: var(--spacing-s);
-        }
-
-        .about-item-name{
-            font-size: var(--fontSize-t2);
-            color: var(--color-text);
-            line-height: var(--lineHeight-t2);
-            opacity: 0.6;
-        }
-
-        .about-item-content{
-            font-size: var(--fontSize-t2);
-            color: var(--color-text);
-            line-height: var(--lineHeight-t2);
-        }
-
-    }
+  .about-item-content {
+    font-size: var(--fontSize-t2);
+    color: var(--color-text);
+    line-height: var(--lineHeight-t2);
+  }
+}

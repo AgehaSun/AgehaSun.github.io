@@ -199,6 +199,13 @@ body {
   font-weight: 300;
 }
 
+.Body-quote {
+  font-family: serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
 .Label-large {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans",
     Arial, sans-serif;
