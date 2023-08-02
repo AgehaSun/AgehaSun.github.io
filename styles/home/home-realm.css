@@ -1,5 +1,4 @@
-@keyframes contentHover {
-}
+@import url(/styles/library.css);
 
 @media (min-width: 768px) {
   .content-list {

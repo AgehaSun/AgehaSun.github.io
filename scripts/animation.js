@@ -1,15 +1,13 @@
-
+//加载动画
 gsap.from(".nav", {
     opacity: 0,
-    duration: 0.8,
-    y: -40,
+    duration: 0.4,
     stagger: 0.2
 });
 
-gsap.from("#homeArea", {
+gsap.from(".main", {
     opacity: 0,
     duration: 0.8,
-    y: 40,
     stagger: 0.2,
 });
 
@@ -98,26 +96,10 @@ gsap.to("#clock_p", {
 })
 
 
-const additionalX = { val: 0 };
-let containerWidth = document.body.clientWidth * 0.35;
-let offset = 0;
 
-gsap.to(".repeatText", {
-    x: -containerWidth,
-    duration: 10,
-    repeat: -1,
-    ease: 'none',
-    modifiers: {
-        x: gsap.utils.unitize(x =>
-        {
-            offset += additionalX.val;
-            x = (parseFloat(x) + offset) % -containerWidth
-            return x;
-        })
-    }
-});
 
-let airplane = TweenMax.from(".anim",
+// 飞机动画
+let airplane = TweenMax.from(".about-animation-actor",
     { yPercent: 30, duration: 40 }
 )
 

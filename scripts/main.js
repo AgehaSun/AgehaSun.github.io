@@ -1,25 +1,21 @@
 window.addEventListener("load", function ()
 {
-    document.getElementById("waftButton").addEventListener("click", function () { openPage("waftPage", "waftButton", "waftBackground"); })
-    document.getElementById("realmButton").addEventListener("click", function () { openPage("realmPage", "realmButton", "realmBackground"); })
-    document.getElementById("fragmentsButton").addEventListener("click", function () { openPage("fragmentsPage", "fragmentsButton", "fragmentsBackground"); })
-    document.getElementById("aboutButton").addEventListener("click", function () { openPage("aboutPage", "aboutButton", "aboutBackground"); })
+    document.getElementById("waftButton").addEventListener("click", function () { openPage("main-tab-waft", "waftButton", "waftBackground"); })
+    document.getElementById("realmButton").addEventListener("click", function () { openPage("main-tab-realm", "realmButton", "realmBackground"); })
+    document.getElementById("fragmentsButton").addEventListener("click", function () { openPage("main-tab-fragments", "fragmentsButton", "fragmentsBackground"); })
+    document.getElementById("aboutButton").addEventListener("click", function () { openPage("main-tab-about", "aboutButton", "aboutBackground"); })
     document.getElementById("nav-menu-button").addEventListener("click", function () { menuShow(); })
     document.getElementById("nav-closeMenu-button").addEventListener("click", function () { menuHide(); })
-    document.getElementById("realmPage").addEventListener("wheel", HorizontalScroll, false)
-    document.getElementById("realmPage").addEventListener("touchstart", TouchStart, false)
-    document.getElementById("realmPage").addEventListener("touchmove", TouchMove, false)
+    document.getElementById("main-tab-realm").addEventListener("wheel", HorizontalScroll, false)
+    document.getElementById("main-tab-realm").addEventListener("touchstart", TouchStart, false)
+    document.getElementById("main-tab-realm").addEventListener("touchmove", TouchMove, false)
 
-    //横向滚动
-    // let item = document.getElementById("realmPage");
-    // item.addEventListener("wheel", function (e) { if (e.deltaY > 0) item.scrollLeft += 100; else item.scrollLeft -= 100; })
-    // item.addEventListener("touch", TouchMove ,false)
 })
 
 
 function HorizontalScroll(event)
 {
-    const item = document.getElementById("realmPage");
+    const item = document.getElementById("main-tab-realm");
     const button = document.getElementById("nav-closeMenu-button");
     const style = getComputedStyle(button);
 
@@ -43,7 +39,7 @@ function TouchStart(event)
 
 function TouchMove(event)
 {
-    const item = document.getElementById("realmPage");
+    const item = document.getElementById("main-tab-realm");
     offset = {}
     offset.x = start.x - event.touches[0].pageX;
     offset.y = start.y - event.touches[0].pageY;
@@ -64,7 +60,7 @@ function TouchMove(event)
 //切换页面
 function openPage(tabName, activeButton, back)
 {
-    const tabPages = document.getElementsByClassName("tabPages");
+    const tabPages = document.getElementsByClassName("main-tab");
     const tabButtons = document.getElementsByClassName("nav-option-button");
     const background = document.getElementsByClassName("pageBackground");
 
@@ -118,7 +114,16 @@ function openPage(tabName, activeButton, back)
     {
         menuHide()
     }
+
+    backgroundFadeIn.restart();
 }
+
+let backgroundFadeIn = TweenMax.from(".pageBackground",
+    {
+        opacity: 0,
+        y: -60,
+        duration: 2,
+    });
 
 
 

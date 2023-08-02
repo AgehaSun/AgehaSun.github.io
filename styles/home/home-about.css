@@ -1,7 +1,7 @@
 @import url(/styles/library.css);
 
 @media (min-width: 768px) {
-  .fly {
+  .about-animation {
     width: 240px;
     height: 100%;
 
@@ -10,27 +10,22 @@
     right: 0;
   }
 
-  .flyText {
-    width: 100%;
-
+  .about-animation-text {
     position: absolute;
     z-index: 200;
 
-    font-size: var(--fontSize-t5);
-    line-height: var(--lineHeight-t5);
-    color: var(--color-text);
-    color: var(--color-font-primary);
-    opacity: var(--opacity-navOption-normal);
-    font-family: serif;
+    width: 100%;
+
+    color: var(--color-font-secondary);
     text-align: right;
   }
 
-  .animArea {
-    width: 100%;
-    height: 100%;
-
+  .about-animation-frame {
     position: absolute;
     z-index: 100;
+
+    width: 100%;
+    height: 100%;
 
     overflow: hidden;
     justify-self: center;
@@ -39,12 +34,12 @@
     mask-image: var(--maskColor-about);
   }
 
-  .anim {
-    margin-top: 160px;
+  .about-animation-actor {
     width: 100%;
+    margin-top: 160px;
+
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     align-items: center;
   }
 
@@ -58,64 +53,70 @@
     height: 1080px;
   }
 
-  .aboutme {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  .about-content {
     position: relative;
+    width: 100%;
+
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxl);
   }
 
-  .aboutme::-webkit-scrollbar {
+  .about-content::-webkit-scrollbar {
     display: none;
   }
 
-  .about-title-name {
-    color: var(--color-text);
-    font-size: var(--fontSize-t9);
-    line-height: var(--lineHeight-t9);
-    font-family: Saira, serif;
+  .about-content-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
   }
 
-  .about-title {
-    height: var(--fontSize-t5);
-    margin-top: var(--spacing-xxxxl);
-    margin-bottom: var(--spacing-large);
+  .about-page-title {
+    color: var(--color-font-primary);
+  }
 
-    font-size: var(--fontSize-t5);
-    line-height: var(--fontSize-t5);
-    color: var(--color-text);
+  .about-section-title {
+    color: var(--color-font-primary);
+  }
+
+  .about-section-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
   }
 
   .about-item-frame {
+    color: var(--color-font-secondary);
+
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: var(--spacing-s);
+    gap: var(--spacing-s);
   }
 
   .about-item-name {
     width: 200px;
 
-    opacity: 0.4;
-    color: var(--color-text);
+    display: flex;
+    gap: var(--spacing-s);
   }
 
   .about-item-content {
     width: 400px;
-    color: var(--color-text);
-  }
 
-  .about-item-icon {
-    margin-right: 20px;
-    width: 24px;
-    height: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-s);
   }
 }
 
 @media (max-width: 767px) {
-  .fly {
+  .about-animation {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -125,14 +126,14 @@
     padding: var(--spacing-large);
     overflow: hidden;
   }
-  .flyText {
+  .about-animation-text {
     position: fixed;
     font-family: serif;
     color: var(--color-text);
     font-size: var(--fontSize-t3);
     opacity: 0.8;
   }
-  .animArea {
+  .about-animation-frame {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -142,7 +143,7 @@
     padding: var(--spacing-large);
   }
 
-  .anim {
+  .about-animation-actor {
     width: 100%;
     height: 100%;
   }
@@ -166,7 +167,7 @@
     margin-top: 140px;
   }
 
-  .aboutme {
+  .about-content {
     position: absolute;
     z-index: 2;
     left: 0;

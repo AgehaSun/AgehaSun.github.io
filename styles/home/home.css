@@ -14,7 +14,7 @@
   }
 }
 
-#waftPage {
+#main-tab-waft {
   visibility: visible;
   z-index: 10;
 }
@@ -29,7 +29,7 @@
   height: 100%;
 }
 
-#realmPage {
+#main-tab-realm {
   visibility: hidden;
   z-index: 9;
 }
@@ -45,7 +45,7 @@
   visibility: hidden;
 }
 
-#fragmentsPage {
+#main-tab-fragments {
   visibility: hidden;
   z-index: 8;
 }
@@ -61,7 +61,7 @@
   visibility: hidden;
 }
 
-#aboutPage {
+#main-tab-about {
   visibility: hidden;
   z-index: 6;
 }
@@ -88,16 +88,8 @@
   pointer-events: none;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media (min-width: 768px) {
-  .contentArea {
+  .container {
     width: 80%;
     height: 75%;
 
@@ -114,7 +106,7 @@
     position: relative;
   }
 
-  .tabPages {
+  .main-tab {
     box-sizing: border-box;
     position: absolute;
     padding-top: var(--spacing-xxl);

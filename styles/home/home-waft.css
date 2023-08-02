@@ -1,7 +1,7 @@
 @import url(/styles/library.css);
 
 @media (min-width: 768px) {
-  #waftPage {
+  #main-tab-waft {
     justify-content: end;
   }
 

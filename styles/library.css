@@ -139,12 +139,17 @@ html {
   overflow: hidden;
 }
 
+Body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   border: 0;
   text-decoration: none;
   list-style-type: none;
-
-  font-family: "Source Han Sans SC", "PingFang SC", serif;
 }
 
 img {
@@ -155,12 +160,6 @@ li {
   cursor: pointer;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans",
-    Arial, sans-serif;
-  font-size: 14px;
-  line-height: 22px;
-}
 
 @font-face {
   font-family: "Saira";
@@ -233,28 +232,28 @@ body {
 
 @media (min-width: 768px) {
   .H1-regular {
-    font-family: "Saira", serif;
+    font-family: "Saira", sans-serif;
     font-size: 48px;
     line-height: 56px;
     font-weight: 400;
   }
 
   .H2-regular {
-    font-family: "Saira", serif;
+    font-family: "Saira", sans-serif;
     font-size: 32px;
     line-height: 40px;
     font-weight: 400;
   }
 
   .H3-regular {
-    font-family: "Saira", serif;
+    font-family: "Saira", sans-serif;
     font-size: 24px;
     line-height: 32px;
     font-weight: 400;
   }
 
   .H4-regular {
-    font-family: "Saira", serif;
+    font-family: "Saira", sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -263,28 +262,28 @@ body {
 
 @media (max-width: 767px) {
   .H1-regular {
-    font-family: "Saira", serif;
+    font-family: "Saira", sans-serif;
     font-size: 24px;
     line-height: 32px;
     font-weight: 400;
   }
 
   .H2-regular {
-    font-family: "Saira", serif;
+    font-family: "Saira", sans-serif;
     font-size: 20px;
     line-height: 28px;
     font-weight: 400;
   }
 
   .H3-regular {
-    font-family: "Saira", serif;
+    font-family: "Saira", sans-serif;
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
   }
 
   .H4-regular {
-    font-family: "Saira", serif;
+    font-family: "Saira", sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
