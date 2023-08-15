@@ -3,6 +3,7 @@
   --color-font-secondary: rgba(235, 235, 245, 0.6);
   --color-font-tertiary: rgba(235, 235, 245, 0.3);
   --color-font-quaternary: rgba(235, 235, 245, 0.16);
+  
 
   --spacing-xxxxl: 80px;
   --spacing-xxxl: 64px;
@@ -159,6 +160,7 @@ img {
 li {
   cursor: pointer;
 }
+
 
 
 @font-face {
