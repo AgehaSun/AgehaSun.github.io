@@ -115,15 +115,15 @@ function openPage(tabName, activeButton, back)
         menuHide()
     }
 
-    backgroundFadeIn.restart();
+    // backgroundFadeIn.restart();
 }
 
-let backgroundFadeIn = TweenMax.from(".pageBackground",
-    {
-        opacity: 0,
-        y: -60,
-        duration: 2,
-    });
+// let backgroundFadeIn = TweenMax.from(".pageBackground",
+//     {
+//         opacity: 0,
+//         y: -60,
+//         duration: 2,
+//     });
 
 
 

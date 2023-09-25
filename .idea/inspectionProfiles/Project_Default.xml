@@ -12,5 +12,10 @@
         </value>
       </option>
     </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="true" level="TEXT ATTRIBUTES" enabled_by_default="true" editorAttributes="CONSIDERATION_ATTRIBUTES">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
   </profile>
 </component>

@@ -1,0 +1,167 @@
+/*color*/
+:root {
+    --color-font-primary: rgba(255, 255, 255, 1);
+    --color-font-secondary: rgba(235, 235, 245, 0.6);
+    --color-font-tertiary: rgba(235, 235, 245, 0.3);
+    --color-font-quaternary: rgba(235, 235, 245, 0.16);
+
+    --spacing-xxxxl: 80px;
+    --spacing-xxxl: 64px;
+    --spacing-xxl: 40px;
+    --spacing-xl: 32px;
+    --spacing-large: 24px;
+    --spacing-m: 16px;
+    --spacing-s: 8px;
+    --spacing-xs: 4px;
+
+    --cornerRadius-4: 4px;
+    --cornerRadius-8: 8px;
+    --cornerRadius-16: 16px;
+    --cornerRadius-24: 24px;
+    --cornerRadius-32: 32px;
+    --cornerRadius-40: 40px;
+
+    --linearColor-homeBackground: #0c0c0c;
+    --linearColor-projectsBackground: linear-gradient(
+            137.59deg,
+            #003f7d 0%,
+            #104e7a 34.9%,
+            #0c5984 67.19%,
+            #006174 100%
+    );
+    --linearColor-notesBackground: linear-gradient(
+            137.59deg,
+            #1f364d 0%,
+            #243959 34.9%,
+            #232e4d 67.19%,
+            #232a4d 100%
+    );
+    --linearColor-othersBackground: linear-gradient(
+            137.59deg,
+            #8b75c8 0%,
+            #ce8893 34.9%,
+            #d7876c 67.19%,
+            #c89962 100%
+    );
+    --linearColor-aboutBackground: linear-gradient(
+            -45deg,
+            #4e7df5,
+            #4082f4,
+            #5a9cf9,
+            #7da2ff
+    );
+
+    --maskColor-about: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 100%
+    );
+}
+
+
+/*font*/
+@font-face {
+    font-family: ttttt;
+    src: url(/fonts/SairaCondensed-Regular.ttf) format("woff")
+}
+.Body-bold {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.Body-medium {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.Body-regular {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.Body-light {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+}
+
+.Body-quote {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.Label-large {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.Label-small {
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.divider {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: var(--color-font-quaternary);
+}
+
+@media (min-width: 768px) {
+    .H1-regular {
+        font-family: ttttt, serif;
+        font-size: 48px;
+        line-height: 56px;
+        font-weight: 400;
+    }
+
+    .H2-regular {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 400;
+    }
+
+    .H3-regular {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+    }
+
+    .H4-regular {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 767px) {
+    .H1-regular {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+    }
+
+    .H2-regular {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+
+    .H3-regular {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+
+    .H4-regular {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}

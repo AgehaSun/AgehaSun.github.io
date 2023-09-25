@@ -1,4 +1,4 @@
-@import url(/styles/library.css);
+@import url(/styles/theme/theme-A.css);
 
 @keyframes gradient {
   0% {
@@ -17,6 +17,13 @@
 #main-tab-waft {
   visibility: visible;
   z-index: 10;
+}
+
+#webgl{
+  position: absolute;
+  z-index:-1;
+  width:100vw;
+  height: 100vh;
 }
 
 #waftBackground {
@@ -88,7 +95,16 @@
   pointer-events: none;
 }
 
+
 @media (min-width: 768px) {
+
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .container {
     width: 80%;
     height: 75%;
@@ -99,6 +115,8 @@
     grid-column-gap: 80px;
 
     overflow: hidden;
+
+
   }
 
   .main {
