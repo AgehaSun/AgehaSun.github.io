@@ -2,565 +2,567 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>Driftage</title>
-    <link rel="stylesheet" href="styles/reset.css"/>
-    <link rel="stylesheet" href="styles/home/home.css"/>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/home/home.css" />
     <link rel="stylesheet" href="styles/home/home-waft.css">
     <link rel="stylesheet" href="styles/home/home-realm.css">
     <link rel="stylesheet" href="styles/home/home-fragments.css">
     <link rel="stylesheet" href="styles/home/home-about.css">
-    <link rel="icon" type="image/x-icon" href="images/icon.png"/>
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
 </head>
 
 <body>
-<!-- background-->
-<div class="pageBackground" id="waftBackground"></div>
-<div class="pageBackground" id="realmBackground"></div>
-<div class="pageBackground" id="fragmentsBackground"></div>
-<div class="pageBackground" id="aboutBackground"></div>
-<div id="webgl"></div>
-<div class="noise"></div>
+    <!-- background-->
+    <div class="pageBackground" id="waftBackground"></div>
+    <div class="pageBackground" id="realmBackground"></div>
+    <div class="pageBackground" id="fragmentsBackground"></div>
+    <div class="pageBackground" id="aboutBackground"></div>
+    <canvas id="webgl"></canvas>
+    <div class="noise"></div>
 
-<!-- container-->
-<div class="container">
-    <!-- navigation -->
-    <div class="nav" id="nav-frame">
-        <div class="nav-top" id="head">
-            <a class="nav-title" id="title" href="">
-                <h1 class="H1-regular">Driftage</h1>
-            </a>
-            <a id="nav-menu-button">
-                <img class="nav-menu-icon" src="images/menu@2x.png" alt="menu"/>
-            </a>
-        </div>
-        <ul class="nav-middle" id="nav-bar">
-            <li class="nav-option-button selected" id="waftButton">
-                <span class="Body-light">WAFT</span>
-                <span class="divider">/</span>
-                <span class="Body-regular">飘</span>
-            </li>
-
-            <li class="nav-option-button" id="realmButton">
-                <span class="Body-light">REALM</span>
-                <span class="divider">/</span>
-                <span class="Body-regular">境</span>
-            </li>
-
-            <li class="nav-option-button" id="fragmentsButton">
-                <span class="Body-light">FRAGMENTS</span>
-                <span class="divider">/</span>
-                <span class="Body-regular">碎片</span>
-            </li>
-
-            <li class="nav-option-button" id="aboutButton">
-                <span class="Body-light">ABOUT</span>
-                <span class="divider">/</span>
-                <span class="Body-regular">关于</span>
-            </li>
-
-            <li id="nav-closeMenu-button">
-                <img id="nav-closeMenu-icon" src="images/close.png" alt="close">
-            </li>
-        </ul>
-        <div class="nav-bottom">
-            <div class="nav-bottom-1">
-                <img class="nav-icon" src="images/driftage-icon.png" alt="icon"/>
+    <!-- container-->
+    <div class="container">
+        <!-- navigation -->
+        <div class="nav" id="nav-frame">
+            <div class="nav-top" id="head">
+                <a class="nav-title" id="title" href="">
+                    <h1 class="H1-regular">Driftage</h1>
+                </a>
+                <a id="nav-menu-button">
+                    <img class="nav-menu-icon" src="images/menu@2x.png" alt="menu" />
+                </a>
             </div>
-            <div class="nav-bottom-2" id="info">
-                <p class="Label-small">ageha@driftage.net</p>
-            </div>
-        </div>
-    </div>
-    <!-- main content -->
-    <div class="main">
-        <div class="main-tab" id="main-tab-waft">
-            <div class="clock">
-                <img id="clock_1" src="/images/home/media-1.png" alt="">
-                <img id="clock_2" src="/images/home/media-2.png" alt="">
-                <img id="clock_3" src="/images/home/media-3.png" alt="">
-                <img id="clock_4" src="/images/home/media-4.png" alt="">
-                <img id="clock_5" src="/images/home/media-5.png" alt="">
-                <img id="clock_p" src="/images/home/media-p.png" alt="">
-            </div>
+            <ul class="nav-middle" id="nav-bar">
+                <li class="nav-option-button selected" id="waftButton">
+                    <span class="Body-light">WAFT</span>
+                    <span class="divider">/</span>
+                    <span class="Body-regular">飘</span>
+                </li>
 
-            <div id="home_text">
-                <div id="p1">
-                    <p class="H2-regular">
-                        Your matter <br> is time
-                    </p>
+                <li class="nav-option-button" id="realmButton">
+                    <span class="Body-light">REALM</span>
+                    <span class="divider">/</span>
+                    <span class="Body-regular">境</span>
+                </li>
+
+                <li class="nav-option-button" id="fragmentsButton">
+                    <span class="Body-light">FRAGMENTS</span>
+                    <span class="divider">/</span>
+                    <span class="Body-regular">碎片</span>
+                </li>
+
+                <li class="nav-option-button" id="aboutButton">
+                    <span class="Body-light">ABOUT</span>
+                    <span class="divider">/</span>
+                    <span class="Body-regular">关于</span>
+                </li>
+
+                <li id="nav-closeMenu-button">
+                    <img id="nav-closeMenu-icon" src="images/close.png" alt="close">
+                </li>
+            </ul>
+            <div class="nav-bottom">
+                <div class="nav-bottom-1">
+                    <img class="nav-icon" src="images/driftage-icon.png" alt="icon" />
                 </div>
-                <div id="p2">
-                    <p class="H2-regular">
-                        CEASELESS<br>TIME
-                    </p>
-                </div>
-                <div id="p3">
-                    <p class="H2-regular">
-                        you are each solitary<br> moment
-                    </p>
+                <div class="nav-bottom-2" id="info">
+                    <p class="Label-small">ageha@driftage.net</p>
                 </div>
             </div>
         </div>
-        <div class="main-tab" id="main-tab-realm">
-            <div class="content-list">
-                <!-- 项目1 -->
-                <a class="content-item" href="/Pages/articles-realm-01.html">
-                    <img class="content-cover" src="images/projects/1.png" alt=""/>
-                    <div class="content-cover-up">
-                        <div class="content-cover-title">
-                            <p class="H3-regular"> Majula </p>
-                        </div>
-                        <div class="content-cover-description">
-                            <p class="Label-small"> Driftage's description </p>
-                        </div>
-                        <div class="content-cover-poetry">
-                            <p class="Label-large">
-                                突然间，黄昏变得明亮<br/>
-                                此刻，正有细雨落下<br/>
-                                或曾经落下<br/>
-
-                                下雨<br/>
-                                无疑是过去发生的一件事<br/>
-                                谁听见雨落下的声音<br/>
-                                谁就回想起<br/>
-                                曾经幸福的命运向他呈现的<br/>
-                                那朵奇妙的玫瑰花<br/>
-                                和它的红颜色<br/>
-
-                                这蒙住了窗玻璃的细雨<br/>
-                                在被遗弃的郊外<br/>
-                                在某个不复存在的庭院中<br/>
-                                正洗着<br/>
-                                架上的黑葡萄
-                            </p>
-                        </div>
-                        <div class="content-cover-author">
-                            <p class="Label-large">
-                                Jorge Luis Borges
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <!-- 项目2 -->
-                <a class="content-item" href="/Pages/articles-realm-01.html">
-                    <img class="content-cover" src="images/projects/2.png" alt=""/>
-                    <div class="content-cover-up">
-                        <div class="content-cover-title">
-                            <p class="H3-regular"> Majula </p>
-                        </div>
-                        <div class="content-cover-description">
-                            <p class="Label-small"> Driftage's description </p>
-                        </div>
-                        <div class="content-cover-poetry">
-                            <p class="Label-large">
-                                从你的一座庭院<br/>
-                                观赏亘古已有的繁星<br/>
-                                坐在夜幕下的长凳上<br/>
-                                凝望<br/>
-                                因为无知而不知其名<br/>
-                                也弄不清属于哪些星座的<br/>
-                                天体的寒光荧荧<br/>
-                                <br/>
-                                聆听从看不见的池塘传来的<br/>
-                                溪流淙淙<br/>
-                                呼吸素馨与忍冬的芳菲<br/>
-                                感受睡鸟的沉寂<br/>
-                                门廊的肃穆、湿气的蒸腾
-                            </p>
-                        </div>
-                        <div class="content-cover-author">
-                            <p class="Label-large">
-                                Jorge Luis Borges
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- 项目3 -->
-                <a class="content-item" href="/Pages/articles-realm-01.html">
-                    <img class="content-cover" src="images/projects/3.png" alt=""/>
-                    <div class="content-cover-up">
-                        <div class="content-cover-title">
-                            <p class="H3-regular"> Majula </p>
-                        </div>
-                        <div class="content-cover-description">
-                            <p class="Label-small"> Driftage's description </p>
-                        </div>
-                        <div class="content-cover-poetry">
-                            <p class="Label-large">
-                                从你的一座庭院<br/>
-                                观赏亘古已有的繁星<br/>
-                                坐在夜幕下的长凳上<br/>
-                                凝望<br/>
-                                因为无知而不知其名<br/>
-                                也弄不清属于哪些星座的<br/>
-                                天体的寒光荧荧<br/>
-                                <br/>
-                                聆听从看不见的池塘传来的<br/>
-                                溪流淙淙<br/>
-                                呼吸素馨与忍冬的芳菲<br/>
-                                感受睡鸟的沉寂<br/>
-                                门廊的肃穆、湿气的蒸腾
-                            </p>
-                        </div>
-                        <div class="content-cover-author">
-                            <p class="Label-large">
-                                Jorge Luis Borges
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <!-- 项目4 -->
-                <a class="content-item" href="/Pages/articles-realm-01.html">
-                    <img class="content-cover" src="images/projects/4.png" alt=""/>
-                    <div class="content-cover-up">
-                        <div class="content-cover-title">
-                            <p class="H3-regular"> Majula </p>
-                        </div>
-                        <div class="content-cover-description">
-                            <p class="Label-small"> Driftage's description </p>
-                        </div>
-                        <div class="content-cover-poetry">
-                            <p class="Label-large">
-                                从你的一座庭院<br/>
-                                观赏亘古已有的繁星<br/>
-                                坐在夜幕下的长凳上<br/>
-                                凝望<br/>
-                                因为无知而不知其名<br/>
-                                也弄不清属于哪些星座的<br/>
-                                天体的寒光荧荧<br/>
-                                <br/>
-                                聆听从看不见的池塘传来的<br/>
-                                溪流淙淙<br/>
-                                呼吸素馨与忍冬的芳菲<br/>
-                                感受睡鸟的沉寂<br/>
-                                门廊的肃穆、湿气的蒸腾
-                            </p>
-                        </div>
-                        <div class="content-cover-author">
-                            <p class="Label-large">
-                                Jorge Luis Borges
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <!-- 项目5 -->
-
-                <a class="content-item" href="/Pages/articles-realm-01.html">
-                    <img class="content-cover" src="images/projects/5.png" alt=""/>
-                    <div class="content-cover-up">
-                        <div class="content-cover-title">
-                            <p class="H3-regular"> Majula </p>
-                        </div>
-                        <div class="content-cover-description">
-                            <p class="Label-small"> Driftage's description </p>
-                        </div>
-                        <div class="content-cover-poetry">
-                            <p class="Label-large">
-                                从你的一座庭院<br/>
-                                观赏亘古已有的繁星<br/>
-                                坐在夜幕下的长凳上<br/>
-                                凝望<br/>
-                                因为无知而不知其名<br/>
-                                也弄不清属于哪些星座的<br/>
-                                天体的寒光荧荧<br/>
-                                <br/>
-                                聆听从看不见的池塘传来的<br/>
-                                溪流淙淙<br/>
-                                呼吸素馨与忍冬的芳菲<br/>
-                                感受睡鸟的沉寂<br/>
-                                门廊的肃穆、湿气的蒸腾
-                            </p>
-                        </div>
-                        <div class="content-cover-author">
-                            <p class="Label-large">
-                                Jorge Luis Borges
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <!-- 项目6 -->
-
-                <a class="content-item" href="/Pages/articles-realm-01.html">
-                    <img class="content-cover" src="images/projects/6.png" alt=""/>
-                    <div class="content-cover-up">
-                        <div class="content-cover-title">
-                            <p class="H3-regular"> Majula </p>
-                        </div>
-                        <div class="content-cover-description">
-                            <p class="Label-small"> Driftage's description </p>
-                        </div>
-                        <div class="content-cover-poetry">
-                            <p class="Label-large">
-                                从你的一座庭院<br/>
-                                观赏亘古已有的繁星<br/>
-                                坐在夜幕下的长凳上<br/>
-                                凝望<br/>
-                                因为无知而不知其名<br/>
-                                也弄不清属于哪些星座的<br/>
-                                天体的寒光荧荧<br/>
-                                <br/>
-                                聆听从看不见的池塘传来的<br/>
-                                溪流淙淙<br/>
-                                呼吸素馨与忍冬的芳菲<br/>
-                                感受睡鸟的沉寂<br/>
-                                门廊的肃穆、湿气的蒸腾
-                            </p>
-                        </div>
-                        <div class="content-cover-author">
-                            <p class="Label-large">
-                                Jorge Luis Borges
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="main-tab" id="main-tab-fragments">
-            <div class="fragment-list">
-                <!-- 1 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block1">
-                    <div class="fragment-item-number">01</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-                <!-- 2 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block2">
-                    <div class="fragment-item-number">02</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-                <!-- 3 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block3">
-                    <div class="fragment-item-number">03</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-                <!-- 4 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block4">
-                    <div class="fragment-item-number">04</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-                <!-- 5 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block5">
-                    <div class="fragment-item-number">05</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-                <!-- 6 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block6">
-                    <div class="fragment-item-number">06</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-                <!-- 7 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block7">
-                    <div class="fragment-item-number">07</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-                <!-- 6 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block8">
-                    <div class="fragment-item-number">08</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-                <!-- 6 -->
-                <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block9">
-                    <div class="fragment-item-number">09</div>
-                    <div class="fragment-item-title">
-                        <p class="H2-regular">My heart like a peacock on a rainy day</p>
-                    </div>
-                    <div class="fragment-item-description">
-                        <p class="Label-large">2022.06.01</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="main-tab" id="main-tab-about">
-            <div class="about-animation">
-                <div class="about-animation-text">
-                    <p class="Body-quote">
-                        空に憧れて<br>
-                        空をかけてゆく<br>
-                        あの子の命はひこうき云<br>
-                        おわり
-                    </p>
+        <!-- main content -->
+        <div class="main">
+            <div class="main-tab" id="main-tab-waft">
+                <div class="clock">
+                    <img id="clock_1" src="/images/home/media-1.png" alt="">
+                    <img id="clock_2" src="/images/home/media-2.png" alt="">
+                    <img id="clock_3" src="/images/home/media-3.png" alt="">
+                    <img id="clock_4" src="/images/home/media-4.png" alt="">
+                    <img id="clock_5" src="/images/home/media-5.png" alt="">
+                    <img id="clock_p" src="/images/home/media-p.png" alt="">
                 </div>
-                <div class="about-animation-frame">
-                    <div class="about-animation-actor">
-                        <img src="/images/airplane.png" id="airplane" alt="airplane">
-                        <img src="/images/cloud.png" id="cloud" alt="cloud">
-                    </div>
-                </div>
-            </div>
-            <div class="about-content">
 
-                <div class="about-content-section">
-                    <div class="about-page-title">
-                        <p class="H1-regular">
-                            Ageha
+                <div id="home_text">
+                    <div id="p1">
+                        <p class="H2-regular">
+                            Your matter <br> is time
+                        </p>
+                    </div>
+                    <div id="p2">
+                        <p class="H2-regular">
+                            CEASELESS<br>TIME
+                        </p>
+                    </div>
+                    <div id="p3">
+                        <p class="H2-regular">
+                            you are each solitary<br> moment
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="main-tab" id="main-tab-realm">
+                <div class="content-list">
+                    <!-- 项目1 -->
+                    <a class="content-item" href="/Pages/articles-realm-01.html">
+                        <img class="content-cover" src="images/projects/1.png" alt="" />
+                        <div class="content-cover-up">
+                            <div class="content-cover-title">
+                                <p class="H3-regular"> Majula </p>
+                            </div>
+                            <div class="content-cover-description">
+                                <p class="Label-small"> Driftage's description </p>
+                            </div>
+                            <div class="content-cover-poetry">
+                                <p class="Label-large">
+                                    突然间，黄昏变得明亮<br />
+                                    此刻，正有细雨落下<br />
+                                    或曾经落下<br />
 
-                <div class="about-content-section">
-                    <div class="about-section-title">
-                        <p class="H3-regular">CONTACT ME</p>
-                    </div>
-                    <ul class="about-section-list">
-                        <li class="about-item-frame">
-                            <div class="about-item-name">
-                                <p class="Label-large">联系电话</p>
-                                <span class="divider">/</span>
-                                <p class="Label-large">PHONE</p>
+                                    下雨<br />
+                                    无疑是过去发生的一件事<br />
+                                    谁听见雨落下的声音<br />
+                                    谁就回想起<br />
+                                    曾经幸福的命运向他呈现的<br />
+                                    那朵奇妙的玫瑰花<br />
+                                    和它的红颜色<br />
+
+                                    这蒙住了窗玻璃的细雨<br />
+                                    在被遗弃的郊外<br />
+                                    在某个不复存在的庭院中<br />
+                                    正洗着<br />
+                                    架上的黑葡萄
+                                </p>
                             </div>
-                            <div class="about-item-content">
-                                <p class="Body-regular">+86 15168479096</p>
+                            <div class="content-cover-author">
+                                <p class="Label-large">
+                                    Jorge Luis Borges
+                                </p>
                             </div>
-                        </li>
-                        <li class="about-item-frame">
-                            <div class="about-item-name">
-                                <p class="Label-large">地址</p>
-                                <span class="divider">/</span>
-                                <p class="Label-large">ADDRESS</p>
+                        </div>
+                    </a>
+                    <!-- 项目2 -->
+                    <a class="content-item" href="/Pages/articles-realm-01.html">
+                        <img class="content-cover" src="images/projects/2.png" alt="" />
+                        <div class="content-cover-up">
+                            <div class="content-cover-title">
+                                <p class="H3-regular"> Majula </p>
                             </div>
-                            <div class="about-item-content">
-                                <p class="Body-regular">浙江省杭州市上城区 / Hangzhou,Zhejiang, China</p>
+                            <div class="content-cover-description">
+                                <p class="Label-small"> Driftage's description </p>
                             </div>
-                        </li>
-                        <li class="about-item-frame">
-                            <div class="about-item-name">
-                                <p class="Label-large">邮箱</p>
-                                <span class="divider">/</span>
-                                <p class="Label-large">EMAIL</p>
+                            <div class="content-cover-poetry">
+                                <p class="Label-large">
+                                    从你的一座庭院<br />
+                                    观赏亘古已有的繁星<br />
+                                    坐在夜幕下的长凳上<br />
+                                    凝望<br />
+                                    因为无知而不知其名<br />
+                                    也弄不清属于哪些星座的<br />
+                                    天体的寒光荧荧<br />
+                                    <br />
+                                    聆听从看不见的池塘传来的<br />
+                                    溪流淙淙<br />
+                                    呼吸素馨与忍冬的芳菲<br />
+                                    感受睡鸟的沉寂<br />
+                                    门廊的肃穆、湿气的蒸腾
+                                </p>
                             </div>
-                            <div class="about-item-content">
-                                <p class="Body-regular">Ageha@driftage.com</p>
+                            <div class="content-cover-author">
+                                <p class="Label-large">
+                                    Jorge Luis Borges
+                                </p>
                             </div>
-                        </li>
-                        <li class="about-item-frame">
-                            <div class="about-item-name">
-                                <p class="Label-large">微信</p>
-                                <span class="divider">/</span>
-                                <p class="Label-large">WECHAT</p>
+                        </div>
+                    </a>
+
+                    <!-- 项目3 -->
+                    <a class="content-item" href="/Pages/articles-realm-01.html">
+                        <img class="content-cover" src="images/projects/3.png" alt="" />
+                        <div class="content-cover-up">
+                            <div class="content-cover-title">
+                                <p class="H3-regular"> Majula </p>
                             </div>
-                            <div class="about-item-content">
-                                <p class="Body-regular">Apocrita</p>
+                            <div class="content-cover-description">
+                                <p class="Label-small"> Driftage's description </p>
                             </div>
-                        </li>
-                    </ul>
+                            <div class="content-cover-poetry">
+                                <p class="Label-large">
+                                    从你的一座庭院<br />
+                                    观赏亘古已有的繁星<br />
+                                    坐在夜幕下的长凳上<br />
+                                    凝望<br />
+                                    因为无知而不知其名<br />
+                                    也弄不清属于哪些星座的<br />
+                                    天体的寒光荧荧<br />
+                                    <br />
+                                    聆听从看不见的池塘传来的<br />
+                                    溪流淙淙<br />
+                                    呼吸素馨与忍冬的芳菲<br />
+                                    感受睡鸟的沉寂<br />
+                                    门廊的肃穆、湿气的蒸腾
+                                </p>
+                            </div>
+                            <div class="content-cover-author">
+                                <p class="Label-large">
+                                    Jorge Luis Borges
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- 项目4 -->
+                    <a class="content-item" href="/Pages/articles-realm-01.html">
+                        <img class="content-cover" src="images/projects/4.png" alt="" />
+                        <div class="content-cover-up">
+                            <div class="content-cover-title">
+                                <p class="H3-regular"> Majula </p>
+                            </div>
+                            <div class="content-cover-description">
+                                <p class="Label-small"> Driftage's description </p>
+                            </div>
+                            <div class="content-cover-poetry">
+                                <p class="Label-large">
+                                    从你的一座庭院<br />
+                                    观赏亘古已有的繁星<br />
+                                    坐在夜幕下的长凳上<br />
+                                    凝望<br />
+                                    因为无知而不知其名<br />
+                                    也弄不清属于哪些星座的<br />
+                                    天体的寒光荧荧<br />
+                                    <br />
+                                    聆听从看不见的池塘传来的<br />
+                                    溪流淙淙<br />
+                                    呼吸素馨与忍冬的芳菲<br />
+                                    感受睡鸟的沉寂<br />
+                                    门廊的肃穆、湿气的蒸腾
+                                </p>
+                            </div>
+                            <div class="content-cover-author">
+                                <p class="Label-large">
+                                    Jorge Luis Borges
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- 项目5 -->
+
+                    <a class="content-item" href="/Pages/articles-realm-01.html">
+                        <img class="content-cover" src="images/projects/5.png" alt="" />
+                        <div class="content-cover-up">
+                            <div class="content-cover-title">
+                                <p class="H3-regular"> Majula </p>
+                            </div>
+                            <div class="content-cover-description">
+                                <p class="Label-small"> Driftage's description </p>
+                            </div>
+                            <div class="content-cover-poetry">
+                                <p class="Label-large">
+                                    从你的一座庭院<br />
+                                    观赏亘古已有的繁星<br />
+                                    坐在夜幕下的长凳上<br />
+                                    凝望<br />
+                                    因为无知而不知其名<br />
+                                    也弄不清属于哪些星座的<br />
+                                    天体的寒光荧荧<br />
+                                    <br />
+                                    聆听从看不见的池塘传来的<br />
+                                    溪流淙淙<br />
+                                    呼吸素馨与忍冬的芳菲<br />
+                                    感受睡鸟的沉寂<br />
+                                    门廊的肃穆、湿气的蒸腾
+                                </p>
+                            </div>
+                            <div class="content-cover-author">
+                                <p class="Label-large">
+                                    Jorge Luis Borges
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- 项目6 -->
+
+                    <a class="content-item" href="/Pages/articles-realm-01.html">
+                        <img class="content-cover" src="images/projects/6.png" alt="" />
+                        <div class="content-cover-up">
+                            <div class="content-cover-title">
+                                <p class="H3-regular"> Majula </p>
+                            </div>
+                            <div class="content-cover-description">
+                                <p class="Label-small"> Driftage's description </p>
+                            </div>
+                            <div class="content-cover-poetry">
+                                <p class="Label-large">
+                                    从你的一座庭院<br />
+                                    观赏亘古已有的繁星<br />
+                                    坐在夜幕下的长凳上<br />
+                                    凝望<br />
+                                    因为无知而不知其名<br />
+                                    也弄不清属于哪些星座的<br />
+                                    天体的寒光荧荧<br />
+                                    <br />
+                                    聆听从看不见的池塘传来的<br />
+                                    溪流淙淙<br />
+                                    呼吸素馨与忍冬的芳菲<br />
+                                    感受睡鸟的沉寂<br />
+                                    门廊的肃穆、湿气的蒸腾
+                                </p>
+                            </div>
+                            <div class="content-cover-author">
+                                <p class="Label-large">
+                                    Jorge Luis Borges
+                                </p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="about-content-section">
-                    <div class="about-section-title">
-                        <p class="H3-regular">UI Designer</p>
-                    </div>
-                    <ul class="about-section-list">
-                        <li class="about-item-frame">
-                            <div class="about-item-name">
-                                <p class="Label-large">软件</p>
-                                <span class="divider">/</span>
-                                <p class="Label-large">SOFTWARE</p>
-                            </div>
-                            <div class="about-item-content">
-                                <p class="Body-regular">Figma</p>
-                                <span class="divider">/</span>
-                                <p class="Body-regular">Sketch</p>
-                                <span class="divider">/</span>
-                                <p class="Body-regular">Photoshop</p>
-                                <span class="divider">/</span>
-                                <p class="Body-regular">Illustrator</p>
-                                <span class="divider">/</span>
-                                <p class="Body-regular">After Effects</p>
-                                <span class="divider">/</span>
-                                <p class="Body-regular">Blender</p>
-                            </div>
-                        </li>
-                        <li class="about-item-frame">
-                            <div class="about-item-name">
-                                <p class="Label-large">编程</p>
-                                <span class="divider">/</span>
-                                <p class="Label-large">CODING</p>
-                            </div>
-                            <div class="about-item-content">
-                                <p class="Body-regular">HTML</p>
-                                <span class="divider">/</span>
-                                <p class="Body-regular">CSS</p>
-                                <span class="divider">/</span>
-                                <p class="Body-regular">JAVASCRIPT</p>
-                            </div>
-                        </li>
-                    </ul>
+            </div>
+            <div class="main-tab" id="main-tab-fragments">
+                <div class="fragment-list">
+                    <!-- 1 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block1">
+                        <div class="fragment-item-number">01</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
+                    <!-- 2 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block2">
+                        <div class="fragment-item-number">02</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
+                    <!-- 3 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block3">
+                        <div class="fragment-item-number">03</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
+                    <!-- 4 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block4">
+                        <div class="fragment-item-number">04</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
+                    <!-- 5 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block5">
+                        <div class="fragment-item-number">05</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
+                    <!-- 6 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block6">
+                        <div class="fragment-item-number">06</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
+                    <!-- 7 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block7">
+                        <div class="fragment-item-number">07</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
+                    <!-- 6 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block8">
+                        <div class="fragment-item-number">08</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
+                    <!-- 6 -->
+                    <a href="/Pages/articles-fragments-01.html" class="fragment-item" id="block9">
+                        <div class="fragment-item-number">09</div>
+                        <div class="fragment-item-title">
+                            <p class="H2-regular">My heart like a peacock on a rainy day</p>
+                        </div>
+                        <div class="fragment-item-description">
+                            <p class="Label-large">2022.06.01</p>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="about-content-section">
-                    <div class="about-section-title">
-                        <p class="H3-regular">Indie Game Developer</p>
+            </div>
+            <div class="main-tab" id="main-tab-about">
+                <div class="about-animation">
+                    <div class="about-animation-text">
+                        <p class="Body-quote">
+                            空に憧れて<br>
+                            空をかけてゆく<br>
+                            あの子の命はひこうき云<br>
+                            おわり
+                        </p>
                     </div>
-                    <ul class="about-section-list">
-                        <li class="about-item-frame">
-                            <div class="about-item-name">
-                                <p class="Label-large">UNITY & C#</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="about-animation-frame">
+                        <div class="about-animation-actor">
+                            <img src="/images/airplane.png" id="airplane" alt="airplane">
+                            <img src="/images/cloud.png" id="cloud" alt="cloud">
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+
+                    <div class="about-content-section">
+                        <div class="about-page-title">
+                            <p class="H1-regular">
+                                Ageha
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-content-section">
+                        <div class="about-section-title">
+                            <p class="H3-regular">CONTACT ME</p>
+                        </div>
+                        <ul class="about-section-list">
+                            <li class="about-item-frame">
+                                <div class="about-item-name">
+                                    <p class="Label-large">联系电话</p>
+                                    <span class="divider">/</span>
+                                    <p class="Label-large">PHONE</p>
+                                </div>
+                                <div class="about-item-content">
+                                    <p class="Body-regular">+86 15168479096</p>
+                                </div>
+                            </li>
+                            <li class="about-item-frame">
+                                <div class="about-item-name">
+                                    <p class="Label-large">地址</p>
+                                    <span class="divider">/</span>
+                                    <p class="Label-large">ADDRESS</p>
+                                </div>
+                                <div class="about-item-content">
+                                    <p class="Body-regular">浙江省杭州市上城区 / Hangzhou,Zhejiang, China</p>
+                                </div>
+                            </li>
+                            <li class="about-item-frame">
+                                <div class="about-item-name">
+                                    <p class="Label-large">邮箱</p>
+                                    <span class="divider">/</span>
+                                    <p class="Label-large">EMAIL</p>
+                                </div>
+                                <div class="about-item-content">
+                                    <p class="Body-regular">Ageha@driftage.com</p>
+                                </div>
+                            </li>
+                            <li class="about-item-frame">
+                                <div class="about-item-name">
+                                    <p class="Label-large">微信</p>
+                                    <span class="divider">/</span>
+                                    <p class="Label-large">WECHAT</p>
+                                </div>
+                                <div class="about-item-content">
+                                    <p class="Body-regular">Apocrita</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-content-section">
+                        <div class="about-section-title">
+                            <p class="H3-regular">UI Designer</p>
+                        </div>
+                        <ul class="about-section-list">
+                            <li class="about-item-frame">
+                                <div class="about-item-name">
+                                    <p class="Label-large">软件</p>
+                                    <span class="divider">/</span>
+                                    <p class="Label-large">SOFTWARE</p>
+                                </div>
+                                <div class="about-item-content">
+                                    <p class="Body-regular">Figma</p>
+                                    <span class="divider">/</span>
+                                    <p class="Body-regular">Sketch</p>
+                                    <span class="divider">/</span>
+                                    <p class="Body-regular">Photoshop</p>
+                                    <span class="divider">/</span>
+                                    <p class="Body-regular">Illustrator</p>
+                                    <span class="divider">/</span>
+                                    <p class="Body-regular">After Effects</p>
+                                    <span class="divider">/</span>
+                                    <p class="Body-regular">Blender</p>
+                                </div>
+                            </li>
+                            <li class="about-item-frame">
+                                <div class="about-item-name">
+                                    <p class="Label-large">编程</p>
+                                    <span class="divider">/</span>
+                                    <p class="Label-large">CODING</p>
+                                </div>
+                                <div class="about-item-content">
+                                    <p class="Body-regular">HTML</p>
+                                    <span class="divider">/</span>
+                                    <p class="Body-regular">CSS</p>
+                                    <span class="divider">/</span>
+                                    <p class="Body-regular">JAVASCRIPT</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-content-section">
+                        <div class="about-section-title">
+                            <p class="H3-regular">Indie Game Developer</p>
+                        </div>
+                        <ul class="about-section-list">
+                            <li class="about-item-frame">
+                                <div class="about-item-name">
+                                    <p class="Label-large">UNITY & C#</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
-
         </div>
     </div>
-</div>
 
-<!--script-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
-<script type="importmap">{
+    <!--library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+    <script type="importmap">{
 	"imports": {
 		"three": "https://unpkg.com/three@v0.156.1/build/three.module.js",
         "three/addons/": "https://unpkg.com/three@v0.156.1/examples/jsm/"
 	}}</script>
-<script type="module" src="scripts/webgl.js"></script>
-<script src="/scripts/animation.js"></script>
-<script src="/scripts/main.js"></script>
+
+    <!--script-->
+    <script type="module" src="scripts/webgl.js"></script>
+    <script src="/scripts/animation.js"></script>
+    <script src="/scripts/main.js"></script>
 
 </body>
 
